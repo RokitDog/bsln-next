@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Helvetica Neue';
+    src: url('/fonts/HelveticaNeue-Roman.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Helvetica Neue';
+    src: url('/fonts/HelveticaNeue-Medium.woff2') format('woff2'),
+      url('/fonts/HelveticaNeue-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', serif;
+  }
+}
+
+@layer utilities {
+  .header-links {
+    position: relative;
+  }
+  .header-links::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0%;
+    height: 3px;
+    background: #0f0f0f;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .header-links:hover::before {
+    width: 100%;
+  }
+}
