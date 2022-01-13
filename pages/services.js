@@ -1,10 +1,8 @@
 import React from 'react';
-import Header from '../components/Header/Header';
 
 function services() {
   return (
-    <div>
-      <Header />
+    <div className="px-[80px]">
       <h1>This is services page</h1>
     </div>
   );

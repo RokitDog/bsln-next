@@ -1,10 +1,8 @@
 import React from 'react';
-import Header from '../components/Header/Header';
 
 function work() {
   return (
-    <div>
-      <Header />
+    <div className="px-[80px]">
       <h1>This is Work Page</h1>
     </div>
   );

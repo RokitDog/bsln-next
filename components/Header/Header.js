@@ -5,25 +5,8 @@ import Link from 'next/link';
 import { gsap, Power4 } from 'gsap';
 
 function Header() {
-  const headerRef = useRef();
-  useEffect(() => {
-    const headerFadeAnimation = gsap.from(headerRef.current, {
-      y: -100,
-      duration: 2,
-      opacity: 0,
-      ease: Power4.easeOut,
-    });
-
-    return () => {
-      headerFadeAnimation.kill();
-    };
-  }, []);
-
   return (
-    <header
-      className="h-[100px] flex justify-between items-center sticky top-0 bg-white z-10"
-      ref={headerRef}
-    >
+    <header className="h-[100px] flex justify-between items-center bg-white">
       <div className="w-[93px]">
         <Link href="/">
           <a>

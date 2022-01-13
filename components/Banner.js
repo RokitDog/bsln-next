@@ -6,6 +6,7 @@ function Banner() {
   const splitText = useRef();
   const fadeIn = useRef();
   const slideIn = useRef();
+
   const elements = gsap.utils.selector(splitText);
   useEffect(() => {
     const splitTextAnimation = gsap.from(elements('.absolute'), 1.3, {
@@ -58,7 +59,7 @@ function Banner() {
   }, [clock]);
 
   return (
-    <div>
+    <section>
       <h1
         className="text-[46px] tracking-[-0.01] md:text-[76px] leading-[1.08] md:pl-[70px] md:pt-[100px] font-medium "
         ref={splitText}
@@ -90,10 +91,17 @@ function Banner() {
           </span>
         </p>
       </div>
-      <div className="py-[100px] origin-left" ref={slideIn}>
-        <video src="/video/Hecker.mp4" autoPlay muted loop></video>
+      <div className="my-[100px] origin-left" ref={slideIn}>
+        <video
+          src="/video/Hecker.mp4"
+          data-image-src="view"
+          className="hover-js"
+          autoPlay
+          muted
+          loop
+        ></video>
       </div>
-    </div>
+    </section>
   );
 }
 
