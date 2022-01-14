@@ -55,6 +55,19 @@
   .testimonials .slick-prev {
     left: initial;
     right: 28px;
+    top: 90%;
     z-index: 9;
+  }
+
+  .testimonials .slick-next {
+    bottom: 0;
+    top: 90%;
+    z-index: 9;
+  }
+  .testimonials .slick-prev::before {
+    content: initial;
+  }
+  .testimonials .slick-next::before {
+    content: initial;
   }
 }

@@ -1,20 +1,22 @@
 import { gsap, Power4, Power2 } from 'gsap';
 import React, { useEffect, useRef, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
+import { SplitText } from 'gsap/dist/SplitText';
+gsap.registerPlugin(SplitText);
 
 function Banner() {
   const splitText = useRef();
   const fadeIn = useRef();
   const slideIn = useRef();
 
-  const elements = gsap.utils.selector(splitText);
   useEffect(() => {
-    const splitTextAnimation = gsap.from(elements('.absolute'), 1.3, {
+    let mySplitText = new SplitText(splitText.current, { type: 'lines' });
+
+    const splitTextAnimation = gsap.from(mySplitText.lines, 1.3, {
       y: 100,
       opacity: 0,
       ease: Power4.easeOut,
       delay: 0.5,
-      skewY: 7,
       stagger: {
         amount: 0.3,
       },
@@ -61,15 +63,11 @@ function Banner() {
   return (
     <section>
       <h1
-        className="text-[46px] tracking-[-0.01] md:text-[76px] leading-[1.08] md:pl-[70px] md:pt-[100px] font-medium "
+        className=" text-[46px] tracking-[-0.01] md:text-[76px] leading-[1.08] md:pl-[70px] md:pt-[100px] font-medium "
         ref={splitText}
       >
-        <div className="overflow-hidden relative h-[89px]">
-          <span className="absolute">Where your brands voice</span>
-        </div>
-        <div className="overflow-hidden relative h-[89px]">
-          <span className="absolute">becomes visual.</span>
-        </div>
+        Where your brands voice <br />
+        becomes visual.
       </h1>
       <div className="md:pl-[70px] pt-[40px]" ref={fadeIn}>
         <p className="text-[20px] md:text-[28px]">

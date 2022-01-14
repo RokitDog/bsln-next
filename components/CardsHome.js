@@ -93,13 +93,7 @@ function CardsHome() {
           </h2>
           <p className="text-[17px] font-medium md:text-[20px]">
             It takes one email to{' '}
-            <span
-              className="hover-js underline text-[#367F61]"
-              data-image-src="view"
-            >
-              start
-            </span>
-            .
+            <span className="underline text-[#367F61]">start</span>.
           </p>
         </div>
       </div>
@@ -144,10 +138,7 @@ function CardsHome() {
             different story each time.
           </h3>
           <Link href="/work">
-            <a
-              className="font-medium text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover-js hover:bg-black hover:text-white transition ease-out duration-300"
-              data-image-src="view"
-            >
+            <a className="font-medium text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition ease-out duration-300">
               Check our our favourite projects
             </a>
           </Link>

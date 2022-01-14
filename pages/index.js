@@ -9,6 +9,7 @@ import SlickNextArrow from '../components/slick-arrow/SlickNextArrow';
 import SlickPrevArrow from '../components/slick-arrow/SlickPrevArrow';
 import { useInView } from 'react-intersection-observer';
 import { gsap, Power2 } from 'gsap';
+import Brands from '../components/Brands';
 
 export default function Home() {
   let settings = {
@@ -41,7 +42,11 @@ export default function Home() {
       <main>
         <Banner />
         <CardsHome />
-        <div className="testimonials opacity-0 translate-y-10" ref={ref}>
+        <div
+          className="testimonials opacity-0 translate-y-10 mb-[100px] md:mb-[220px] hover-js"
+          ref={ref}
+          data-image-src="drag"
+        >
           <Slider {...settings}>
             <Testimonials
               text="“Arcu adipiscing tincidunt tristique euismod mi. Sed non id enim id malesuada. Ullamcorper porttitor pharetra fringilla bibendum amet consectetur dui ridiculus interdum.”"
@@ -57,6 +62,7 @@ export default function Home() {
             />
           </Slider>
         </div>
+        <Brands />
       </main>
     </div>
   );
