@@ -2,11 +2,10 @@ import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 import logoImage from '../../public/baseline-logo.svg';
 import Link from 'next/link';
-import { gsap, Power4 } from 'gsap';
 
 function Header() {
   return (
-    <header className="h-[100px] flex justify-between items-center bg-white">
+    <header className="h-[100px] flex justify-between items-center max-w-[1440px] mx-auto  px-[80px]">
       <div className="w-[93px]">
         <Link href="/">
           <a>
@@ -20,7 +19,7 @@ function Header() {
         </Link>
       </div>
       <nav>
-        <ul className="flex space-x-[40px] text-[16px] font-medium">
+        <ul className="flex space-x-[40px] text-[16px]">
           <li>
             <Link href="/work">
               <a className="header-links">Work</a>

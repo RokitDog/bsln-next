@@ -23,6 +23,7 @@
 
   body {
     font-family: 'Helvetica Neue', serif;
+    transition: all 0.5s ease-out;
   }
 }
 
@@ -69,5 +70,51 @@
   }
   .testimonials .slick-next::before {
     content: initial;
+  }
+
+  .animate-left {
+    animation: infinite-slide 80000ms linear infinite;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    transition: 1s ease;
+  }
+
+  .animate-right {
+    animation: infinite-slide-revert 80000ms linear infinite;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    transition: 1s ease;
+  }
+
+  @keyframes infinite-slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+      /*The width of the page needs to be taken into consideration*/
+    }
+  }
+
+  @keyframes infinite-slide-revert {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+      /*The width of the page needs to be taken into consideration*/
+    }
+  }
+
+  .footer-link {
+    font-size: 42px;
+    letter-spacing: -0.01rem;
+    font-weight: 500;
+    line-height: 1;
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .footer-link:hover {
+    color: white;
+    -webkit-text-stroke: 1px black;
   }
 }

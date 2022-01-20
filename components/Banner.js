@@ -2,6 +2,7 @@ import { gsap, Power4, Power2 } from 'gsap';
 import React, { useEffect, useRef, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { SplitText } from 'gsap/dist/SplitText';
+import {ScrollTrigger} from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(SplitText);
 
 function Banner() {
@@ -35,6 +36,8 @@ function Banner() {
       delay: 2,
       ease: Power4.easeOut,
     });
+
+
     return () => {
       splitTextAnimation.kill();
       fadeInAnimation.kill();
@@ -60,10 +63,16 @@ function Banner() {
     return () => {};
   }, [clock]);
 
+  const loaded = () => {
+    ScrollTrigger.getAll().forEach((instance) => {
+      instance.refresh()
+    })
+  }
+
   return (
     <section>
       <h1
-        className=" text-[46px] tracking-[-0.01] md:text-[76px] leading-[1.08] md:pl-[70px] md:pt-[100px] font-medium "
+        className=" text-[46px] tracking-[-0.01] md:text-[72px] leading-[1.08] md:pl-[70px] md:pt-[100px]"
         ref={splitText}
       >
         Where your brands voice <br />
@@ -91,13 +100,16 @@ function Banner() {
       </div>
       <div className="my-[100px] origin-left" ref={slideIn}>
         <video
-          src="/video/Hecker.mp4"
           data-image-src="view"
-          className="hover-js"
+          className="hover-js w-[100%] h-auto"
           autoPlay
           muted
           loop
-        ></video>
+          onPlay={loaded}
+        >
+          <source src='/video/Hecker.mp4' type='video/mp4'       
+          />
+        </video>
       </div>
     </section>
   );

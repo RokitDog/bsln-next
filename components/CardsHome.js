@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { gsap, Power2 } from 'gsap';
 import Card from './Card';
@@ -83,21 +83,21 @@ function CardsHome() {
   return (
     <section className="mb-[142px] md:mb-[250px]">
       <div ref={ref} className="opacity-0 translate-y-10">
-        <p className="text-[10px] md:text-[14px] font-medium text-[#7D7D7D]">
+        <p className="font-medium text-[10px] md:text-[14px] text-[#7D7D7D]">
           Work
         </p>
         <div>
-          <h2 className="text-[30px] font-medium leading-[1.13] tracking-[-0.01rem] mt-[20px] md:mt-[40px] md:text-[42px] mb-[30px]">
+          <h2 className="text-[30px] leading-[1.13] tracking-[-0.01rem] mt-[20px] md:mt-[40px] md:text-[42px] mb-[30px]">
             Your project can be the next big <br />
             thing we are proud to show off.
           </h2>
-          <p className="text-[17px] font-medium md:text-[20px]">
+          <p className="text-[17px] md:text-[20px]">
             It takes one email to{' '}
-            <span className="underline text-[#367F61]">start</span>.
+            <span className="underline text-[#367F61]"> start</span>.
           </p>
         </div>
       </div>
-      <div className="flex space-x-[40px]">
+      <div className="flex justify-between">
         <div className="mt-[200px] opacity-0  translate-y-[100px]" ref={ref2}>
           <Card
             name="FLOWER COUTURE"
@@ -132,13 +132,13 @@ function CardsHome() {
         ref={ref6}
       >
         <div>
-          <h3 className="font-medium text-[26px] tracking-[-1%] leading-[1.15] md:text-[32px] mb-[35px] md:mb-[45px] ">
+          <h3 className="text-[26px] tracking-[-1%] leading-[1.15] md:text-[32px] mb-[35px] md:mb-[45px] ">
             Because all brands are <br />
             unique, our solutions tell a <br />
             different story each time.
           </h3>
           <Link href="/work">
-            <a className="font-medium text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition ease-out duration-300">
+            <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition ease-out duration-300">
               Check our our favourite projects
             </a>
           </Link>
