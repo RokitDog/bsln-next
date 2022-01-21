@@ -22,7 +22,7 @@ function Cta() {
           </div>
         </div>
         <div>
-          <Image src="/images/sketch1.png" width={366} height={400.32} />
+          <Image src="/images/Sketch1.png" width={366} height={400.32} />
         </div>
       </div>
     </section>
