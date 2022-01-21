@@ -43,13 +43,7 @@
   .header-links:hover::before {
     width: 100%;
   }
-  .cursor.media-blend {
-    z-index: 100;
-    mix-blend-mode: exclusion;
-  }
-  .cursor.media-blend .cursr-media {
-    filter: invert(1);
-  }
+
   .hover-js {
     cursor: none;
   }

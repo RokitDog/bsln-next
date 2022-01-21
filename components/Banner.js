@@ -23,6 +23,15 @@ function Banner() {
       },
     });
 
+    let resizeTimeout;
+    const resizeComplete = () => {
+      mySplitText.revert();
+    };
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(resizeComplete, 200);
+    });
+
     const fadeInAnimation = gsap.from(fadeIn.current, {
       y: 50,
       delay: 1.5,

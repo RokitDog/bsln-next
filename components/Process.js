@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import ProcessSection from './ProcessSection';
+import { CallMergeRounded } from '@material-ui/icons';
 
 function Process() {
+  
   useEffect(() => {
     let points = gsap.utils.toArray('.point');
 
