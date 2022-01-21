@@ -82,7 +82,6 @@ function services() {
             <HeadingSingle
               title="Helping businesses grow and brands evolve since 2008"
               sub="Services"
-              width={1030}
             />
           </div>
           <section ref={ref} className="opacity-0 translate-y-[100px]">

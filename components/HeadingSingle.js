@@ -4,7 +4,7 @@ import { gsap, Power2, Power4 } from 'gsap';
 import { SplitText } from 'gsap/dist/SplitText';
 gsap.registerPlugin(SplitText);
 
-function HeadingSingle({ title, sub, width }) {
+function HeadingSingle({ title, sub }) {
   const [ref, inView, entry] = useInView({
     threshold: 0.75,
   });
@@ -52,7 +52,7 @@ function HeadingSingle({ title, sub, width }) {
       </p>
       <div>
         <h1
-          className={`text-[46px] leading-[1.08] tracking-[-0.01rem]  md:text-[72px] max-w-[${width}px] inline md:inline-block`}
+          className={`text-[46px] leading-[1.08] tracking-[-0.01rem]  md:text-[72px] max-w-[1030px] inline md:inline-block`}
           ref={splitText}
         >
           {title}
