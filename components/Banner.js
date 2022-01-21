@@ -46,10 +46,10 @@ function Banner() {
   }, []);
 
   const [clock, setClock] = useState();
-  const colors = ['#FD8550', '#0E6C62', '#FDC52E'];
   const text = useRef();
-
+  
   useEffect(() => {
+    const colors = ['#FD8550', '#0E6C62', '#FDC52E'];
     if (text.current.textContent.match('b')) {
       text.current.style.color = colors[0];
     }
