@@ -27,7 +27,6 @@ function Brands({testimonialRef}) {
         trigger: testimonialTrigger.current,
         toggleActions: 'play none none reverse',
         start:"bottom bottom",
-        markers: true,
       },
       autoAlpha: 0,
       y: 0,
