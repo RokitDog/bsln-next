@@ -74,7 +74,7 @@ export const Cursor = () => {
 
         link.addEventListener('mouseenter', () => {
           this.setImage(link);
-          this.ScaleCursor(this.Cursor.children[0], 0.3);
+          this.ScaleCursor(this.Cursor.children[0], 0.25);
           this.Cursor.classList.add('media-blend');
         });
         link.addEventListener('mouseleave', () => {

@@ -30,7 +30,7 @@ function CardsWork() {
       duration: 1,
       opacity: 1,
       ease: Power2.easeOut,
-      delay: 1.5
+      delay: 1.5,
     });
   }
 
@@ -56,7 +56,7 @@ function CardsWork() {
       duration: 1,
       opacity: 1,
       ease: Power2.easeOut,
-      delay: 1.5
+      delay: 1.5,
     });
   }
   const [ref5, inView5, entry5] = useInView({
@@ -108,6 +108,17 @@ function CardsWork() {
       ease: Power2.easeOut,
     });
   }
+  const [ref9, inView9, entry9] = useInView({
+    threshold: 0,
+  });
+  if (inView9) {
+    const fadeInAnimation = gsap.to(entry9.target, {
+      y: 0,
+      duration: 1.3,
+      opacity: 1,
+      ease: Power2.easeOut,
+    });
+  }
 
   const splitText = useRef();
   useEffect(() => {
@@ -144,8 +155,8 @@ function CardsWork() {
             className="text-[46px] leading-[1.08] tracking-[-0.01rem]  md:text-[72px] max-w-[878px] inline md:inline-block"
             ref={splitText}
           >
-            Because all brands are <br />unique, our solutions tell a different story
-            each time.
+            Because all brands are <br />
+            unique, our solutions tell a different story each time.
           </h1>
         </div>
       </div>
@@ -180,17 +191,21 @@ function CardsWork() {
         </div>
       </div>
       <div className="flex flex-wrap justify-between">
-        <div
-          className="flex justify-center max-w[880px] grow mt-[-200px] opacity-0  translate-y-[100px]"
-          ref={ref8}
-        >
+        <div className="opacity-0  translate-y-[100px]" ref={ref9}>
+          <Card
+            name="FinSource Accounting"
+            text="Laoreet amet nec et varius leo, sollicitudin aliquet suspendisse tristique. Faucibus lobortis potenti et tortor sed in magnis velit ac."
+            image="/images/FinSource.jpg"
+          />
+        </div>
+        <div className="mt-[-140px] opacity-0  translate-y-[100px]" ref={ref8}>
           <Card
             name="Hecker Construction"
             text="Imperdiet sed volutpat nullam fermentum. Quam proin sagittis volutpat diam proin non dui velit. Eget sed sollicitudin ipsum sed tincidunt magna venenatis condimentum. Eu tincidunt donec montes, quis."
             image="/images/Hecker.jpg"
           />
         </div>
-        <div className="mt-[80px] md:mt-[250px] ">
+        <div className="mt-[80px] md:mt-[350px] ">
           <div className="opacity-0  translate-y-[100px]" ref={ref7}>
             <Card
               name="QANYA"
@@ -201,7 +216,7 @@ function CardsWork() {
         </div>
       </div>
       <div
-        className="max-w-[880px] flex justify-center opacity-0 translate-y-10 mt-[-200px]"
+        className="max-w-[880px] flex justify-center opacity-0 translate-y-10 mt-[-100px]"
         ref={ref6}
       >
         <div>

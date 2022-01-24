@@ -2,7 +2,7 @@ import { gsap, Power4, Power2 } from 'gsap';
 import React, { useEffect, useRef, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { SplitText } from 'gsap/dist/SplitText';
-import {ScrollTrigger} from 'gsap/dist/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(SplitText);
 
 function Banner() {
@@ -46,7 +46,6 @@ function Banner() {
       ease: Power4.easeOut,
     });
 
-
     return () => {
       splitTextAnimation.kill();
       fadeInAnimation.kill();
@@ -56,7 +55,7 @@ function Banner() {
 
   const [clock, setClock] = useState();
   const text = useRef();
-  
+
   useEffect(() => {
     const colors = ['#FD8550', '#0E6C62', '#FDC52E'];
     if (text.current.textContent.match('b')) {
@@ -74,9 +73,9 @@ function Banner() {
 
   const loaded = () => {
     ScrollTrigger.getAll().forEach((instance) => {
-      instance.refresh()
-    })
-  }
+      instance.refresh();
+    });
+  };
 
   return (
     <section>
@@ -116,8 +115,7 @@ function Banner() {
           loop
           onPlay={loaded}
         >
-          <source src='/video/Hecker.mp4' type='video/mp4'       
-          />
+          <source src="/video/Hecker.mp4" type="video/mp4" />
         </video>
       </div>
     </section>

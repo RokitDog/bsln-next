@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { gsap, Power2 } from 'gsap';
 import ContentCard from './ContentCard';
+import { useRouter } from 'next/router';
 
 function Services() {
   const [ref, inView, entry] = useInView({
@@ -71,9 +72,16 @@ function Services() {
     'Social Media Animations',
     'Explainer Videos',
   ];
+  const router = useRouter().pathname;
 
   return (
-    <section className="bg-white rounded-[40px] px-[80px] py-[160px]">
+    <section
+      className={
+        router === '/'
+          ? `bg-white rounded-[40px] px-[80px] py-[160px]`
+          : 'bg-[#f3f3f3] rounded-[40px] px-[80px] py-[160px]'
+      }
+    >
       <div className="flex space-x-[140px]">
         <div className="flex-[25%] flex-grow-0 flex-shrink-0">
           <div ref={ref} className="opacity-0 translate-y-60">

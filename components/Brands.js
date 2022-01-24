@@ -2,20 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import { gsap, Power2 } from 'gsap';
 import Sliders from './Sliders';
 
-function Brands({testimonialRef}) {
-  const brands = useRef(null)
-  const testimonialTrigger = useRef(null)
+function Brands({ testimonialRef }) {
+  const brands = useRef(null);
+  const testimonialTrigger = useRef(null);
 
-
-  useEffect(() => { 
-
-    
-
+  useEffect(() => {
     const bodyAnim = gsap.to(document.body, {
       scrollTrigger: {
         trigger: testimonialTrigger.current,
         toggleActions: 'play none none reverse',
-        start:"bottom bottom",
+        start: 'bottom bottom',
       },
       backgroundColor: `black`,
       duration: 0.5,
@@ -26,18 +22,17 @@ function Brands({testimonialRef}) {
       scrollTrigger: {
         trigger: testimonialTrigger.current,
         toggleActions: 'play none none reverse',
-        start:"bottom bottom",
+        start: 'bottom bottom',
       },
       autoAlpha: 0,
       y: 0,
       duration: 1.3,
       ease: Power2.easeOut,
-    })
-
+    });
   }, []);
 
   useEffect(() => {
-    let tl
+    let tl;
     const texts = gsap.utils.toArray('.scrolling-text');
     texts.forEach((text, i) => {
       let toggle;
@@ -49,7 +44,7 @@ function Brands({testimonialRef}) {
           trigger: text,
           pin: true,
           pinSpacing: false,
-          // markers: true,
+          markers: true,
           start: 'top center',
           end: 'bottom center',
           toggleActions: toggle,
@@ -78,9 +73,8 @@ function Brands({testimonialRef}) {
     });
 
     return () => {
-      tl.kill()
-
-   }
+      tl.kill();
+    };
   }, []);
 
   return (
