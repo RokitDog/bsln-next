@@ -44,7 +44,7 @@ function Brands({ testimonialRef }) {
           trigger: text,
           pin: true,
           pinSpacing: false,
-          markers: true,
+          // markers: true,
           start: 'top center',
           end: 'bottom center',
           toggleActions: toggle,
