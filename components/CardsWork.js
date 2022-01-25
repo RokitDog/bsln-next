@@ -73,7 +73,7 @@ function CardsWork() {
   }
 
   const [ref6, inView6, entry6] = useInView({
-    threshold: 0.75,
+    threshold: 0,
   });
 
   if (inView6) {
