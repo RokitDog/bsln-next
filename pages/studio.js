@@ -60,7 +60,7 @@ function studio() {
         start: 'bottom center',
         end: 'bottom center',
         toggleActions: 'play none none reverse',
-        markers: true,
+        // markers: true,
       },
       opacity: 0,
       delay: 0.5,
