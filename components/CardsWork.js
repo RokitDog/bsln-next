@@ -146,7 +146,7 @@ function CardsWork() {
 
   return (
     <section className="mb-[142px] md:mb-[250px]">
-      <div ref={ref} className="opacity-0 translate-y-10">
+      <div ref={ref} className="opacity-0 translate-y-10 pl-[80px]">
         <p className="font-medium text-[10px] md:text-[14px] text-[#7D7D7D] mb-[36px]">
           Work
         </p>
