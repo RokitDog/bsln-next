@@ -63,10 +63,12 @@ function Brands({ testimonialRef }) {
 
       tl.to(text, {
         autoAlpha: 0,
+        ease: Power2.easeInOut,
       }).to(
         text,
         {
           autoAlpha: 1,
+          ease: Power2.easeInOut,
         },
         0
       );

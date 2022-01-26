@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { gsap, Power2, Power4 } from 'gsap';
 import { SplitText } from 'gsap/dist/SplitText';
@@ -32,8 +32,11 @@ function HeadingSingle({ title, sub, text }) {
 
   const splitText = useRef();
   useEffect(() => {
-    let mySplitText = new SplitText(splitText.current, { type: 'lines' });
+    let mySplitText;
 
+    mySplitText = new SplitText(splitText.current, {
+      type: 'lines',
+    });
     const splitTextAnimation = gsap.from(mySplitText.lines, 1.3, {
       y: 100,
       opacity: 0,
@@ -56,12 +59,14 @@ function HeadingSingle({ title, sub, text }) {
 
   return (
     <div className=" mb-[180px] md:mb-[150px]">
-      <p
-        className="font-medium text-[10px] md:text-[14px] text-[#7D7D7D] mb-[36px] opacity-0 translate-y-10"
-        ref={ref}
-      >
-        {sub}
-      </p>
+      {sub && (
+        <p
+          className="font-medium text-[10px] md:text-[14px] text-[#7D7D7D] mb-[36px] opacity-0 translate-y-10"
+          ref={ref}
+        >
+          {sub}
+        </p>
+      )}
       <div>
         <h1
           className={`text-[46px] leading-[1.08] tracking-[-0.01rem]  md:text-[72px] max-w-[1030px] inline md:inline-block`}

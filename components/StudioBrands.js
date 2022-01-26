@@ -8,7 +8,7 @@ for (let i = 0; i <= 46; i++) {
 
 function StudioBrands() {
   return (
-    <div className="flex flex-wrap px-[15px] md:px-[80px] justify-between md:justify-start gap-y-[40px] mx-auto max-w-[1440px] md:gap-x-[70px]">
+    <div className="flex flex-wrap px-[15px] md:px-[80px] justify-around md:justify-start gap-y-[40px] mx-auto max-w-[1440px] md:gap-x-[70px]">
       {images.map((image) => (
         <Image key={image} src={image} width={200} height={100} />
       ))}

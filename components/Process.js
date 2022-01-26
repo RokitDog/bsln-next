@@ -4,7 +4,6 @@ import ProcessSection from './ProcessSection';
 import { CallMergeRounded } from '@material-ui/icons';
 
 function Process() {
-  
   useEffect(() => {
     let points = gsap.utils.toArray('.point');
 
@@ -52,14 +51,13 @@ function Process() {
         tl.to(elem.querySelector('.image'), { autoAlpha: 0 }, i + 0.6);
       }
     });
-
   }, []);
   return (
     <div>
       <section className="relative philosophie">
         <div className="h-[100vh] w-[100%] wrapper">
           <ProcessSection
-            imageSrc="/images/0.svg"
+            imageSrc="/images/ContactImg0.svg"
             content="Before we do - we get inspired
             imagine, doodle, brainstorm
             agree and disagree."
