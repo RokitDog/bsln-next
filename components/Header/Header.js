@@ -6,6 +6,7 @@ import Instagram from '@material-ui/icons/Instagram';
 import LinkedIn from '@material-ui/icons/LinkedIn';
 import LogoComponent from './LogoComponent';
 import { gsap, Expo } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 function Header() {
   const ref = useRef();
@@ -15,6 +16,9 @@ function Header() {
   const menuToggle = gsap.timeline({ paused: true, reversed: true });
 
   useEffect(() => {
+    gsap.set(headerRef.current, {
+      background: 'white',
+    });
     let controlit = ref.current;
     menuToggle
 
@@ -39,50 +43,55 @@ function Header() {
   }, []);
 
   useEffect(() => {
+    const headerTLOpen = gsap.timeline({ paused: true });
+    headerTLOpen.to(headerRef.current, {
+      background: 'black',
+      height: '100vh',
+      duration: 1,
+      ease: Expo.easeInOut,
+      onStart: () => {
+        gsap.set(document.body, {
+          overflow: 'hidden',
+        });
+      },
+    });
+    const headerTLClose = gsap.timeline({ paused: true });
+    headerTLClose.to(headerRef.current, {
+      background: 'white',
+      height: '100px',
+      duration: 1,
+      ease: Expo.easeInOut,
+      onStart: () => {
+        gsap.set(document.body, {
+          overflow: 'initial',
+        });
+      },
+      onComplete: () => {
+        ScrollTrigger.getAll().forEach((instance) => {
+          instance.refresh();
+        });
+      },
+    });
+
     if (ref.current.classList.contains('openmenu')) {
-      gsap.to(headerRef.current, {
-        height: '100px',
-        overflow: 'hidden',
-        background: 'white',
-        paddingBottom: '0px',
-        position: 'initial',
-        duration: 1,
-        ease: Expo.easeInOut,
-      });
-      gsap.set(document.body, {
-        overflow: 'initial',
-      });
-      gsap.set('.header', {
-        paddingTop: '0px',
-      });
+      headerTLOpen.play();
+      console.log(`open menu`);
     } else {
-      gsap.to(headerRef.current, {
-        height: '100vh',
-        paddingBottom: '100px',
-        duration: 1,
-        position: 'fixed',
-        ease: Expo.easeInOut,
-        background: 'black',
-      });
-      gsap.set('.header', {
-        paddingTop: '100px',
-      });
-      gsap.set(document.body, {
-        overflow: 'hidden',
-      });
+      headerTLClose.play();
+      console.log(`closed menu`);
     }
   }, [clicked]);
 
   return (
     <header
-      className="h-[100px] flex md:flex-row flex-col justify-between md:items-center md:max-w-[1440px] mx-auto md:px-[50px] lg:px-[80px] px-[30px] pt-[40px] pb-[100px] md:pt-0 md:pb-0 md:relative md:bg-transparent w-full z-[500] top-0"
+      className="h-[100px] flex md:flex-row flex-col justify-between md:items-center md:max-w-[1440px] mx-auto md:px-[50px] lg:px-[80px] px-[30px] pt-[40px] pb-[40px] lg:pb-[100px] md:pt-0 md:pb-0 md:relative md:bg-transparent w-full z-[500] top-0 relative overflow-hidden"
       ref={headerRef}
     >
       <svg
         ref={ref}
         id="burger"
         width="30"
-        className="openmenu md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white transition-all duration-1000"
+        className=" md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white transition-all duration-1000"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 30 30"
         onClick={() => {
