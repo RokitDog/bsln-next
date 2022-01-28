@@ -94,7 +94,7 @@ function Banner() {
         Where your brands voice becomes visual.
       </h1>
       <div className="md:pl-[70px] pt-[40px]" ref={fadeIn}>
-        <p className="text-[20px] md:text-[28px] max-w-[713px] min-h-[90px] md:min-h-[170px]">
+        <p className="text-[20px] md:text-[28px] max-w-[713px] min-h-[120px] md:min-h-[170px] resizing-text">
           Powerful branding and unique SEO friendly websites that help your
           businesses &nbsp;
           <span className="" ref={text}>

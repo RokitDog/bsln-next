@@ -67,7 +67,7 @@ function Header() {
         ref={ref}
         id="burger"
         width="30"
-        className="openmenu md:hidden absolute right-[30px] top-[35px] cursor-pointer"
+        className="openmenu md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 30 30"
         onClick={() => {

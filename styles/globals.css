@@ -55,13 +55,14 @@
   }
   .testimonials .slick-prev {
     left: initial;
-    right: 28px;
+    right: 40px;
     top: 90%;
     z-index: 9;
   }
 
   .testimonials .slick-next {
     bottom: 0;
+    right: 0px;
     top: 90%;
     z-index: 9;
   }
