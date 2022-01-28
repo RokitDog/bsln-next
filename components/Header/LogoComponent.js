@@ -3,7 +3,7 @@ const LogoComponent = (props) => (
     ref={props.reference}
     width={93}
     height={18}
-    className=""
+    className="transition-all duration-1000"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >

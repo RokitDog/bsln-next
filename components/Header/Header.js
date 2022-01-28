@@ -70,7 +70,7 @@ function Header() {
         ref={ref}
         id="burger"
         width="30"
-        className="openmenu md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white"
+        className="openmenu md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white transition-all duration-1000"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 30 30"
         onClick={() => {
@@ -83,7 +83,10 @@ function Header() {
       <div className="w-[93px]">
         <Link href="/">
           <a>
-            <LogoComponent className="mb-[50px] md:mb-0" reference={logoRef} />
+            <LogoComponent
+              className="mb-[50px] md:mb-0 transition-all duration-1000"
+              reference={logoRef}
+            />
           </a>
         </Link>
       </div>
