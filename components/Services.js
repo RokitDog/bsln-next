@@ -89,7 +89,7 @@ function Services() {
               Services
             </p>
             <div>
-              <h2 className="text-[30px] leading-[1.13] tracking-[-0.01rem] mt-[20px] md:mt-[40px] md:text-[42px] mb-[30px] text-[#0f0f0f]">
+              <h2 className="text-[30px] leading-[1.13] tracking-[-0.01rem] mt-[20px] md:mt-[40px] md:text-[32px] mb-[30px] text-[#0f0f0f]">
                 Helping business <br />
                 grow and brands <br /> evolve since 2008
               </h2>
