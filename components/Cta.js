@@ -20,7 +20,7 @@ function Cta() {
               alt="illustration"
             />
           </div>
-          <div className="flex justify-between space-x-[20px] md:space-x-[60px] items-center">
+          <div className="flex justify-between w-full md:w-[initial] md:space-x-[60px] items-center">
             <p className="text-white text-[14px] md:text-[16px]">
               Have a project in mind?
             </p>

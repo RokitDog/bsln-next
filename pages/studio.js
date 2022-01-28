@@ -20,7 +20,7 @@ function studio() {
   const cardsRef = useRef();
   const revealSection = useRef();
   useEffect(() => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1024) {
       Cursor();
     }
 

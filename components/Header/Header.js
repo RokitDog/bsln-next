@@ -75,16 +75,14 @@ function Header() {
 
     if (ref.current.classList.contains('openmenu')) {
       headerTLOpen.play();
-      console.log(`open menu`);
     } else {
       headerTLClose.play();
-      console.log(`closed menu`);
     }
   }, [clicked]);
 
   return (
     <header
-      className="h-[100px] flex md:flex-row flex-col justify-between md:items-center md:max-w-[1440px] mx-auto md:px-[50px] lg:px-[80px] px-[30px] pt-[40px] pb-[40px] lg:pb-[100px] md:pt-0 md:pb-0 md:relative md:bg-transparent w-full z-[500] top-0 relative overflow-hidden"
+      className="h-[100px] flex md:flex-row flex-col justify-between md:items-center md:max-w-[1440px] mx-auto md:px-[50px] lg:px-[80px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0 md:relative md:bg-transparent w-full z-[500] top-0 relative overflow-hidden"
       ref={headerRef}
     >
       <svg

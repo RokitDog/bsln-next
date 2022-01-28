@@ -97,7 +97,7 @@ function Brands({ testimonialRef }) {
           <h2 className="h-[300px] lg:h-[600px] max-w-[527px] opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
             You have an idea but you're not sure about it?
           </h2>
-          <h2 className="h-[300px] lg:h-[600px] max-w-[527px]  opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
+          <h2 className="h-[300px] lg:h-[600px] max-w-[448px]  opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
             It's too big, too small too crazy, too boring, or just too average?
           </h2>
           <div className="h-[300px] lg:h-[600px]  max-w-[527px]  opacity-0 scrolling-text  flex flex-col space-y-[20px] mx-auto">
@@ -105,7 +105,7 @@ function Brands({ testimonialRef }) {
               We've got you.
               <br />
             </h2>
-            <span className="text-[20px] text-[#7D7D7D] fade-in opacity-0 translate-y-10 leading-[1.13] max-w-[300px] mx-auto text-center">
+            <span className="text-[20px] text-[#7D7D7D] fade-in opacity-0 translate-y-10 leading-[1.13] max-w-[300px] md:max-w-full mx-auto text-center">
               Let’s shape that idea of yours into something grand.
             </span>
           </div>

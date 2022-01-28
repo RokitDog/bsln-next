@@ -40,33 +40,37 @@ function Footer() {
           <div className="space-x-[30px]">
             <Link href="#">
               <a>
-                <FacebookIcon />
+                <FacebookIcon className="hover:scale-125 transition-transform duration-300 ease-out" />
               </a>
             </Link>
             <Link href="#">
               <a>
-                <Twitter />
+                <Twitter className="hover:scale-125 transition-transform duration-300 ease-out" />
               </a>
             </Link>
             <Link href="#">
               <a>
-                <Instagram />
+                <Instagram className="hover:scale-125 transition-transform duration-300 ease-out" />
               </a>
             </Link>
             <Link href="#">
               <a>
-                <LinkedIn />
+                <LinkedIn className="hover:scale-125 transition-transform duration-300 ease-out" />
               </a>
             </Link>
           </div>
           <div className="flex space-y-[10px] md:space-y-0 md:space-x-[50px] mt-[50px] flex-col md:flex-row">
             <div>
               <p className="text-[#7D7D7D] font-medium">United States</p>
-              <a className="text-[#7D7D7D]">us@wearebaseline.com</a>
+              <a className="text-[#7D7D7D] header-links cursor-pointer">
+                us@wearebaseline.com
+              </a>
             </div>
             <div>
               <p className="text-[#7D7D7D] font-medium">Europe</p>
-              <a className="text-[#7D7D7D]">europe@wearebaseline.com</a>
+              <a className="text-[#7D7D7D] header-links cursor-pointer">
+                europe@wearebaseline.com
+              </a>
             </div>
           </div>
         </div>

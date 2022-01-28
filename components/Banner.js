@@ -9,7 +9,6 @@ function Banner() {
   const splitText = useRef();
   const fadeIn = useRef();
   const slideIn = useRef();
-  const [fontLoaded, setFontLoaded] = useState(false);
 
   useEffect(() => {
     const fadeInAnimation = gsap.from(fadeIn.current, {
@@ -32,30 +31,48 @@ function Banner() {
     };
   }, []);
 
+  const [fontLoaded, setFontLoaded] = useState(false);
   useEffect(() => {
-    let mySplitText = new SplitText(splitText.current, { type: 'lines' });
-
-    const splitTextAnimation = gsap.from(mySplitText.lines, 1.3, {
-      y: 100,
-      opacity: 0,
-      ease: Power4.easeOut,
-      delay: 0.5,
-      stagger: {
-        amount: 0.3,
-      },
-    });
-
-    let resizeTimeout;
-    const resizeComplete = () => {
-      mySplitText.revert();
+    let fontLoadTimeout;
+    const fontLoadingComplete = () => {
+      let font = document.fonts.check('46px Helvetica Neue');
+      setFontLoaded(font);
     };
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(resizeComplete, 200);
+    window.addEventListener('load', () => {
+      clearTimeout(fontLoadTimeout);
+      fontLoadTimeout = setTimeout(fontLoadingComplete, 1);
     });
+
+    let mySplitText;
+    let splitTextAnimation;
+    if (fontLoaded) {
+      mySplitText = new SplitText(splitText.current, { type: 'lines' });
+
+      splitTextAnimation = gsap.from(mySplitText.lines, 1.3, {
+        y: 100,
+        opacity: 0,
+        ease: Power4.easeOut,
+        delay: 0.5,
+        stagger: {
+          amount: 0.3,
+        },
+      });
+
+      let resizeTimeout;
+      const resizeComplete = () => {
+        mySplitText.revert();
+      };
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resizeComplete, 200);
+      });
+    }
     return () => {
-      splitTextAnimation.kill();
+      setFontLoaded(false);
     };
+  }, [fontLoaded]);
+  useEffect(() => {
+    setFontLoaded(!fontLoaded);
   }, []);
 
   const [clock, setClock] = useState();
