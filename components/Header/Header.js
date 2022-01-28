@@ -49,6 +49,9 @@ function Header() {
         duration: 1,
         ease: Expo.easeInOut,
       });
+      gsap.set('.header', {
+        paddingTop: '0px',
+      });
     } else {
       gsap.to(headerRef.current, {
         height: '100vh',
@@ -57,6 +60,9 @@ function Header() {
         position: 'fixed',
         ease: Expo.easeInOut,
         background: 'black',
+      });
+      gsap.set('.header', {
+        paddingTop: '100px',
       });
     }
   }, [clicked]);
