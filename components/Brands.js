@@ -94,19 +94,16 @@ function Brands({ testimonialRef }) {
       </div>
       <div className="h-[100vh] flex justify-center items-center relative px-[30px] md:px-0">
         <div>
-          <h2 className="h-[600px] opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
-            You have an idea but you're <br />
-            not sure about it?
+          <h2 className="h-[300px] lg:h-[600px] max-w-[527px] opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
+            You have an idea but you're not sure about it?
           </h2>
-          <h2 className="h-[600px]  opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
-            It's too big, too small <br />
-            too crazy, too boring, or <br />
-            just too average?
+          <h2 className="h-[300px] lg:h-[600px] max-w-[527px]  opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
+            It's too big, too small too crazy, too boring, or just too average?
           </h2>
-          <h2 className="h-[600px]  opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
+          <h2 className="h-[300px] lg:h-[600px]  max-w-[527px]  opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
             We've got you.
             <br />
-            <span className="text-[20px] text-[#7D7D7D] mt-[60px] fade-in opacity-0 translate-y-10">
+            <span className="text-[20px] text-[#7D7D7D] mt-[60px] fade-in opacity-0 translate-y-10 leading-[1.13]">
               Let’s shape that idea of yours into something grand.
             </span>
           </h2>

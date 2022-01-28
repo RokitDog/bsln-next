@@ -20,7 +20,9 @@ function studio() {
   const cardsRef = useRef();
   const revealSection = useRef();
   useEffect(() => {
-    Cursor();
+    if (window.innerWidth > 768) {
+      Cursor();
+    }
 
     gsap.from(imageRef.current, {
       opacity: 0,

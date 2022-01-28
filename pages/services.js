@@ -24,7 +24,9 @@ function services() {
   }
 
   useEffect(() => {
-    Cursor();
+    if (window.innerWidth > 768) {
+      Cursor();
+    }
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();

@@ -21,10 +21,12 @@ function Cta() {
             />
           </div>
           <div className="flex justify-between space-x-[20px] md:space-x-[60px] items-center">
-            <p className="text-white text-[16px]">Have a project in mind?</p>
+            <p className="text-white text-[14px] md:text-[16px]">
+              Have a project in mind?
+            </p>
 
             <Link href="/contact">
-              <a className="text-[16px] text-white bg-black rounded-full px-[15px] py-[10px] hover:bg-white hover:text-black transition ease-out duration-300">
+              <a className="text-[14px] md:text-[16px] text-white bg-black rounded-full px-[15px] py-[10px] hover:bg-white hover:text-black transition ease-out duration-300">
                 Let's get to work
               </a>
             </Link>

@@ -88,7 +88,7 @@ function Banner() {
   return (
     <section>
       <h1
-        className=" text-[46px] tracking-[-0.01] md:text-[72px] leading-[1.08] md:pl-[70px] md:pt-[100px] pt-[145px] max-w-[900px]"
+        className=" text-[46px] tracking-[-0.01] md:text-[72px] leading-[1.08] md:pl-[70px] md:pt-[100px] pt-[50px] max-w-[900px]"
         ref={splitText}
       >
         Where your brands voice becomes visual.

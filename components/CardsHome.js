@@ -87,9 +87,8 @@ function CardsHome() {
           Work
         </p>
         <div>
-          <h2 className="text-[30px] leading-[1.13] tracking-[-0.01rem] mt-[20px] md:mt-[40px] md:text-[42px] mb-[30px]">
-            Your project can be the next big <br />
-            thing we are proud to show off.
+          <h2 className="text-[30px] leading-[1.13] tracking-[-0.01rem] mt-[20px] md:mt-[40px] md:text-[42px] mb-[30px] max-w-[596px]">
+            Your project can be the next big thing we are proud to show off.
           </h2>
           <p className="text-[17px] md:text-[20px]">
             It takes one email to{' '}

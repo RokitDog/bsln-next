@@ -19,7 +19,9 @@ function InsightNews() {
         amount: 0.5,
       },
     });
-    Cursor();
+    if (window.innerWidth > 768) {
+      Cursor();
+    }
   }, [anim]);
 
   return (

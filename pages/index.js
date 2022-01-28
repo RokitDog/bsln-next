@@ -30,7 +30,9 @@ export default function Home() {
   const testimonials = useRef(null);
 
   useEffect(() => {
-    Cursor();
+    if (window.innerWidth > 768) {
+      Cursor();
+    }
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();

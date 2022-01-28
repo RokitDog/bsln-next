@@ -9,7 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 function contact() {
   useEffect(() => {
-    Cursor();
+    if (window.innerWidth > 768) {
+      Cursor();
+    }
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
@@ -68,7 +70,6 @@ function contact() {
   }, []);
 
   useEffect(() => {
-    Cursor();
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
