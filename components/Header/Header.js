@@ -49,6 +49,9 @@ function Header() {
         duration: 1,
         ease: Expo.easeInOut,
       });
+      gsap.set(document.body, {
+        overflow: 'initial',
+      });
       gsap.set('.header', {
         paddingTop: '0px',
       });
@@ -63,6 +66,9 @@ function Header() {
       });
       gsap.set('.header', {
         paddingTop: '100px',
+      });
+      gsap.set(document.body, {
+        overflow: 'hidden',
       });
     }
   }, [clicked]);
