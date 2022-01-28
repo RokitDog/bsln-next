@@ -18,6 +18,17 @@ function Brands({ testimonialRef }) {
       ease: Power2.easeOut,
     });
 
+    gsap.to('.cards-home', {
+      scrollTrigger: {
+        trigger: testimonialTrigger.current,
+        toggleActions: 'play none none reverse',
+        start: 'bottom bottom',
+      },
+      autoAlpha: 0,
+      duration: 0.5,
+      ease: Power2.easeOut,
+    });
+
     const testimonialAnim = gsap.to(testimonialRef.current, {
       scrollTrigger: {
         trigger: testimonialTrigger.current,
@@ -97,7 +108,7 @@ function Brands({ testimonialRef }) {
           <h2 className="h-[300px] lg:h-[600px] max-w-[527px] opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
             You have an idea but you're not sure about it?
           </h2>
-          <h2 className="h-[300px] lg:h-[600px] max-w-[448px]  opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
+          <h2 className="h-[300px] lg:h-[600px] max-w-[448px] mx-auto opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
             It's too big, too small too crazy, too boring, or just too average?
           </h2>
           <div className="h-[300px] lg:h-[600px]  max-w-[527px]  opacity-0 scrolling-text  flex flex-col space-y-[20px] mx-auto">

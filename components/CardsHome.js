@@ -81,7 +81,7 @@ function CardsHome() {
     });
   }
   return (
-    <section className="mb-[142px] md:mb-[250px]">
+    <section className="mb-[142px] md:mb-[250px] cards-home">
       <div ref={ref} className="opacity-0 translate-y-10">
         <p className="font-medium text-[10px] md:text-[14px] text-[#7D7D7D]">
           Work
