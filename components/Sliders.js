@@ -10,7 +10,12 @@ function Sliders(props) {
         }
       >
         <div className="flex space-x-[70px] shrink-0 w-[100%] relative">
-          <Image src="/images/sliderImages/6.svg" width={200} height={100} />
+          <Image
+            src="/images/sliderImages/6.svg"
+            width={200}
+            height={100}
+            className="min-w-[160px]"
+          />
           <Image src="/images/sliderImages/7.svg" width={200} height={100} />
           <Image src="/images/sliderImages/8.svg" width={200} height={100} />
           <Image src="/images/sliderImages/9.svg" width={200} height={100} />

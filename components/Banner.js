@@ -9,6 +9,28 @@ function Banner() {
   const splitText = useRef();
   const fadeIn = useRef();
   const slideIn = useRef();
+  const [fontLoaded, setFontLoaded] = useState(false);
+
+  useEffect(() => {
+    const fadeInAnimation = gsap.from(fadeIn.current, {
+      y: 50,
+      delay: 1.5,
+      duration: 1.3,
+      opacity: 0,
+      ease: Power2.easeOut,
+    });
+
+    const slideInVideo = gsap.from(slideIn.current, 3, {
+      transform: 'scaleX(0)',
+      delay: 2,
+      ease: Power4.easeOut,
+    });
+
+    return () => {
+      fadeInAnimation.kill();
+      slideInVideo.kill();
+    };
+  }, []);
 
   useEffect(() => {
     let mySplitText = new SplitText(splitText.current, { type: 'lines' });
@@ -31,25 +53,8 @@ function Banner() {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(resizeComplete, 200);
     });
-
-    const fadeInAnimation = gsap.from(fadeIn.current, {
-      y: 50,
-      delay: 1.5,
-      duration: 1.3,
-      opacity: 0,
-      ease: Power2.easeOut,
-    });
-
-    const slideInVideo = gsap.from(slideIn.current, 3, {
-      transform: 'scaleX(0)',
-      delay: 2,
-      ease: Power4.easeOut,
-    });
-
     return () => {
       splitTextAnimation.kill();
-      fadeInAnimation.kill();
-      slideInVideo.kill();
     };
   }, []);
 
@@ -57,15 +62,18 @@ function Banner() {
   const text = useRef();
 
   useEffect(() => {
-    const colors = ['#FD8550', '#0E6C62', '#FDC52E'];
-    if (text.current.textContent.match('b')) {
+    const colors = ['#FD8550', '#0E6C62', '#FDC52E', '#3E70A6'];
+    if (text.current.textContent.match('a')) {
       text.current.style.color = colors[0];
     }
-    if (text.current.textContent.match('l')) {
+    if (text.current.textContent.match('b')) {
       text.current.style.color = colors[1];
     }
-    if (text.current.textContent.match('g')) {
+    if (text.current.textContent.match('c')) {
       text.current.style.color = colors[2];
+    }
+    if (text.current.textContent.match('s')) {
+      text.current.style.color = colors[3];
     }
 
     return () => {};
@@ -80,16 +88,15 @@ function Banner() {
   return (
     <section>
       <h1
-        className=" text-[46px] tracking-[-0.01] md:text-[72px] leading-[1.08] md:pl-[70px] md:pt-[100px]"
+        className=" text-[46px] tracking-[-0.01] md:text-[72px] leading-[1.08] md:pl-[70px] md:pt-[100px] pt-[145px] max-w-[900px]"
         ref={splitText}
       >
-        Where your brands voice <br />
-        becomes visual.
+        Where your brands voice becomes visual.
       </h1>
       <div className="md:pl-[70px] pt-[40px]" ref={fadeIn}>
-        <p className="text-[20px] md:text-[28px]">
-          Powerful branding and unique SEO friendly websites
-          <br /> that help your businesses &nbsp;
+        <p className="text-[20px] md:text-[28px] max-w-[713px] min-h-[90px] md:min-h-[170px]">
+          Powerful branding and unique SEO friendly websites that help your
+          businesses &nbsp;
           <span className="" ref={text}>
             <Typewriter
               loop
@@ -98,7 +105,12 @@ function Banner() {
               typeSpeed={70}
               deleteSpeed={50}
               delaySpeed={1000}
-              words={['bring in clients', 'grow', 'learn']}
+              words={[
+                'achieve success',
+                'bring in clients',
+                'create a lasting impression',
+                'stand out',
+              ]}
               onType={(words) => {
                 setClock(words);
               }}

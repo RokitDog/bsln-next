@@ -57,7 +57,7 @@ function Process() {
       <section className="relative philosophie">
         <div className="h-[100vh] w-[100%] wrapper">
           <ProcessSection
-            imageSrc="/images/ContactImg0.svg"
+            imageSrc="/images/0.svg"
             content="Before we do - we get inspired
             imagine, doodle, brainstorm
             agree and disagree."

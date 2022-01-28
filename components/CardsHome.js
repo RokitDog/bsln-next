@@ -97,28 +97,42 @@ function CardsHome() {
           </p>
         </div>
       </div>
-      <div className="flex justify-between">
-        <div className="mt-[200px] opacity-0  translate-y-[100px]" ref={ref2}>
+      <div className="grid md:grid-cols-2 gap-x-[40px] 2xl:grid-cols-3">
+        <div
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  2xl:mt-[200px]"
+          ref={ref2}
+        >
           <Card
             name="FLOWER COUTURE"
             text="Magna ultrices dictum odio morbi sagittis quis at orci."
             image="/images/FlowerCouture.jpg"
           />
         </div>
-        <div className="mt-[300px] opacity-0  translate-y-[100px]" ref={ref3}>
+        <div
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  2xl:mt-[300px]"
+          ref={ref3}
+        >
           <Card
             name="Nestlé"
             text="Cursus id volutpat eleifend id quis in natoque velit. Integer risus adipiscing sed platea quis platea a purus consectetur."
             image="/images/Nestle.jpg"
           />
         </div>
-        <div className="mt-[-100px] opacity-0  translate-y-[100px]" ref={ref4}>
-          <Card
-            name="Mihano Momosa"
-            text="Nisl diam sed porttitor amet ullamcorper velit enim, faucibus sed."
-            image="/images/Mihano Momosa.jpg"
-          />
-          <div className="mt-[160px] opacity-0  translate-y-[100px]" ref={ref5}>
+        <div
+          className="mt-[80px] opacity-0  translate-y-[100px]  md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto 2xl:col-span-1 2xl:flex-col 2xl:mt-[-100px]"
+          ref={ref4}
+        >
+          <div className="">
+            <Card
+              name="Mihano Momosa"
+              text="Nisl diam sed porttitor amet ullamcorper velit enim, faucibus sed."
+              image="/images/Mihano Momosa.jpg"
+            />
+          </div>
+          <div
+            className="mt-[80px] mb-[100px] opacity-0  2xl:translate-y-[100px] justify-self-center   md:mt-0 2xl:mt-[160px]"
+            ref={ref5}
+          >
             <Card
               name="luv Michael"
               text="Vitae, massa rhoncus ac velit in ac cras. Suspendisse facilisis eget arcu vestibulum lacus, faucibus."
@@ -128,7 +142,7 @@ function CardsHome() {
         </div>
       </div>
       <div
-        className="max-w-[880px] flex justify-center opacity-0 translate-y-10"
+        className="max-w-full 2xl:max-w-[880px] flex justify-center opacity-0 translate-y-10"
         ref={ref6}
       >
         <div>

@@ -92,7 +92,7 @@ function Brands({ testimonialRef }) {
         <Sliders />
         <Sliders left={true} />
       </div>
-      <div className="h-[100vh] flex justify-center items-center relative">
+      <div className="h-[100vh] flex justify-center items-center relative px-[30px] md:px-0">
         <div>
           <h2 className="h-[600px] opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
             You have an idea but you're <br />

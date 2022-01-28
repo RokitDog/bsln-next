@@ -78,12 +78,12 @@ function Services() {
     <section
       className={
         router === '/'
-          ? `bg-white rounded-[40px] px-[80px] py-[160px]`
-          : 'bg-[#f3f3f3] rounded-[40px] px-[80px] py-[160px]'
+          ? `bg-white rounded-[40px] px-[30px] md:px-[50px] lg:px-[80px] py-[60px] lg:py-[160px]`
+          : 'bg-[#f3f3f3] rounded-[40px] px-[30px] md:px-[50px] lg:px-[80px] py-[60px] lg:py-[160px]'
       }
     >
-      <div className="flex space-x-[140px]">
-        <div className="flex-[25%] flex-grow-0 flex-shrink-0">
+      <div className=" xl:space-x-[140px] xl:flex">
+        <div className="xl:flex-[25%] xl:flex-grow-0 xl:flex-shrink-0">
           <div ref={ref} className="opacity-0 translate-y-60">
             <p className="text-[10px] md:text-[14px] text-[#7D7D7D] font-medium">
               Services
@@ -96,7 +96,7 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="flex-[75%] flex-grow-1 flex-shrink-1 flex flex-wrap">
+        <div className="xl:flex-[75%] xl:flex-grow-1 xl:flex-shrink-1 flex flex-col md:flex-row md:flex-wrap pt-[70px] xl:pt-[0]">
           <ContentCard name="Branding" content={items1} />
           <ContentCard name="Print Design" content={items2} />
           <ContentCard name="Websites" content={items3} />

@@ -8,7 +8,7 @@ import Link from 'next/link';
 function Footer() {
   return (
     <footer className="bg-white">
-      <div className="max-w-[1440px] mx-auto py-[100px] flex justify-between items-center">
+      <div className="max-w-[1440px] lg:px-[150px] 2xl:px-0 mx-auto px-[30px] py-[100px] flex flex-col justify-between items-start md:flex-row">
         <ul className="space-y-[20px]">
           <li>
             <Link href="/work">
@@ -36,7 +36,7 @@ function Footer() {
             </Link>
           </li>
         </ul>
-        <div className="grow-1 mt-[100px]">
+        <div className="grow-1 mt-[40px] md:mt-[100px]">
           <div className="space-x-[30px]">
             <Link href="#">
               <a>
@@ -59,7 +59,7 @@ function Footer() {
               </a>
             </Link>
           </div>
-          <div className="flex space-x-[50px] mt-[50px]">
+          <div className="flex space-y-[10px] md:space-y-0 md:space-x-[50px] mt-[50px] flex-col md:flex-row">
             <div>
               <p className="text-[#7D7D7D] font-medium">United States</p>
               <a className="text-[#7D7D7D]">us@wearebaseline.com</a>
