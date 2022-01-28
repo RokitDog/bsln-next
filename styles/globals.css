@@ -66,6 +66,9 @@
     top: 90%;
     z-index: 9;
   }
+  .inverted {
+    fill: white;
+  }
   .testimonials .slick-prev::before {
     content: initial;
   }

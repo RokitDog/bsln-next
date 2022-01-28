@@ -10,6 +10,7 @@ import { gsap, Expo } from 'gsap';
 function Header() {
   const ref = useRef();
   const headerRef = useRef();
+  const logoRef = useRef();
   const [clicked, setClicked] = useState(false);
   const menuToggle = gsap.timeline({ paused: true, reversed: true });
 
@@ -32,6 +33,8 @@ function Header() {
     controlit.addEventListener('click', function () {
       menuToggle.reversed() ? menuToggle.restart() : menuToggle.reverse();
       controlit.classList.toggle('openmenu');
+      ref.current.classList.toggle('inverted');
+      logoRef.current.classList.toggle('inverted');
     });
   }, []);
 
@@ -43,14 +46,14 @@ function Header() {
         background: 'white',
         paddingBottom: '0px',
         position: 'initial',
-        duration: 0.5,
+        duration: 1,
         ease: Expo.easeInOut,
       });
     } else {
       gsap.to(headerRef.current, {
         height: '100vh',
         paddingBottom: '100px',
-        duration: 0.5,
+        duration: 1,
         position: 'fixed',
         ease: Expo.easeInOut,
         background: 'black',
@@ -74,13 +77,13 @@ function Header() {
           setClicked(!clicked);
         }}
       >
-        <path className="top invert mix-blend-difference" d="M0 9h30v2H0z" />
-        <path className="bot invert mix-blend-difference" d="M0 19h30v2H0z" />
+        <path className="top " d="M0 9h30v2H0z" />
+        <path className="bot " d="M0 19h30v2H0z" />
       </svg>
       <div className="w-[93px]">
         <Link href="/">
           <a>
-            <LogoComponent className="mb-[50px] md:mb-0" />
+            <LogoComponent className="mb-[50px] md:mb-0" reference={logoRef} />
           </a>
         </Link>
       </div>
