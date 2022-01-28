@@ -80,14 +80,14 @@ function Brands({ testimonialRef }) {
   }, []);
 
   return (
-    <section ref={brands} className="mb-[900px]">
+    <section ref={brands} className="mb-[600px] md:mb-[900px]">
       <div
         ref={testimonialTrigger}
-        className=" text-[30px] tracking-[-1%] text-center text-white md:text-[42px]  flex justify-center items-center my-[300px] "
+        className=" text-[30px] tracking-[-1%] text-center text-white md:text-[42px]  flex justify-center items-center my-[200px] md:my-[300px] "
       >
         <h2>Big names that trust us</h2>
       </div>
-      <div className="mb-[620px]">
+      <div className="mb-[320px] md:mb-[620px]">
         <Sliders left={true} />
         <Sliders />
         <Sliders left={true} />
