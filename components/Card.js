@@ -10,6 +10,7 @@ function Card({ name, text, image }) {
           layout="fill"
           className="rounded-[10px]"
           objectFit="cover"
+          priority
         />
       </div>
       <div className="mt-[40px] flex items-start space-x-[30px]">
