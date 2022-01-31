@@ -86,7 +86,7 @@ function contact() {
       <main>
         <div className="max-w-[1440px] mx-auto px-[30px] md:px-[50px] lg:px-[80px] ">
           <div>
-            <section className="relative philosophie pb-[100px] md:pb-[150px]">
+            <section className="relative philosophie pb-[100px] md:pb-[150px] ">
               <div className="h-[100vh] w-[100%] wrapper relative">
                 <ContactSlider
                   imageSrc="/images/Contact0.svg"
