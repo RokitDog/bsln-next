@@ -53,6 +53,11 @@
   .hover-js {
     cursor: none;
   }
+  @media screen and (max-width: 1024px) {
+    .hover-js {
+      cursor: initial;
+    }
+  }
   .testimonials .slick-prev {
     left: initial;
     right: 40px;

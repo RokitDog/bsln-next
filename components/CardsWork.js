@@ -8,6 +8,7 @@ import HeadingSingle from './HeadingSingle';
 gsap.registerPlugin(SplitText);
 
 function CardsWork() {
+  useEffect(() => {}, []);
   const [ref, inView, entry] = useInView({
     threshold: 0.75,
   });
@@ -26,12 +27,14 @@ function CardsWork() {
   });
 
   if (inView2) {
+    let innerWindowWidthh = window.innerWidth;
+
     const fadeInAnimation = gsap.to(entry2.target, {
       y: 0,
       duration: 1,
       opacity: 1,
       ease: Power2.easeOut,
-      delay: 1.5,
+      delay: innerWindowWidthh > 1535 ? 1.5 : 0,
     });
   }
 
@@ -52,12 +55,13 @@ function CardsWork() {
   });
 
   if (inView4) {
+    let innerWindowWidthh = window.innerWidth;
     const fadeInAnimation = gsap.to(entry4.target, {
       y: 0,
       duration: 1,
       opacity: 1,
       ease: Power2.easeOut,
-      delay: 1.5,
+      delay: innerWindowWidthh > 1535 ? 1.5 : 0,
     });
   }
   const [ref5, inView5, entry5] = useInView({
@@ -164,7 +168,7 @@ function CardsWork() {
             />
           </div>
           <div
-            className="mt-[80px]  opacity-0  2xl:translate-y-[100px] justify-self-center   md:mt-0 2xl:mt-[160px]"
+            className="mt-[80px]  opacity-0 translate-y-[100px] justify-self-center   md:mt-0 2xl:mt-[160px]"
             ref={ref5}
           >
             <Card

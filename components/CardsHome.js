@@ -129,7 +129,7 @@ function CardsHome() {
             />
           </div>
           <div
-            className="mt-[80px] mb-[100px] opacity-0  2xl:translate-y-[100px] justify-self-center   md:mt-0 2xl:mt-[160px]"
+            className="mt-[80px] mb-[100px] opacity-0 translate-y-[100px]  justify-self-center   md:mt-0 2xl:mt-[160px]"
             ref={ref5}
           >
             <Card
