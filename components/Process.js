@@ -55,7 +55,7 @@ function Process() {
   return (
     <div>
       <section className="relative philosophie">
-        <div className="h-[100vh] w-[100%] wrapper">
+        <div className="h-[100vh] w-[100%] wrapper relative">
           <ProcessSection
             imageSrc="/images/0.svg"
             content="Before we do - we get inspired
