@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap, Power2 } from 'gsap';
 import ContactSlider from '../components/ContactSlider';
 import ContactForm from '../components/ContactForm';
+import { InsertCommentSharp } from '@material-ui/icons';
 gsap.registerPlugin(ScrollTrigger);
 
 function contact() {
@@ -75,6 +76,9 @@ function contact() {
       console.log(`lool`);
       let vh = window.innerHeight * 0.01;
       sliderRef.current.style.height = `=${vh}px`;
+      ScrollTrigger.getAll().forEach((instance) => {
+        instance.refresh();
+      });
     });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
