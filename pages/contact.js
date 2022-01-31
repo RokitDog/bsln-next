@@ -12,6 +12,7 @@ function contact() {
     if (window.innerWidth > 1024) {
       Cursor();
     }
+
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
@@ -70,6 +71,11 @@ function contact() {
   }, []);
 
   useEffect(() => {
+    window.addEventListener('resize', () => {
+      console.log(`lool`);
+      let vh = window.innerHeight * 0.01;
+      sliderRef.current.style.height = `=${vh}px`;
+    });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
@@ -80,6 +86,7 @@ function contact() {
 
   const thankYouRef = useRef();
   const formRef = useRef();
+  const sliderRef = useRef();
 
   return (
     <div>
@@ -87,7 +94,10 @@ function contact() {
         <div className="max-w-[1440px] mx-auto px-[30px] md:px-[50px] lg:px-[80px] ">
           <div>
             <section className="relative philosophie pb-[100px] md:pb-[150px] ">
-              <div className="h-[100vh] w-[100%] wrapper relative">
+              <div
+                className="h-[100vh] w-[100%] wrapper relative"
+                ref={sliderRef}
+              >
                 <ContactSlider
                   imageSrc="/images/Contact0.svg"
                   content="If your website is in desperate need of a polish."

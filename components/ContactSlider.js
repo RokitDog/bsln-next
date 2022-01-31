@@ -15,6 +15,7 @@ function ContactSlider({ imageSrc, content }) {
         width="628"
         height="600"
         className="image"
+        priority
       />
     </div>
   );
