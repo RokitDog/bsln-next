@@ -31,31 +31,46 @@ function HeadingSingle({ title, sub, text }) {
   }
 
   const splitText = useRef();
+  const [isFontLoaded, setIsFontLoaded] = useState();
+
   useEffect(() => {
-    let mySplitText;
-
-    mySplitText = new SplitText(splitText.current, {
-      type: 'lines',
-    });
-    const splitTextAnimation = gsap.from(mySplitText.lines, 1.3, {
-      y: 100,
-      opacity: 0,
-      ease: Power4.easeOut,
-      delay: 0.5,
-      stagger: {
-        amount: 0.3,
-      },
-    });
-
-    let resizeTimeout;
-    const resizeComplete = () => {
-      mySplitText.revert();
+    const fontLoaded = () => {
+      if (document.fonts.check('72px Helvetica Neue')) {
+        setIsFontLoaded(!isFontLoaded);
+      } else {
+      }
     };
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(resizeComplete, 200);
-    });
+    clearTimeout(loadTimeout);
+    const loadTimeout = setTimeout(fontLoaded, 1);
   }, []);
+
+  useEffect(() => {
+    if (isFontLoaded) {
+      let mySplitText;
+
+      mySplitText = new SplitText(splitText.current, {
+        type: 'lines',
+      });
+      const splitTextAnimation = gsap.from(mySplitText.lines, 1.3, {
+        y: 100,
+        opacity: 0,
+        ease: Power4.easeOut,
+        delay: 0.5,
+        stagger: {
+          amount: 0.3,
+        },
+      });
+
+      let resizeTimeout;
+      const resizeComplete = () => {
+        mySplitText?.revert();
+      };
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resizeComplete, 200);
+      });
+    }
+  }, [isFontLoaded]);
 
   return (
     <div className=" mb-[180px] md:mb-[150px]">

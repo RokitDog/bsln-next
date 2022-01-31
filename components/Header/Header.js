@@ -16,10 +16,10 @@ function Header() {
   const menuToggle = gsap.timeline({ paused: true, reversed: true });
 
   useEffect(() => {
+    let controlit = ref.current;
     gsap.set(headerRef.current, {
       background: 'white',
     });
-    let controlit = ref.current;
     menuToggle
 
       .add('rotate')
@@ -43,6 +43,8 @@ function Header() {
   }, []);
 
   useEffect(() => {
+    let controlit = ref.current;
+
     const headerTLOpen = gsap.timeline({ paused: true });
     headerTLOpen.to(headerRef.current, {
       background: 'black',
@@ -54,6 +56,17 @@ function Header() {
           overflow: 'hidden',
         });
       },
+    });
+
+    const links = gsap.utils.toArray('.header-links');
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        menuToggle.reverse();
+        controlit.classList.remove('openmenu');
+        ref.current.classList.remove('inverted');
+        logoRef.current.classList.remove('inverted');
+        headerTLClose.play();
+      });
     });
     const headerTLClose = gsap.timeline({ paused: true });
     headerTLClose.to(headerRef.current, {

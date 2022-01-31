@@ -22,8 +22,8 @@ function insights() {
   return (
     <div>
       <main>
-        <div className="max-w-[1440px] mx-auto px-[80px] mb-[100px]">
-          <div className="mt-[100px] px-[80px] max-w-[950px]">
+        <div className="max-w-[1440px] mx-auto px-[30px] md:px-[50px] lg:px-[80px] mb-[100px]">
+          <div className="mt-[100px] md:px-[50px] lg:px-[80px] max-w-[950px]">
             <HeadingSingle
               title="All of our latest updates, faces and stories from across our network."
               sub="Insights"

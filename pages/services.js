@@ -79,8 +79,8 @@ function services() {
   return (
     <div>
       <main>
-        <div className="max-w-[1440px] mx-auto px-[80px] mb-[100px]">
-          <div className="mt-[100px] px-[80px]">
+        <div className="max-w-[1440px] mx-auto px-[30px] md:px-[50px] lg:px-[80px] mb-[100px]">
+          <div className="mt-[100px] md:px-[50px] lg:px-[80px]">
             <HeadingSingle
               title="Helping businesses grow and brands evolve since 2008"
               sub="Services"
@@ -92,30 +92,35 @@ function services() {
               content="Being the unique black sheep in a herd of white should be the biggest aspiration when it comes to forming an authentic brand that your customers will remember, and want to come back to."
               list={items1}
               numberOfItems={4}
+              link="/"
             />
             <ServiceBox
               title="Print Design"
               content="Offline marketing isn't dead. Unlike in the case of digital advertising, printed ads can be converted into paper planes after they’ve completed their mission!"
               list={items2}
               numberOfItems={4}
+              link="/"
             />
             <ServiceBox
               title="Websites"
               content="Your website is your best outfit for a first date. We can help you make an impression your visitors will remember, turning them into paying clients and customers, getting you a second date."
               list={items3}
               numberOfItems={4}
+              link="/"
             />
             <ServiceBox
               title="Digital Marketing"
               content="Everyone’s online. If your not using the opportunity to reach millions of potential clients in the era of unlimited connection, let's get you on that train ASAP. It's a heck of a ride!"
               list={items4}
               numberOfItems={3}
+              link="/"
             />
             <ServiceBox
               title="Motion Graphics"
               content="We dare you not to look at a moving object. Impossible? Motion is mesmerizing. If you are trying to capture instant attention, animation is the way to go. Let’s move it!"
               list={items5}
               numberOfItems={3}
+              link="/"
             />
           </section>
         </div>
