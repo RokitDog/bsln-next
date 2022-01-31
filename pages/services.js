@@ -14,11 +14,12 @@ function services() {
   const [ref, inView, entry] = useInView();
 
   if (inView) {
+    let innerWindowWidthh = window.innerWidth;
     const fadeInAnimation = gsap.to(entry.target, {
       y: 0,
       duration: 1.3,
       opacity: 1,
-      delay: 1.5,
+      delay: innerWindowWidthh >= 768 ? 1.5 : 0,
       ease: Power2.easeOut,
     });
   }
