@@ -95,6 +95,20 @@
     transition: 1s ease;
   }
 
+  .animated-line {
+    animation: loadingline 5000ms linear forwards;
+    transform-origin: left center;
+  }
+
+  @keyframes loadingline {
+    0% {
+      transform: scaleX(0%);
+    }
+    100% {
+      transform: scaleX(100%);
+    }
+  }
+
   @keyframes infinite-slide {
     0% {
       transform: translateX(0%);
