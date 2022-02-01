@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
           animate={{ opacity: '100%' }}
           exit={{ opacity: 0 }}
           key="modal"
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.3 }}
         >
           <div className="relative w-[450px] h-[80px]">
             <Image
