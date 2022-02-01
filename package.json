@@ -18,7 +18,10 @@
     "react-intersection-observer": "^8.33.1",
     "react-simple-typewriter": "^3.0.1",
     "react-slick": "^0.28.1",
-    "slick-carousel": "^1.8.1"
+    "react-smooth-scrollbar": "^8.0.6",
+    "slick-carousel": "^1.8.1",
+    "smooth-scrollbar": "^8.7.4",
+    "smooth-scrollbar-react": "^2.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",

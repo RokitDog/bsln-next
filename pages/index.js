@@ -33,6 +33,11 @@ export default function Home() {
     if (window.innerWidth > 1024) {
       Cursor();
     }
+    if (window.innerWidth < 768) {
+      ScrollTrigger.config({
+        autoRefreshEvents: 'DOMContentLoaded,load,visibilitychange',
+      });
+    }
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();

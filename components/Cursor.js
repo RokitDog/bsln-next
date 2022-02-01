@@ -48,6 +48,7 @@ export const Cursor = () => {
         y: { previous: 0, current: 0, amt: 0.2 },
       };
       this.onMouseMoveEv = () => {
+        console.log(`yoo`);
         this.cursorConfigs.x.previous = this.cursorConfigs.x.current = mouse.x;
         this.cursorConfigs.y.previous = this.cursorConfigs.y.previous = mouse.y;
 

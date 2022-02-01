@@ -175,7 +175,7 @@ function studio() {
             </div>
           </section>
           <section className="flex justify-center">
-            <h3 className="text-[26px] leading-[1.15] py-[150px] md:pt-[250px] md:pb-[170px] md:text-[32px] tracking-[-1%]">
+            <h3 className="text-[26px] text-center leading-[1.15] py-[150px] md:pt-[250px] md:pb-[170px] md:text-[32px] tracking-[-1%]  h-[100px] md:h-[initial]">
               <span className="text-[#7D7D7D]">We &nbsp;</span>
               <span className="">
                 <Typewriter
