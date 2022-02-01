@@ -5,9 +5,9 @@ import Bottom from '../components/Footer/Bottom';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <div>
-        <div className="z-10">
+    <div className="App">
+      <div className="scroll">
+        <div className="z-10 ">
           <Header />
         </div>
         <Component {...pageProps} />
