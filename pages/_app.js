@@ -19,15 +19,6 @@ function MyApp({ Component, pageProps }) {
   // };
 
   // useEffect(() => {
-  //   ScrollTrigger.scrollerProxy(document.body, {
-  //     scrollTop(value) {
-  //       if (arguments.length) {
-  //         bodyScrollBar.scrollTop = value;
-  //       }
-  //       return bodyScrollBar.scrollTop;
-  //     },
-  //   });
-
   //   document.body.style.height = `${
   //     scrollContainer.current.getBoundingClientRect().height
   //   }px`;
@@ -41,12 +32,6 @@ function MyApp({ Component, pageProps }) {
   //     clearTimeout(resizeTimeout);
   //     resizeTimeout = setTimeout(resizeComplete, 200);
   //   });
-
-  //   setWindowHeight(
-  //     setTimeout(() => {
-  //       return window.innerHeight;
-  //     }, 200)
-  //   );
   // }, [windowHeight]);
 
   // useEffect(() => {

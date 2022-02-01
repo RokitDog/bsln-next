@@ -72,14 +72,6 @@ function contact() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      console.log(`lool`);
-      let vh = window.innerHeight * 0.01;
-      sliderRef.current.style.height = `=${vh}px`;
-      ScrollTrigger.getAll().forEach((instance) => {
-        instance.refresh();
-      });
-    });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
@@ -99,7 +91,7 @@ function contact() {
           <div>
             <section className="relative philosophie pb-[100px] md:pb-[150px] ">
               <div
-                className="h-[100vh] w-[100%] wrapper relative"
+                className="h-[893px] md:h-[100vh] w-[100%] wrapper relative"
                 ref={sliderRef}
               >
                 <ContactSlider
