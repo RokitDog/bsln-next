@@ -59,18 +59,21 @@ function contact() {
         i
       );
 
-      // if (i != points.length - 1) {
-      tl.to(
-        elem.querySelector('article'),
-        { autoAlpha: 0, translateY: -100 },
-        i + 0.6
-      );
-      tl.to(elem.querySelector('.image'), { autoAlpha: 0 }, i + 0.6);
-      // }
+      if (i != points.length - 1) {
+        tl.to(
+          elem.querySelector('article'),
+          { autoAlpha: 0, translateY: -100 },
+          i + 0.6
+        );
+        tl.to(elem.querySelector('.image'), { autoAlpha: 0 }, i + 0.6);
+      }
     });
   }, []);
 
   useEffect(() => {
+    ScrollTrigger.defaults({
+      scroller: '.App',
+    });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
