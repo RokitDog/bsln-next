@@ -71,9 +71,11 @@ function contact() {
   }, []);
 
   useEffect(() => {
-    ScrollTrigger.defaults({
-      scroller: '.App',
-    });
+    if (window.innerWidth < 768) {
+      ScrollTrigger.config({
+        autoRefreshEvents: 'DOMContentLoaded,load,visibilitychange',
+      });
+    }
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();
