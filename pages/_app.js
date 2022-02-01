@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence>
       {loaded && (
-        <div className="App">
+        <div className="App origin-right">
           <div className="scroll">
             <div className="z-10 ">
               <Header />
@@ -33,11 +33,11 @@ function MyApp({ Component, pageProps }) {
       {!loaded && (
         <motion.div
           className="transition-all  h-[100vh] flex items-center justify-center bg-black flex-col"
-          initial={{ width: '100%' }}
-          animate={{ width: '100%' }}
-          exit={{ width: 0 }}
+          initial={{ opacity: '100%' }}
+          animate={{ opacity: '100%' }}
+          exit={{ opacity: 0 }}
           key="modal"
-          transition={{ ease: 'easeOut', duration: 2 }}
+          transition={{ duration: 1 }}
         >
           <div className="relative w-[450px] h-[80px]">
             <Image
