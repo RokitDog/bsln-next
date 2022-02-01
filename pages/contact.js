@@ -2,10 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { Cursor } from '../components/Cursor';
 import CursorBody from '../components/CursorBody';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { gsap, Power2 } from 'gsap';
+import { gsap } from 'gsap';
 import ContactSlider from '../components/ContactSlider';
 import ContactForm from '../components/ContactForm';
-import { InsertCommentSharp } from '@material-ui/icons';
 gsap.registerPlugin(ScrollTrigger);
 
 function contact() {
@@ -60,14 +59,14 @@ function contact() {
         i
       );
 
-      if (i != points.length - 1) {
-        tl.to(
-          elem.querySelector('article'),
-          { autoAlpha: 0, translateY: -100 },
-          i + 0.6
-        );
-        tl.to(elem.querySelector('.image'), { autoAlpha: 0 }, i + 0.6);
-      }
+      // if (i != points.length - 1) {
+      tl.to(
+        elem.querySelector('article'),
+        { autoAlpha: 0, translateY: -100 },
+        i + 0.6
+      );
+      tl.to(elem.querySelector('.image'), { autoAlpha: 0 }, i + 0.6);
+      // }
     });
   }, []);
 
