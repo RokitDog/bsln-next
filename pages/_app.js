@@ -42,14 +42,13 @@ function MyApp({ Component, pageProps }) {
           <div className="relative w-[450px] h-[80px]">
             <Image
               alt="logo"
-              src="/images/logo-retina.png"
-              className="transition animate-pulse duration-300"
+              src="/images/Logo.svg"
+              className="transition animate-pulse duration-300 "
               layout="fill"
               priority
               objectFit="contain"
             />
           </div>
-          <div className="h-[5px] w-[450px]  bg-white rounded-full mt-[25px] animated-line origin-left"></div>
         </motion.div>
       )}
     </AnimatePresence>

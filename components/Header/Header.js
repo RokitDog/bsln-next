@@ -118,6 +118,8 @@ function Header() {
             <LogoComponent
               className="mb-[50px] md:mb-0 transition-all duration-1000"
               reference={logoRef}
+              width={93}
+              height={18}
             />
           </a>
         </Link>

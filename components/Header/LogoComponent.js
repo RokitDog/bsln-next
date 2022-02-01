@@ -1,8 +1,8 @@
 const LogoComponent = (props) => (
   <svg
     ref={props.reference}
-    width={93}
-    height={18}
+    width={props.width}
+    height={props.height}
     className="transition-all duration-1000"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
