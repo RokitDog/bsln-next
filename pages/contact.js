@@ -130,7 +130,7 @@ function contact() {
           </div>
         </div>
         <section
-          className="pt-[100px] md:pt-[160px] md:pb-[150px]  bg-black overflow- origin-bottom"
+          className="pt-[100px] md:pt-[160px] md:pb-[150px]  bg-black origin-bottom"
           ref={formRef}
         >
           <div className="max-w-[1440px] mx-auto px-[30px] md:px-[50px] lg:px-[80px]">
@@ -148,7 +148,7 @@ function contact() {
             </h2>
             <p>
               Or you can email us directly at{' '}
-              <span className="text-[#367F61] underline font-medium in">
+              <span className="text-[#367F61] underline font-medium">
                 contact@wearebaseline.com
               </span>
             </p>

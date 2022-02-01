@@ -53,7 +53,7 @@ function Header() {
       ease: Expo.easeInOut,
       onStart: () => {
         gsap.set(document.body, {
-          overflow: 'hidden',
+          overflowY: 'hidden',
         });
       },
     });
@@ -76,7 +76,7 @@ function Header() {
       ease: Expo.easeInOut,
       onStart: () => {
         gsap.set(document.body, {
-          overflow: 'initial',
+          overflowY: 'scroll',
         });
       },
       onComplete: () => {
