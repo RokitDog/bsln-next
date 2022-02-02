@@ -35,12 +35,26 @@ function ContactForm({ ref1, ref2 }) {
       delay: 0.25,
       duration: 2,
       ease: Expo.easeInOut,
+      onStart: () => {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: ref1.current, offsetY: 100 },
+        });
+      },
       onComplete: () => {
-        gsap.to(window, { duration: 2, scrollTo: ref2.current });
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: ref2.current, offsetY: 100 },
+        });
+        gsap.to(form.current, {
+          display: 'none',
+          duration: 1,
+          ease: Expo.easeInOut,
+        });
       },
     });
     gsap.to(form.current, {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 1,
       ease: Expo.easeInOut,
     });

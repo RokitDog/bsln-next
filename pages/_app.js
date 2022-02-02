@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
           key="modal"
           transition={{ duration: 0.3 }}
         >
-          <div className="relative w-[450px] h-[80px]">
+          <div className="relative w-[250px] h-[50px] md:w-[450px] md:h-[80px]">
             <Image
               alt="logo"
               src="/images/Logo.svg"
