@@ -2,16 +2,21 @@ import '../styles/globals.css';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Bottom from '../components/Footer/Bottom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { gsap } from 'gsap';
 
 function MyApp({ Component, pageProps }) {
   const [loaded, setLoaded] = useState(false);
 
   const loader = setTimeout(() => {
     setLoaded(true);
-  }, 5000);
+  }, 3000);
+
+  useEffect(() => {
+    gsap.to('body', 0, { css: { visibility: 'visible' } });
+  }, []);
 
   return (
     <AnimatePresence>
