@@ -142,8 +142,9 @@ function contact() {
           </div>
         </section>
         <section
-          className=" md:py-[150px] text-center overflow-hidden hidden"
+          className="h-0 text-center overflow-hidden px-[30px]"
           ref={thankYouRef}
+          id="thankyou"
         >
           <div className="space-y-[40px] md:space-y-[60px]">
             <h2 className="text-[30px] md:text-[48px] tracking-[-1%] leading-[1.13] max-w-[850px] mx-auto">

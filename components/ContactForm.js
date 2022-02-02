@@ -1,6 +1,9 @@
 import { gsap, Power2, Expo } from 'gsap';
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
+gsap.registerPlugin(ScrollToPlugin);
 
 function ContactForm({ ref1, ref2 }) {
   const form = useRef();
@@ -8,42 +11,53 @@ function ContactForm({ ref1, ref2 }) {
   const onButtonSubmit = (e) => {
     e.preventDefault();
 
-    if (form.current.checkValidity()) {
-      emailjs
-        .sendForm(
-          'gmail',
-          'template_ac33cva',
-          form.current,
-          `user_Nseu4oxLKkloEobmRTyOB`
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+    // if (form.current.checkValidity()) {
+    // emailjs
+    //   .sendForm(
+    //     'gmail',
+    //     'template_ac33cva',
+    //     form.current,
+    //     `user_Nseu4oxLKkloEobmRTyOB`
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
 
-      gsap.to(ref1.current, {
-        paddingTop: 0,
-        paddingBottom: 0,
-        height: 0,
-        delay: 0.25,
-        duration: 2,
-        ease: Expo.easeInOut,
-      });
-      gsap.to(form.current, {
-        opacity: 0,
-        duration: 1,
-        ease: Expo.easeInOut,
-      });
-      gsap.to(ref2.current, {
-        display: 'block',
-        duration: 2,
-        ease: Expo.easeInOut,
-      });
-    }
+    gsap.to(ref1.current, {
+      paddingTop: 0,
+      paddingBottom: 0,
+      height: 0,
+      delay: 0.25,
+      duration: 2,
+      ease: Expo.easeInOut,
+      onComplete: () => {
+        gsap.to(window, { duration: 2, scrollTo: ref2.current });
+      },
+    });
+    gsap.to(form.current, {
+      opacity: 0,
+      duration: 1,
+      ease: Expo.easeInOut,
+    });
+    gsap.to(ref2.current, {
+      height: 300,
+      paddingTop: 50,
+      paddingBottom: 50,
+      delay: 2.25,
+      duration: 2,
+      ease: Expo.easeInOut,
+      onComplete: () => {
+        ScrollTrigger.getAll().forEach((instance) => {
+          instance.refresh();
+        });
+      },
+    });
+    // }
   };
 
   return (
