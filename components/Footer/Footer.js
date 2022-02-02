@@ -7,8 +7,8 @@ import Link from 'next/link';
 
 function Footer() {
   return (
-    <footer className="bg-white">
-      <div className="max-w-[1440px] lg:px-[150px] 2xl:px-0 mx-auto px-[30px] py-[100px] flex flex-col justify-between items-start md:flex-row">
+    <footer className="bg-white" id="footer">
+      <div className="max-w-[1600px] lg:px-[150px] 2xl:px-0 mx-auto px-[30px] py-[100px] flex flex-col justify-between items-start md:flex-row">
         <ul className="space-y-[20px]">
           <li>
             <Link href="/work">

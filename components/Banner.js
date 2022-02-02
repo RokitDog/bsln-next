@@ -97,7 +97,7 @@ function Banner() {
         <p className="text-[20px] md:text-[28px] max-w-[713px] min-h-[120px] md:min-h-[170px] resizing-text">
           Powerful branding and unique SEO friendly websites that help your
           businesses &nbsp;
-          <span className="" ref={text}>
+          <span ref={text}>
             <Typewriter
               loop
               cursor
@@ -106,10 +106,10 @@ function Banner() {
               deleteSpeed={50}
               delaySpeed={1000}
               words={[
-                'achieve success',
-                'bring in clients',
-                'create a lasting impression',
-                'stand out',
+                'achieve success.',
+                'bring in clients.',
+                'create a lasting impression.',
+                'stand out.',
               ]}
               onType={(words) => {
                 setClock(words);

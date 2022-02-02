@@ -3,14 +3,17 @@ import React from 'react';
 
 function Card({ name, text, image }) {
   return (
-    <div className="max-w-[400px] hover-js" data-image-src="view">
-      <div className="overflow-hidden max-w-[400px] h-[450px] relative">
+    <div className="w-[100%] hover-js" data-image-src="view">
+      <div className="">
         <Image
           src={image}
-          layout="fill"
+          layout="responsive"
           className="rounded-[10px]"
           objectFit="cover"
+          width={400}
+          height={450}
           priority
+          alt="logoimage"
         />
       </div>
       <div className="mt-[40px] flex items-start space-x-[30px]">

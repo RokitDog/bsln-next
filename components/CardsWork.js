@@ -164,7 +164,7 @@ function CardsWork() {
             <Card
               name="Mihano Momosa"
               text="Nisl diam sed porttitor amet ullamcorper velit enim, faucibus sed."
-              image="/images/Mihano Momosa.jpg"
+              image="/images/Mihano Momosa-alt.jpg"
             />
           </div>
           <div

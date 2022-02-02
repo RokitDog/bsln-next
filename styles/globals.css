@@ -148,4 +148,7 @@
   .select-field select {
     display: none;
   }
+  .wrapper::before {
+    content: 'Our Process' !important;
+  }
 }

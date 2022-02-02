@@ -82,7 +82,7 @@ function Services() {
           : 'bg-[#f3f3f3] rounded-[40px] px-[30px] md:px-[50px] lg:px-[80px] py-[60px] lg:py-[160px]'
       }
     >
-      <div className=" xl:space-x-[140px] xl:flex">
+      <div className=" xl:space-x-[140px] xl:flex max-w-[1600px] mx-auto">
         <div className="xl:flex-[25%] xl:flex-grow-0 xl:flex-shrink-0">
           <div ref={ref} className="opacity-0 translate-y-60">
             <p className="text-[10px] md:text-[14px] text-[#7D7D7D] font-medium">

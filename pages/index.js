@@ -55,13 +55,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="max-w-[1440px] mx-auto px-[30px] md:px-[50px] lg:px-[80px]">
+        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] lg:px-[80px]">
           <Banner />
           <CardsHome excerpt={true} />
           <div
-            className="testimonials translate-y-10 mb-[100px] md:mb-[220px] hover-js"
+            className="testimonials translate-y-10 mb-[100px] md:mb-[220px] "
             ref={testimonials}
-            data-image-src="drag"
           >
             <Slider {...settings}>
               <Testimonials

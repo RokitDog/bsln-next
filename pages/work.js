@@ -23,7 +23,7 @@ function work() {
   return (
     <div>
       <main>
-        <div className="max-w-[1440px] mx-auto px-[30px] md:px-[50px] lg:px-[80px]">
+        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] lg:px-[80px]">
           <div className="mt-[100px]">
             <CardsWork />
           </div>

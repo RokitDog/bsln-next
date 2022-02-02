@@ -5,7 +5,7 @@ import React from 'react';
 function Cta() {
   return (
     <section className="bg-[#FDC52E] px-[30px] md:px-[50px] lg:px-[150px] py-[100px] md:py-[65px] ">
-      <div className="flex flex-col  max-w-[1440px] mx-auto lg:flex-row lg:justify-between">
+      <div className="flex flex-col  max-w-[1600px] mx-auto lg:flex-row lg:justify-between">
         <div className="flex flex-col items-center md:items-start">
           <div>
             <h2 className="max-w-[770px] text-[46px] leading-[1.13] text-white tracking-[-1%] md:text-[72px] mb-[50px] md:mb-[65px]">

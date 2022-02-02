@@ -53,7 +53,7 @@ function Header() {
       ease: Expo.easeInOut,
       onStart: () => {
         gsap.set(document.body, {
-          // overflowY: 'hidden',
+          overflowY: 'hidden',
         });
       },
     });
@@ -76,7 +76,7 @@ function Header() {
       ease: Expo.easeInOut,
       onStart: () => {
         gsap.set(document.body, {
-          // overflowY: 'scroll',
+          overflowY: 'scroll',
         });
       },
       onComplete: () => {
@@ -95,7 +95,7 @@ function Header() {
 
   return (
     <header
-      className="h-[100px] flex md:flex-row flex-col justify-between md:items-center md:max-w-[1440px] mx-auto md:px-[50px] lg:px-[80px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0 md:relative md:bg-transparent w-full z-[500] top-0 relative overflow-hidden"
+      className="h-[100px] flex md:flex-row flex-col justify-between md:items-center md:max-w-[1600px] mx-auto md:px-[50px] lg:px-[80px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0 md:relative md:bg-transparent w-full z-[500] top-0 relative overflow-hidden"
       ref={headerRef}
     >
       <svg
@@ -147,7 +147,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/contact">
+            <Link href="#footer">
               <a className="header-links">Contact</a>
             </Link>
           </li>

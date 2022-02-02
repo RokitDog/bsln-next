@@ -5,7 +5,10 @@ function Testimonials({ text, image, name, org }) {
   return (
     <section className="flex justify-center">
       <div className=" max-w-[1140px]">
-        <h2 className="text-[26px] md:text-[42px] tracking-[-1%] mb-[42.5px] md:mb-[63px] leading-[1.14]">
+        <h2
+          className="text-[26px] md:text-[42px] tracking-[-1%] mb-[42.5px] md:mb-[63px] leading-[1.14] pr-[10px] hover-js"
+          data-image-src="drag"
+        >
           {text}
         </h2>
         <div className="flex space-x-[15px]">
