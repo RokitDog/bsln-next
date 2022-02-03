@@ -97,11 +97,31 @@ function Services() {
           </div>
         </div>
         <div className="xl:flex-[75%] xl:flex-grow-1 xl:flex-shrink-1 flex flex-col md:flex-row md:flex-wrap pt-[70px] xl:pt-[0]">
-          <ContentCard name="Branding" content={items1} />
-          <ContentCard name="Print Design" content={items2} />
-          <ContentCard name="Websites" content={items3} />
-          <ContentCard name="Digital Marketing" content={items4} />
-          <ContentCard name="Motion Graphics" content={items5} />
+          <ContentCard
+            name="Branding"
+            content={items1}
+            hoverText="Being the unique black sheep in a herd of white should be the biggest aspiration when it comes to forming an authentic brand that your customers will remember,  and want to come baa-ck to."
+          />
+          <ContentCard
+            name="Print Design"
+            content={items2}
+            hoverText="Offline marketing isn't dead. Unlike in the case of digital advertising, printed ads can be converted into paper planes after they’ve completed their mission!"
+          />
+          <ContentCard
+            name="Websites"
+            content={items3}
+            hoverText="Your website is your best outfit for a first date. We can help you make an impression your visitors will remember, turning them into paying clients and customers, getting you a second date."
+          />
+          <ContentCard
+            name="Digital Marketing"
+            content={items4}
+            hoverText="Everyone’s online. If your not using the opportunity to reach millions of potential clients in the era of unlimited connection, let's get you on that train ASAP. It's a heck of a ride!"
+          />
+          <ContentCard
+            name="Motion Graphics"
+            content={items5}
+            hoverText="We dare you not to look at a moving object. Impossible? Motion is mesmerizing. If you are trying to capture instant attention, animation is the way to go. Let’s move it!"
+          />
         </div>
       </div>
     </section>

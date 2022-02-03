@@ -168,4 +168,11 @@
   ::-webkit-calendar-picker-indicator {
     filter: invert(1);
   }
+  .services-cards div:nth-child(1) {
+    transition: all 300ms ease-out;
+  }
+  .services-cards:hover div:nth-child(1) {
+    opacity: 1;
+    top: 0;
+  }
 }

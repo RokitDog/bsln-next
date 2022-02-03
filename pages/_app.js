@@ -26,7 +26,9 @@ function MyApp({ Component, pageProps }) {
             <div className="z-10 ">
               <Header />
             </div>
-            <Component {...pageProps} />
+            <div className="pt-[100px]">
+              <Component {...pageProps} />
+            </div>
             <div>
               <Footer />
               <Bottom />

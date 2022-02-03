@@ -93,104 +93,124 @@ function Header() {
     }
   }, [clicked]);
 
+  useEffect(() => {
+    let prevScrollpos = window.pageYOffset;
+
+    let headerDiv = headerRef.current;
+    let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+
+    window.onscroll = () => {
+      var currentScrollPos = window.pageYOffset;
+      console.log(prevScrollpos, currentScrollPos);
+      if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
+        headerDiv.style.top = '0';
+      } else {
+        headerDiv.style.top = '-100px';
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  }, []);
+
   return (
     <header
-      className="h-[100px] flex md:flex-row flex-col justify-between md:items-center md:max-w-[1600px] mx-auto md:px-[50px]   px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0 md:relative md:bg-transparent w-full z-[500] top-0 relative overflow-hidden"
+      className="z-[500] top-0 fixed left-0 right-0  transition-all duration-300 ease-out overflow-hidden h-[100px]"
       ref={headerRef}
     >
-      <svg
-        ref={ref}
-        id="burger"
-        width="30"
-        className=" md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white transition-all duration-1000"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 30 30"
-        onClick={() => {
-          setClicked(!clicked);
-        }}
-      >
-        <path className="top " d="M0 9h30v2H0z" />
-        <path className="bot " d="M0 19h30v2H0z" />
-      </svg>
-      <div className="w-[93px]">
-        <Link href="/">
-          <a>
-            <LogoComponent
-              className="mb-[50px] md:mb-0 transition-all duration-1000"
-              reference={logoRef}
-              width={93}
-              height={18}
-            />
-          </a>
-        </Link>
-      </div>
-      <nav>
-        <ul className="md:flex md:space-x-[40px] text-[46px] md:text-[16px] text-white md:text-black">
-          <li>
-            <Link href="/work">
-              <a className="header-links">Work</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/services">
-              <a className="header-links">Services</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/studio">
-              <a className="header-links">Studio</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/insights">
-              <a className="header-links">Insights</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#footer">
-              <a className="header-links">Contact</a>
-            </Link>
-          </li>
-          <li className="hidden md:block">
-            <Link href="/contact">
-              <a className="px-[15px] py-[10px] bg-[#0F0F0F] rounded-3xl text-white">
-                Start here
-              </a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <div className="md:hidden">
-        <div className="space-x-[30px] text-white">
-          <Link href="#">
+      <div className="md:max-w-[1600px] mx-auto w-full flex md:flex-row flex-col justify-between md:items-center h-[100%] md:px-[50px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0">
+        <svg
+          ref={ref}
+          id="burger"
+          width="30"
+          className=" md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white transition-all duration-1000"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 30 30"
+          onClick={() => {
+            setClicked(!clicked);
+          }}
+        >
+          <path className="top " d="M0 9h30v2H0z" />
+          <path className="bot " d="M0 19h30v2H0z" />
+        </svg>
+        <div className="w-[93px]">
+          <Link href="/">
             <a>
-              <FacebookIcon />
-            </a>
-          </Link>
-          <Link href="#">
-            <a>
-              <Twitter />
-            </a>
-          </Link>
-          <Link href="#">
-            <a>
-              <Instagram />
-            </a>
-          </Link>
-          <Link href="#">
-            <a>
-              <LinkedIn />
+              <LogoComponent
+                className="mb-[50px] md:mb-0 transition-all duration-1000"
+                reference={logoRef}
+                width={93}
+                height={18}
+              />
             </a>
           </Link>
         </div>
-        <div className="flex flex-col space-y-[10px] mt-[50px]">
-          <div>
-            <p className="text-[#7D7D7D] font-medium">United States</p>
-            <a className="text-[#7D7D7D]">us@wearebaseline.com</a>
+        <nav>
+          <ul className="md:flex md:space-x-[40px] text-[46px] md:text-[16px] text-white md:text-black">
+            <li>
+              <Link href="/work">
+                <a className="header-links">Work</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/services">
+                <a className="header-links">Services</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/studio">
+                <a className="header-links">Studio</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/insights">
+                <a className="header-links">Insights</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#footer">
+                <a className="header-links">Contact</a>
+              </Link>
+            </li>
+            <li className="hidden md:block">
+              <Link href="/contact">
+                <a className="px-[15px] py-[10px] bg-[#0F0F0F] rounded-3xl text-white">
+                  Start here
+                </a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <div className="md:hidden">
+          <div className="space-x-[30px] text-white">
+            <Link href="#">
+              <a>
+                <FacebookIcon />
+              </a>
+            </Link>
+            <Link href="#">
+              <a>
+                <Twitter />
+              </a>
+            </Link>
+            <Link href="#">
+              <a>
+                <Instagram />
+              </a>
+            </Link>
+            <Link href="#">
+              <a>
+                <LinkedIn />
+              </a>
+            </Link>
           </div>
-          <div>
-            <p className="text-[#7D7D7D] font-medium">Europe</p>
-            <a className="text-[#7D7D7D]">europe@wearebaseline.com</a>
+          <div className="flex flex-col space-y-[10px] mt-[50px]">
+            <div>
+              <p className="text-[#7D7D7D] font-medium">United States</p>
+              <a className="text-[#7D7D7D]">us@wearebaseline.com</a>
+            </div>
+            <div>
+              <p className="text-[#7D7D7D] font-medium">Europe</p>
+              <a className="text-[#7D7D7D]">europe@wearebaseline.com</a>
+            </div>
           </div>
         </div>
       </div>
