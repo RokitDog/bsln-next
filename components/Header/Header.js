@@ -73,6 +73,13 @@ function Header() {
         headerTLClose.play();
       });
     });
+    logoRef.current.addEventListener('click', () => {
+      menuToggle.reverse();
+      controlit.classList.remove('openmenu');
+      ref.current.classList.remove('inverted');
+      logoRef.current.classList.remove('inverted');
+      headerTLClose.play();
+    });
     const headerTLClose = gsap.timeline({ paused: true });
     headerTLClose.to(headerRef.current, {
       background: 'white',
@@ -113,7 +120,6 @@ function Header() {
       if (didScroll) {
         hasScrolled();
         didScroll = false;
-        console.log(`loool`);
       }
     }, 500);
 
