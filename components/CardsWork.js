@@ -34,7 +34,7 @@ function CardsWork() {
       duration: 1,
       opacity: 1,
       ease: Power2.easeOut,
-      delay: innerWindowWidthh > 1535 ? 1.5 : 0,
+      delay: innerWindowWidthh > 1535 ? 1.3 : 0,
     });
   }
 
@@ -61,7 +61,7 @@ function CardsWork() {
       duration: 1,
       opacity: 1,
       ease: Power2.easeOut,
-      delay: innerWindowWidthh > 1535 ? 1.5 : 0,
+      delay: innerWindowWidthh > 1535 ? 1.3 : 0,
     });
   }
   const [ref5, inView5, entry5] = useInView({
