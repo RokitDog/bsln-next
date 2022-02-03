@@ -103,10 +103,22 @@ function Header() {
 
     let headerDiv = headerRef.current;
     let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+    let didScroll;
 
     window.onscroll = () => {
+      didScroll = true;
+    };
+
+    setInterval(() => {
+      if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+        console.log(`loool`);
+      }
+    }, 500);
+
+    const hasScrolled = () => {
       var currentScrollPos = window.pageYOffset;
-      console.log(prevScrollpos, currentScrollPos);
       if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
         headerDiv.style.top = '0';
       } else {
