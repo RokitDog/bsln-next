@@ -56,11 +56,12 @@ function services() {
   const items3 = [
     'UI/UX',
     'Web Design',
-    'Landing Pages',
+    'Content Writing',
     'Online Store',
     'Front-end Development',
     'Back-end Development',
-    'Content Writing',
+    'React Websites',
+    'Wordpress Websites',
   ];
   const items4 = [
     'SEO',
@@ -87,7 +88,10 @@ function services() {
               sub="Services"
             />
           </div>
-          <section ref={ref} className="opacity-0 translate-y-[100px]">
+          <section
+            ref={ref}
+            className="opacity-0 translate-y-[100px] service-page-container transition-all duration-300 ease-out"
+          >
             <ServiceBox
               title="Branding"
               content="Being the unique black sheep in a herd of white should be the biggest aspiration when it comes to forming an authentic brand that your customers will remember, and want to come back to."

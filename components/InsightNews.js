@@ -27,7 +27,7 @@ function InsightNews() {
   return (
     <div className=" max-w-[1600px] mx-auto px-[30px] md:px-[50px]  pb-[100px] md:pb-[150px] ">
       <div
-        className="flex flex-wrap gap-y-[88px] justify-between insight-container"
+        className="grid gap-x-[40px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-[80px] flex-wrap insight-container"
         ref={cardsRef}
       >
         {imagesJSON.map(

@@ -135,9 +135,9 @@ function CardsWork() {
           />
         </div>
       </div>
-      <div className="grid md:grid-cols-2 gap-x-[40px] 2xl:grid-cols-3">
+      <div className="grid md:grid-cols-2 gap-x-[40px] lg:grid-cols-3">
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  2xl:mt-[200px]"
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center lg:mt-[200px]"
           ref={ref2}
         >
           <Card
@@ -147,7 +147,7 @@ function CardsWork() {
           />
         </div>
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  2xl:mt-[300px]"
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center lg:mt-[300px]"
           ref={ref3}
         >
           <Card
@@ -156,11 +156,11 @@ function CardsWork() {
             image="/images/Nestle.jpg"
           />
         </div>
-        <div
-          className="mt-[80px] opacity-0  translate-y-[100px]  md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto 2xl:col-span-1 2xl:flex-col 2xl:mt-[-100px]"
-          ref={ref4}
-        >
-          <div className="">
+        <div className="md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto lg:col-span-1 lg:flex-col lg:mt-[-100px]">
+          <div
+            className="mt-[80px] opacity-0  translate-y-[100px] md:flex-[50%]"
+            ref={ref4}
+          >
             <Card
               name="Mihano Momosa"
               text="Nisl diam sed porttitor amet ullamcorper velit enim, faucibus sed."
@@ -168,7 +168,7 @@ function CardsWork() {
             />
           </div>
           <div
-            className="mt-[80px]  opacity-0 translate-y-[100px] justify-self-center   md:mt-0 2xl:mt-[160px]"
+            className="mt-[80px] mb-[100px] opacity-0 translate-y-[100px]  justify-self-center    lg:mt-[160px] md:flex-[50%]"
             ref={ref5}
           >
             <Card
@@ -179,9 +179,9 @@ function CardsWork() {
           </div>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 gap-x-[40px] 2xl:grid-cols-3">
+      <div className="grid md:grid-cols-2 gap-x-[40px] lg:grid-cols-3">
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  2xl:mt-[0px]"
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[0px]"
           ref={ref6}
         >
           <Card
@@ -191,7 +191,7 @@ function CardsWork() {
           />
         </div>
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  2xl:mt-[-100px]"
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[-100px]"
           ref={ref7}
         >
           <Card
@@ -201,7 +201,7 @@ function CardsWork() {
           />
         </div>
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px]  md:col-span-1 md:gap-x-[40px] justify-self-center 2xl:mt-[350px]"
+          className="mt-[80px] opacity-0  translate-y-[100px]  md:col-span-1 md:gap-x-[40px] justify-self-center lg:mt-[350px]"
           ref={ref8}
         >
           <div className="mb-[100px]">
@@ -214,7 +214,7 @@ function CardsWork() {
         </div>
       </div>
       <div
-        className="max-w-full 2xl:max-w-[880px] flex justify-center opacity-0 translate-y-10"
+        className="max-w-full lg:max-w-[666px] xl:max-w-[880px] flex justify-center opacity-0 translate-y-10 lg:mt-[-200px]"
         ref={ref9}
       >
         <div>
@@ -224,7 +224,7 @@ function CardsWork() {
           </h3>
           <Link href="/work">
             <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition ease-out duration-300">
-              See more projects
+              Get Started
             </a>
           </Link>
         </div>

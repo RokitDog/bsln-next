@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Cta from '../components/Cta';
 import { Cursor } from '../components/Cursor';
 import CursorBody from '../components/CursorBody';
@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { gsap, Power4, Power2 } from 'gsap';
 import CardsStudio from '../components/CardsStudio';
 import Link from 'next/link';
-import { Typewriter } from 'react-simple-typewriter';
 import Services from '../components/Services';
 import StudioBrands from '../components/StudioBrands';
 gsap.registerPlugin(ScrollTrigger);
@@ -68,6 +67,33 @@ function studio() {
       delay: 0.5,
       duration: 1,
     });
+
+    gsap.registerEffect({
+      name: 'swapText',
+      effect: (targets, config) => {
+        let tl = gsap.timeline({ delay: config.delay });
+        tl.to(targets, { opacity: 0, duration: config.duration / 2 });
+        tl.add(() => (targets[0].innerText = config.text));
+        tl.to(targets, { opacity: 1, duration: config.duration });
+        return tl;
+      },
+      defaults: { duration: 1 },
+      extendTimeline: true,
+    });
+
+    let tl = gsap.timeline({ repeat: -1 });
+    tl.swapText('.fading-text', {
+      text: 'this is just a lorem that is a placeholder.',
+      delay: 3,
+    })
+      .swapText('.fading-text', {
+        text: 'And this is also lorem which makes it cool.',
+        delay: 2,
+      })
+      .swapText('.fading-text', {
+        text: 'create digital experience for analogue humans.',
+        delay: 2,
+      });
 
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
@@ -130,7 +156,7 @@ function studio() {
                 ref={textRef}
               >
                 We are a bunch of highly organized, embarrassingly geeky, hyper
-                creative, digital freaks, who take pikado playing at the office
+                creative, digital freaks, who take darts playing at the office
                 very seriously.
               </h2>
             </div>
@@ -174,23 +200,11 @@ function studio() {
               </div>
             </div>
           </section>
-          <section className="flex justify-center">
-            <h3 className="text-[26px] text-center leading-[1.15] py-[150px] md:pt-[250px] md:pb-[170px] md:text-[32px] tracking-[-1%]  h-[100px] md:h-[initial]">
+          <section className="max-w-[800px] mx-auto">
+            <h3 className="text-[26px] text-left leading-[1.15] py-[150px] md:pt-[250px] md:pb-[170px] md:text-[32px] tracking-[-1%]  h-[100px] md:h-[initial]">
               <span className="text-[#7D7D7D]">We &nbsp;</span>
-              <span className="">
-                <Typewriter
-                  loop
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                  words={[
-                    'create digital experience for analogue humans.',
-                    'create whatever you want',
-                    'delete the unecessary clutter',
-                  ]}
-                />
+              <span className="fading-text">
+                create digital experience for analogue humans.
               </span>
             </h3>
           </section>
@@ -199,7 +213,7 @@ function studio() {
           <Services />
         </section>
         <section className="bg-black pt-[125px] md:pt-[200px] pb-[150px] md:pb-[200px]">
-          <h2 className="text-white text-center max-w-[644px] text-[30px] md:text-[42px] leading-[1.13] tracking-[-1%] mx-auto pb-[150px] md:pb-[300px] px-[15px]">
+          <h2 className="text-white text-center max-w-[644px] text-[30px] md:text-[42px] leading-[1.13] tracking-[-1%] mx-auto pb-[150px] md:pb-[200px] px-[15px]">
             Let us brag a little about the brands we've worked for.
           </h2>
           <StudioBrands />

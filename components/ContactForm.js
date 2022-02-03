@@ -76,60 +76,60 @@ function ContactForm({ ref1, ref2 }) {
 
   return (
     <form
-      className="text-[26px] leading-[1.13] tracking-[-1%] md:text-[32px] max-w-[1200px] mx-auto"
+      className="text-[26px] tracking-[-1%] md:text-[32px] max-w-[1200px] mx-auto leading-[1.5]"
       ref={form}
       encType="form-data"
       onSubmit={onButtonSubmit}
     >
-      <div className="2xl:mb-[20px] 2xl:whitespace-nowrap">
+      <div className="inline  xl:whitespace-nowrap ">
         <span className="text-white align-middle">You usually go by </span>
-        <div className="block 2xl:inline whitespace-nowrap max-w-[400px] w-[100%]">
+        <div className="md:inline block max-w-[100%] md:max-w-[400px] w-[100%]">
           <input
             type="text"
-            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white  leading-[1.2] text-[26px] pb-[0] mb-[40px] 2xl:mb-[0px]"
+            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white  leading-[1.2] text-[26px] pb-[0] mb-[40px] md:mb-[0px] placeholder:text-center mx-[15px]"
             name="name"
             required
+            placeholder="(name)"
           />
-          <sup className="form-sub">(name)</sup>
         </div>
-        <span className="text-white align-middle hidden 2xl:inline-block">
+        <span className="text-white align-middle hidden xl:inline-block">
           {' '}
           and you're not mad when
         </span>
-        <span className="text-white align-middle 2xl:hidden">
+        <span className="text-white align-middle xl:hidden">
           and you're not mad when someone emails you at
         </span>
       </div>
-      <div className="2xl:mb-[20px] 2xl:whitespace-nowrap">
-        <span className="text-white align-middle hidden 2xl:inline-block">
+      <div className="inline  xl:whitespace-nowrap">
+        <span className="text-white align-middle hidden xl:inline-block">
           someone emails you at{' '}
         </span>
-        <div className="block 2xl:inline whitespace-nowrap max-w-[487px] w-[100%]">
+        <div className="md:inline block max-w-[487px] w-[100%]">
           <input
             type="email"
             name="email"
-            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white  leading-[1.2] text-[26px] pb-[0] mb-[40px] 2xl:mb-[0px]"
+            placeholder="(e-mail)"
+            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white  leading-[1.2] text-[26px] pb-[0] mb-[40px] md:mb-[0px] placeholder:text-center mx-[15px]"
             required
           />
           <span className="text-white align-middle">.</span>
-          <sup className="form-sub">(e-mail)</sup>
         </div>
-        <span className="text-white align-middle hidden 2xl:inline-block">
+        <span className="text-white align-middle hidden xl:inline-block">
           {' '}
           Your business is
         </span>
-        <span className="text-white align-middle 2xl:hidden">
+        <span className="text-white align-middle xl:hidden">
           {' '}
           Your business is awesome but you need a bit of help with
         </span>
       </div>
-      <div className="2xl:mb-[20px] 2xl:whitespace-nowrap">
-        <span className="text-white align-middle hidden 2xl:inline-block">
+      <div className="inline  xl:whitespace-nowrap">
+        <span className="text-white align-middle hidden xl:inline-block">
           awesome but you need a bit of help with{' '}
         </span>
-        <div className="block 2xl:inline whitespace-nowrap">
+        <div className="md:inline block">
           <select
-            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white max-w-[380px] w-[100%] leading-[1.2] text-[26px] pb-[0] select-field appearance-none text-center mb-[40px] 2xl:mb-[0px]"
+            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white max-w-[380px] w-[100%] leading-[1.2] text-[26px] pb-[0] select-field appearance-none text-center mb-[40px] md:mb-[0px] mx-[15px]"
             name="option"
             required
           >
@@ -142,46 +142,44 @@ function ContactForm({ ref1, ref2 }) {
             <option className="bg-black text-center">Logo</option>
             <option className="bg-black text-center">Cooking</option>
           </select>
-          <span className="text-white align-middle"> .</span>
         </div>
-        <span className="text-white align-middle hidden 2xl:inline-block">
+        <span className="text-white align-middle hidden xl:inline-block">
           {' '}
           and you've
         </span>
-        <span className="text-white align-middle 2xl:hidden">
+        <span className="text-white align-middle xl:hidden">
           {' '}
           and you've decided to have it done by
         </span>
       </div>
-      <div className="2xl:mb-[20px] 2xl:whitespace-nowrap">
-        <span className="text-white align-middle hidden 2xl:inline-block">
+      <div className="inline  xl:whitespace-nowrap">
+        <span className="text-white align-middle hidden xl:inline-block">
           decided to have it done by{' '}
         </span>
-        <div className="block 2xl:inline whitespace-nowrap">
+        <div className="md:inline block">
           <input
-            type="text"
+            type="date"
             name="deadline"
             required
-            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white max-w-[280px] w-[100%] leading-[1.2] text-[26px] pb-[0] mb-[40px] 2xl:mb-[0px]"
+            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white max-w-[280px] w-[100%] leading-[1.2] text-[26px] pb-[0] mb-[40px] md:mb-[0px] text-center mx-[15px]"
           />
           <span className="text-white align-middle">.</span>
-          <sup className="form-sub">(deadline)</sup>
         </div>
-        <span className="text-white align-middle hidden 2xl:inline-block">
+        <span className="text-white align-middle hidden xl:inline-block">
           {' '}
           You have a limited budget
         </span>
       </div>
-      <div className="2xl:mb-[20px] 2xl:whitespace-nowrap">
-        <span className="text-white align-middle 2xl:hidden">
+      <div className="inline  xl:whitespace-nowrap">
+        <span className="text-white align-middle xl:hidden">
           You have a limited budget which is around{' '}
         </span>
-        <span className="text-white align-middle hidden 2xl:inline-block">
+        <span className="text-white align-middle hidden xl:inline-block">
           which is around{' '}
         </span>
-        <div className="block 2xl:inline whitespace-nowrap">
+        <div className="md:inline block ">
           <select
-            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white max-w-[300px] w-[100%] leading-[1.2] text-[26px] pb-[0] select-field appearance-none text-center"
+            className="border-t-0 border-l-0 border-r-0 border-b-1  border-[#7D7D7D] bg-transparent  relative focus:outline-none focus:ring-0 focus:border-[#7D7D7D] text-white max-w-[300px] w-[100%] leading-[1.2] text-[26px] pb-[0] select-field appearance-none text-center mx-[15px]"
             name="pricing"
             required
           >
@@ -204,7 +202,7 @@ function ContactForm({ ref1, ref2 }) {
           them together):
         </p>
         <textarea
-          className="w-[1140px] max-w-[100%] bg-transparent text-white text-[26px] rounded-md mt-[20px] leading-[1.5] focus:border-white focus:ring-0 min-h-[200px]"
+          className="w-[1140px] max-w-[100%] bg-transparent text-white text-[26px] mt-[20px] leading-[1.5] focus:border-white focus:ring-0 min-h-[200px] border-l-0 border-r-0"
           placeholder="Write us here"
           name="message"
           required
@@ -213,7 +211,7 @@ function ContactForm({ ref1, ref2 }) {
       <div className="text-center">
         <button
           type="submit"
-          className="bg-[#fdc52e] text-[14px] md:text-[16px] rounded-full px-[15px] py-[10px] mt-[40px] md:mt-[70px] hover:bg-white hover:text-black transition ease-out duration-300 mb-[100px] 2xl:mb-0"
+          className="bg-[#fdc52e] text-[14px] md:text-[16px] rounded-full px-[15px] py-[10px] mt-[40px] md:mt-[70px] hover:bg-white hover:text-black transition ease-out duration-300 mb-[100px] xl:mb-0"
         >
           Submit
         </button>

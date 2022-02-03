@@ -96,9 +96,9 @@ function CardsHome() {
           </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 gap-x-[40px] 2xl:grid-cols-3">
+      <div className="grid md:grid-cols-2 gap-x-[40px] lg:grid-cols-3">
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  2xl:mt-[200px]"
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[200px]"
           ref={ref2}
         >
           <Card
@@ -108,7 +108,7 @@ function CardsHome() {
           />
         </div>
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  2xl:mt-[300px]"
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[300px]"
           ref={ref3}
         >
           <Card
@@ -117,7 +117,7 @@ function CardsHome() {
             image="/images/Nestle.jpg"
           />
         </div>
-        <div className="md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto 2xl:col-span-1 2xl:flex-col 2xl:mt-[-100px]">
+        <div className="md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto lg:col-span-1 lg:flex-col lg:mt-[-100px]">
           <div
             className="mt-[80px] opacity-0  translate-y-[100px] md:flex-[50%] "
             ref={ref4}
@@ -129,7 +129,7 @@ function CardsHome() {
             />
           </div>
           <div
-            className="mt-[80px] mb-[100px] opacity-0 translate-y-[100px]  justify-self-center    2xl:mt-[160px] md:flex-[50%]"
+            className="mt-[80px] mb-[100px] opacity-0 translate-y-[100px]  justify-self-center    lg:mt-[160px] md:flex-[50%]"
             ref={ref5}
           >
             <Card
@@ -141,7 +141,7 @@ function CardsHome() {
         </div>
       </div>
       <div
-        className="max-w-full 2xl:max-w-[880px] flex justify-center opacity-0 translate-y-10 2xl:mt-[-200px]"
+        className="max-w-full lg:max-w-[666px] xl:max-w-[880px] flex justify-center opacity-0 translate-y-10 lg:mt-[-200px]"
         ref={ref6}
       >
         <div>

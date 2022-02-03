@@ -4,16 +4,18 @@ import React from 'react';
 function InsightCard({ image, date, heading, content }) {
   return (
     <div
-      className="md:max-w-[290px] opacity-0 translate-y-[50px] insight-card hover-js transition-all duration-300 ease-out flex-[100%] max-w-[100%]"
+      className="max-w-[100%] opacity-0 translate-y-[50px] insight-card hover-js transition-all duration-300 ease-out  justify-self-center"
       data-image-src="view"
       id="insight-card-id"
     >
-      <div className="relative md:max-w-[290px] min-h-[250px] mb-[10px]">
+      <div className="mb-[10px]">
         <Image
           src={image}
           alt="insightImage"
           className=" rounded-[10px]"
-          layout="fill"
+          layout="responsive"
+          width={290}
+          height={290}
           objectFit="cover"
         />
       </div>

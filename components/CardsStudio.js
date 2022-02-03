@@ -19,7 +19,7 @@ function CardsStudio() {
         image="/images/Qanya.jpg"
       />
       <Person
-        name="Miloš Savuljic"
+        name="Milos Savuljic"
         position="Web & Graphic Designer"
         linkedIn="#"
         instagram="#"
@@ -41,7 +41,7 @@ function CardsStudio() {
       />
       <Person
         name="Bojan Martinov"
-        position="Front'End Developer"
+        position="Front-End Developer"
         linkedIn="#"
         instagram="#"
         image="/images/Qanya.jpg"
@@ -53,7 +53,6 @@ function CardsStudio() {
         instagram="#"
         image="/images/Qanya.jpg"
       />
-      <Person name="Your Name" position="Position" />
     </div>
   );
 }

@@ -54,7 +54,7 @@ function Process() {
   return (
     <div>
       <section className="relative philosophie max-w-[1600px] mx-auto">
-        <div className="h-[100vh] w-[100%] wrapper relative  before:absolute before:bottom-[90vh] before:text-[#7D7D7D] before:left-[30px] before:max-w-[54px] before:font-medium lg:before:bottom-[25vh] before:text-[12px]">
+        <div className="h-[100vh] w-[100%] wrapper wrapper-process relative  before:absolute before:bottom-[90vh] before:text-[#7D7D7D] before:left-[30px] before:max-w-[54px] before:font-medium lg:before:bottom-[25vh] before:text-[12px]">
           <ProcessSection
             imageSrc="/images/0.svg"
             content="Before we do - we get inspired
