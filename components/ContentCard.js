@@ -5,7 +5,7 @@ function ContentCard({ name, content, hoverText }) {
   return (
     <div className="xl:flex-[33%] lg:flex-shrink-0 lg:flex-grow-0 lg:max-w-[33%] mb-[45px]  translate-y-[50px] md:flex-[50%] lg:flex-[33%] relative  services-cards opacity-0">
       <div className="lg:m-[30px]">
-        <div className="bg-[#EDEDED] lg:p-[30px] absolute left-0 top-0 w-[90%] rounded-[20px] opacity-0 ">
+        <div className="bg-[#EDEDED] lg:p-[30px] absolute left-0 top-0 w-[90%] rounded-[20px] opacity-0 invisible">
           <h4 className="font-medium text-[20px] md:text-[24px] mb-[20px]">
             {name}
           </h4>
