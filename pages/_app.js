@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   }, 3000);
 
   useEffect(() => {
-    gsap.to('body', 0, { css: { visibility: 'visible' } });
+    gsap.set('body', { css: { visibility: 'visible' } });
   }, []);
 
   return (

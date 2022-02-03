@@ -20,6 +20,11 @@ function Header() {
     gsap.set(headerRef.current, {
       background: 'white',
     });
+    gsap.to(headerRef.current, {
+      opacity: 1,
+      duration: 2,
+      ease: Expo.easeInOut,
+    });
     menuToggle
 
       .add('rotate')
@@ -113,7 +118,7 @@ function Header() {
 
   return (
     <header
-      className="z-[500] top-0 fixed left-0 right-0  transition-all duration-300 ease-out overflow-hidden h-[100px]"
+      className="z-[500] top-0 fixed left-0 right-0  transition-all duration-300 ease-out overflow-hidden h-[100px] opacity-0"
       ref={headerRef}
     >
       <div className="md:max-w-[1600px] mx-auto w-full flex md:flex-row flex-col justify-between md:items-center h-[100%] md:px-[50px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0">
