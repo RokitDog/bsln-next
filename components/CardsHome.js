@@ -152,7 +152,7 @@ function CardsHome() {
           </h3>
           <Link href="/work">
             <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition ease-out duration-300">
-              Check our our favourite projects
+              Check out our favourite projects
             </a>
           </Link>
         </div>

@@ -78,8 +78,8 @@ function Services() {
     <section
       className={
         router === '/'
-          ? `bg-white rounded-[40px] px-[30px] md:px-[50px] lg:px-[80px] py-[60px] lg:py-[160px]`
-          : 'bg-[#f3f3f3] rounded-[40px] px-[30px] md:px-[50px] lg:px-[80px] py-[60px] lg:py-[160px]'
+          ? `bg-white rounded-[40px] px-[30px] md:px-[50px]  py-[60px] lg:py-[160px]`
+          : 'bg-[#f3f3f3] rounded-[40px] px-[30px] md:px-[50px]  py-[60px] lg:py-[160px]'
       }
     >
       <div className=" xl:space-x-[140px] xl:flex max-w-[1600px] mx-auto">

@@ -91,7 +91,7 @@ function contact() {
   return (
     <div>
       <main>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] lg:px-[80px] ">
+        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]  ">
           <div>
             <section className="relative philosophie pb-[100px] md:pb-[150px] ">
               <div
@@ -137,7 +137,7 @@ function contact() {
           className="pt-[100px] md:pt-[160px] md:pb-[150px]  bg-black origin-bottom"
           ref={formRef}
         >
-          <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] lg:px-[80px]">
+          <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] ">
             <ContactForm ref1={formRef} ref2={thankYouRef} />
           </div>
         </section>

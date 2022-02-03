@@ -25,7 +25,7 @@ function InsightNews() {
   }, [anim]);
 
   return (
-    <div className=" max-w-[1600px] mx-auto px-[30px] md:px-[50px] lg:px-[80px] pb-[100px] md:pb-[150px] ">
+    <div className=" max-w-[1600px] mx-auto px-[30px] md:px-[50px]  pb-[100px] md:pb-[150px] ">
       <div
         className="flex flex-wrap gap-y-[88px] justify-between insight-container"
         ref={cardsRef}

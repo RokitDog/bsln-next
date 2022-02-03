@@ -3,7 +3,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { SplitText } from 'gsap/dist/SplitText';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-gsap.registerPlugin(SplitText);
+import { CSSRulePlugin } from 'gsap/dist/CSSRulePlugin';
+gsap.registerPlugin(SplitText, CSSRulePlugin);
 
 function Banner() {
   const splitText = useRef();
@@ -20,8 +21,10 @@ function Banner() {
       ease: Power2.easeOut,
     });
 
-    const slideInVideo = gsap.from(slideIn.current, 3, {
-      transform: 'scaleX(0)',
+    const video = CSSRulePlugin.getRule('.banner-video:before');
+
+    const slideInVideo = gsap.to(video, 3, {
+      width: '0%',
       delay: 2,
       ease: Power4.easeOut,
     });
@@ -118,7 +121,7 @@ function Banner() {
           </span>
         </p>
       </div>
-      <div className="my-[100px] origin-left" ref={slideIn}>
+      <div className="my-[100px] banner-video">
         <video
           data-image-src="view"
           className="hover-js w-[100%] h-auto"

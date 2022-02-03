@@ -100,8 +100,8 @@ function studio() {
   return (
     <div>
       <main>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] lg:px-[80px] mb-[100px]">
-          <div className="mt-[100px] md:px-[50px] lg:px-[80px]">
+        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]  mb-[100px]">
+          <div className="mt-[100px] md:px-[50px] ">
             <div className="max-w-[740px] ">
               <HeadingSingle
                 title="Let's get digital - while staying human."

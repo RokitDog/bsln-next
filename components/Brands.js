@@ -98,7 +98,7 @@ function Brands({ testimonialRef }) {
       >
         <h2>Big names that trust us</h2>
       </div>
-      <div className="mb-[320px] md:mb-[620px]">
+      <div className="mb-[400px] md:mb-[900px]">
         <Sliders left={true} />
         <Sliders />
         <Sliders left={true} />
