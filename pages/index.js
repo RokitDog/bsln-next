@@ -83,7 +83,18 @@ export default function Home() {
           </div>
         </div>
         <Brands testimonialRef={testimonials} />
-        <Services />
+        <div className="bg-white rounded-t-[40px]">
+          <Services />
+          <div>
+            <div>
+              <h4>B2C</h4>
+            </div>
+            <div>
+              <p>Are you the client that needs our services?</p>
+              <p>We'd love to help!</p>
+            </div>
+          </div>
+        </div>
         <Process />
         <Cta />
       </main>

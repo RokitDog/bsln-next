@@ -92,7 +92,13 @@ function CardsHome() {
           </h2>
           <p className="text-[17px] md:text-[20px]">
             It takes one email to{' '}
-            <span className="underline text-[#367F61]"> start</span>.
+            <span className="underline text-[#367F61]">
+              {' '}
+              <Link href="/contact">
+                <a>start</a>
+              </Link>
+            </span>
+            .
           </p>
         </div>
       </div>

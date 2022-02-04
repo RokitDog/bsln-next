@@ -46,6 +46,9 @@
   .header-links:hover::before {
     width: 100%;
   }
+  .header-links:focus {
+    opacity: 0.4;
+  }
   .cursor.media-blend {
     /* z-index: 100; */
     /* mix-blend-mode: exclusion; */
@@ -185,5 +188,8 @@
       visibility: visible;
       top: 0;
     }
+  }
+  .overflow {
+    overflow: auto;
   }
 }

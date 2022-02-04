@@ -12,6 +12,7 @@ function Header() {
   const ref = useRef();
   const headerRef = useRef();
   const logoRef = useRef();
+  const overflowRef = useRef();
   const [clicked, setClicked] = useState(false);
   const menuToggle = gsap.timeline({ paused: true, reversed: true });
 
@@ -44,6 +45,7 @@ function Header() {
       controlit.classList.toggle('openmenu');
       ref.current.classList.toggle('inverted');
       logoRef.current.classList.toggle('inverted');
+      overflowRef.current.classList.toggle('overflow');
     });
   }, []);
 
@@ -70,6 +72,8 @@ function Header() {
         controlit.classList.remove('openmenu');
         ref.current.classList.remove('inverted');
         logoRef.current.classList.remove('inverted');
+        overflowRef.current.classList.toggle('overflow');
+
         headerTLClose.play();
       });
     });
@@ -78,6 +82,8 @@ function Header() {
       controlit.classList.remove('openmenu');
       ref.current.classList.remove('inverted');
       logoRef.current.classList.remove('inverted');
+      overflowRef.current.classList.toggle('overflow');
+
       headerTLClose.play();
     });
     const headerTLClose = gsap.timeline({ paused: true });
@@ -139,7 +145,10 @@ function Header() {
       className="z-[500] top-0 fixed left-0 right-0  transition-all duration-300 ease-out overflow-hidden h-[100px] opacity-0"
       ref={headerRef}
     >
-      <div className="md:max-w-[1600px] mx-auto w-full flex md:flex-row flex-col justify-between md:items-center h-[100%] md:px-[50px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0">
+      <div
+        className="md:max-w-[1600px] mx-auto w-full flex md:flex-row flex-col justify-between md:items-center h-[100%] md:px-[50px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0"
+        ref={overflowRef}
+      >
         <svg
           ref={ref}
           id="burger"
