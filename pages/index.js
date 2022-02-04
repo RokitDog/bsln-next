@@ -38,6 +38,10 @@ export default function Home() {
         autoRefreshEvents: 'DOMContentLoaded,load,visibilitychange',
       });
     }
+    gsap.to('body main', {
+      opacity: 1,
+      duration: 0.5,
+    });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();

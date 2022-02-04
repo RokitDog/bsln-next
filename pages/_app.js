@@ -14,10 +14,6 @@ function MyApp({ Component, pageProps }) {
     setLoaded(true);
   }, 3000);
 
-  useEffect(() => {
-    gsap.set('body', { css: { visibility: 'visible' } });
-  }, []);
-
   return (
     <AnimatePresence>
       {loaded && (

@@ -71,11 +71,16 @@ function contact() {
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1024) {
       ScrollTrigger.config({
         autoRefreshEvents: 'DOMContentLoaded,load,visibilitychange',
       });
     }
+    gsap.to('body main', {
+      opacity: 1,
+      duration: 2,
+      delay: 0.1,
+    });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();

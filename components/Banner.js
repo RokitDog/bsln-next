@@ -9,8 +9,6 @@ gsap.registerPlugin(SplitText, CSSRulePlugin);
 function Banner() {
   const splitText = useRef();
   const fadeIn = useRef();
-  const slideIn = useRef();
-  const [fontLoaded, setFontLoaded] = useState(false);
 
   useEffect(() => {
     const fadeInAnimation = gsap.from(fadeIn.current, {

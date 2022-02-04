@@ -12,6 +12,11 @@ function work() {
     if (window.innerWidth > 1024) {
       Cursor();
     }
+    gsap.to('body main', {
+      opacity: 1,
+      duration: 2,
+      delay: 0.1,
+    });
     return () => {
       ScrollTrigger.getAll().forEach((instance) => {
         instance.kill();

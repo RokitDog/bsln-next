@@ -121,6 +121,11 @@ function studio() {
         amount: 1,
       },
     });
+    gsap.to('body main', {
+      opacity: 1,
+      duration: 2,
+      delay: 0.1,
+    });
   }, []);
 
   return (

@@ -24,7 +24,9 @@
   body {
     font-family: 'Helvetica Neue', serif;
     transition: all 0.5s ease-out;
-    visibility: hidden;
+  }
+  main {
+    opacity: 0;
   }
 }
 
@@ -83,7 +85,13 @@
   }
 
   .animate-left {
-    animation: infinite-slide 80000ms linear infinite;
+    animation: infinite-slide 70000ms linear infinite;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    transition: 1s ease;
+  }
+  .animate-left2 {
+    animation: infinite-slide 40000ms linear infinite;
     transform: translate3d(0, 0, 0);
     will-change: transform;
     transition: 1s ease;

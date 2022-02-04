@@ -101,7 +101,7 @@ function Brands({ testimonialRef }) {
       <div className="mb-[400px] md:mb-[900px]">
         <Sliders left={true} />
         <Sliders />
-        <Sliders left={true} />
+        <Sliders left2={true} />
       </div>
       <div className="h-[100vh] flex justify-center items-center relative px-[30px] md:px-0">
         <div>
