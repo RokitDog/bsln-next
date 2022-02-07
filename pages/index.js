@@ -16,6 +16,7 @@ import { Cursor } from '../components/Cursor';
 import CursorBody from '../components/CursorBody';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
+import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -85,13 +86,32 @@ export default function Home() {
         <Brands testimonialRef={testimonials} />
         <div className="bg-white rounded-t-[40px]">
           <Services />
-          <div>
-            <div>
-              <h4>B2C</h4>
+          <div className="flex justify-around py-[35px]">
+            <div className="flex items-center">
+              <div className="pr-[15px] mr-[15px] border-r border-r-[#0f0f0f]">
+                <h4 className="font-medium text-[24px]">B2B</h4>
+              </div>
+              <div>
+                <p>Are you the client that needs our services?</p>
+                <Link href="/contact">
+                  <a className="text-[#367F61] header-links before:bg-[#367F61]">
+                    We'd love to help!
+                  </a>
+                </Link>
+              </div>
             </div>
-            <div>
-              <p>Are you the client that needs our services?</p>
-              <p>We'd love to help!</p>
+            <div className="flex items-center">
+              <div className="pr-[15px] mr-[15px] border-r border-r-[#0f0f0f]">
+                <h4 className="font-medium text-[24px]">B2C</h4>
+              </div>
+              <div>
+                <p>Do you have clients that need our services?</p>
+                <Link href="/contact">
+                  <a className="text-[#367F61] header-links before:bg-[#367F61]">
+                    Let's partner up!
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
