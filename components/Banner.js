@@ -30,7 +30,7 @@ function Banner() {
 
     return () => {
       fadeInAnimation.kill();
-      slideInVideo.kill();
+      slideInVideo.reverse();
     };
   }, []);
 
