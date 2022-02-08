@@ -4,7 +4,8 @@ import { Typewriter } from 'react-simple-typewriter';
 import { SplitText } from 'gsap/dist/SplitText';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { CSSRulePlugin } from 'gsap/dist/CSSRulePlugin';
-gsap.registerPlugin(SplitText, CSSRulePlugin);
+gsap.registerPlugin(SplitText);
+gsap.registerPlugin(CSSRulePlugin);
 
 function Banner() {
   const splitText = useRef();
@@ -29,7 +30,7 @@ function Banner() {
 
     return () => {
       fadeInAnimation.kill();
-      slideInVideo.reverse();
+      slideInVideo.kill();
     };
   }, []);
 
