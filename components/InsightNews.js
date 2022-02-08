@@ -46,7 +46,7 @@ function InsightNews() {
       <div className="flex justify-center mt-[70px] md:mt-[100px] transition-all duration-500">
         {blogs < imagesJSON.length && (
           <button
-            className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition-all ease-out duration-300"
+            className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-[#0f0f0f] hover:text-white transition-all ease-out duration-300"
             onClick={() => {
               setBlogs(blogs + 4);
               tl.play();

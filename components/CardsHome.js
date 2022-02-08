@@ -111,6 +111,7 @@ function CardsHome() {
             name="Flower Couture"
             text="Magna ultrices dictum odio morbi sagittis quis at orci."
             image="/images/FlowerCouture.jpg"
+            link="/work/flower-couture"
           />
         </div>
         <div
@@ -121,6 +122,7 @@ function CardsHome() {
             name="Nestlé"
             text="Cursus id volutpat eleifend id quis in natoque velit. Integer risus adipiscing sed platea quis platea a purus consectetur."
             image="/images/Nestle.jpg"
+            link="/work/nestle"
           />
         </div>
         <div className="md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto lg:col-span-1 lg:flex-col lg:mt-[-100px]">
@@ -132,6 +134,7 @@ function CardsHome() {
               name="Mihano Momosa"
               text="Nisl diam sed porttitor amet ullamcorper velit enim, faucibus sed."
               image="/images/Mihano Momosa-alt.jpg"
+              link="/work/mihano-momosa"
             />
           </div>
           <div
@@ -142,6 +145,7 @@ function CardsHome() {
               name="Luv Michael"
               text="Vitae, massa rhoncus ac velit in ac cras. Suspendisse facilisis eget arcu vestibulum lacus, faucibus."
               image="/images/luv Michael.jpg"
+              link="/work/luv-michael"
             />
           </div>
         </div>
@@ -157,7 +161,7 @@ function CardsHome() {
             different story each time.
           </h3>
           <Link href="/work">
-            <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition ease-out duration-300">
+            <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-[#0f0f0f] hover:text-white transition ease-out duration-300">
               Check out our favourite projects
             </a>
           </Link>

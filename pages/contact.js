@@ -139,7 +139,7 @@ function contact() {
           </div>
         </div>
         <section
-          className="pt-[100px] md:pt-[160px] md:pb-[150px]  bg-black origin-bottom"
+          className="pt-[100px] md:pt-[160px] md:pb-[150px]  bg-[#0f0f0f] origin-bottom"
           ref={formRef}
         >
           <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] ">

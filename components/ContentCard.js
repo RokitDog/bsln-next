@@ -15,7 +15,7 @@ function ContentCard({ name, content, hoverText }) {
               <a className="text-[14px] underline">Learn More</a>
             </Link>
             <Link href="/">
-              <a className="text-white text-[14px] bg-black rounded-full px-[15px] py-[10px] border border-black hover:bg-white hover:text-black transition-all duration-300 ease-out max-w-[108px]">
+              <a className="text-white text-[14px] bg-[#0f0f0f] rounded-full px-[15px] py-[10px] border border-[#0f0f0f] hover:bg-white hover:text-[#0f0f0f] transition-all duration-300 ease-out max-w-[108px]">
                 Quick Start
               </a>
             </Link>
@@ -36,7 +36,7 @@ function ContentCard({ name, content, hoverText }) {
               <a className="text-[14px] underline">Learn More</a>
             </Link>
             <Link href="/">
-              <a className="text-white text-[14px] bg-black rounded-full px-[15px] py-[10px] border border-black hover:bg-white hover:text-black transition-all duration-300 ease-out">
+              <a className="text-white text-[14px] bg-[#0f0f0f] rounded-full px-[15px] py-[10px] border border-[#0f0f0f] hover:bg-white hover:text-[#0f0f0f] transition-all duration-300 ease-out">
                 Quick Start
               </a>
             </Link>

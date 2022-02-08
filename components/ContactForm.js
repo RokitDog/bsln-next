@@ -134,13 +134,13 @@ function ContactForm({ ref1, ref2 }) {
             required
           >
             <option
-              className="bg-black text-center"
+              className="bg-[#0f0f0f] text-center"
               disabled
               defaultValue={''}
             ></option>
-            <option className="bg-black text-center">Website</option>
-            <option className="bg-black text-center">Logo</option>
-            <option className="bg-black text-center">Cooking</option>
+            <option className="bg-[#0f0f0f] text-center">Website</option>
+            <option className="bg-[#0f0f0f] text-center">Logo</option>
+            <option className="bg-[#0f0f0f] text-center">Cooking</option>
           </select>
         </div>
         <span className="text-white align-middle hidden xl:inline-block">
@@ -184,15 +184,15 @@ function ContactForm({ ref1, ref2 }) {
             required
           >
             <option
-              className="bg-black text-center"
+              className="bg-[#0f0f0f] text-center"
               disabled
               defaultValue={''}
             ></option>
-            <option className="bg-black text-center">Under 100.000$</option>
-            <option className="bg-black text-center">
+            <option className="bg-[#0f0f0f] text-center">Under 100.000$</option>
+            <option className="bg-[#0f0f0f] text-center">
               100.000$ - 150.000$
             </option>
-            <option className="bg-black text-center">Over 150.000$</option>
+            <option className="bg-[#0f0f0f] text-center">Over 150.000$</option>
           </select>
         </div>
       </div>
@@ -211,7 +211,7 @@ function ContactForm({ ref1, ref2 }) {
       <div className="text-center">
         <button
           type="submit"
-          className="bg-[#fdc52e] text-[14px] md:text-[16px] rounded-full px-[15px] py-[10px] mt-[40px] md:mt-[70px] hover:bg-white hover:text-black transition ease-out duration-300 mb-[100px] xl:mb-0"
+          className="bg-[#fdc52e] text-[14px] md:text-[16px] rounded-full px-[15px] py-[10px] mt-[40px] md:mt-[70px] hover:bg-white hover:text-[#0f0f0f] transition ease-out duration-300 mb-[100px] xl:mb-0"
         >
           Submit
         </button>

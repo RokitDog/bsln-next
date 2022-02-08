@@ -54,7 +54,7 @@ function Header() {
 
     const headerTLOpen = gsap.timeline({ paused: true });
     headerTLOpen.to(headerRef.current, {
-      background: 'black',
+      background: '#0f0f0f',
       height: '100vh',
       duration: 1,
       ease: Expo.easeInOut,
@@ -127,7 +127,7 @@ function Header() {
         hasScrolled();
         didScroll = false;
       }
-    }, 500);
+    }, 250);
 
     const hasScrolled = () => {
       var currentScrollPos = window.pageYOffset;
@@ -176,7 +176,7 @@ function Header() {
           </Link>
         </div>
         <nav>
-          <ul className="md:flex md:space-x-[40px] text-[46px] md:text-[16px] text-white md:text-black">
+          <ul className="md:flex md:space-x-[40px] text-[46px] md:text-[16px] text-white md:text-[#0f0f0f]">
             <li>
               <Link href="/work">
                 <a className="header-links">Work</a>

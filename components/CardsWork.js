@@ -144,6 +144,7 @@ function CardsWork() {
             name="FLOWER COUTURE"
             text="Magna ultrices dictum odio morbi sagittis quis at orci."
             image="/images/FlowerCouture.jpg"
+            link="/work/flower-couture"
           />
         </div>
         <div
@@ -154,6 +155,7 @@ function CardsWork() {
             name="Nestlé"
             text="Cursus id volutpat eleifend id quis in natoque velit. Integer risus adipiscing sed platea quis platea a purus consectetur."
             image="/images/Nestle.jpg"
+            link="/work/nestle"
           />
         </div>
         <div className="md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto lg:col-span-1 lg:flex-col lg:mt-[-100px]">
@@ -165,6 +167,7 @@ function CardsWork() {
               name="Mihano Momosa"
               text="Nisl diam sed porttitor amet ullamcorper velit enim, faucibus sed."
               image="/images/Mihano Momosa-alt.jpg"
+              link="/work/mihano-momosa"
             />
           </div>
           <div
@@ -175,6 +178,7 @@ function CardsWork() {
               name="luv Michael"
               text="Vitae, massa rhoncus ac velit in ac cras. Suspendisse facilisis eget arcu vestibulum lacus, faucibus."
               image="/images/luv Michael.jpg"
+              link="/work/luv-michael"
             />
           </div>
         </div>
@@ -188,6 +192,7 @@ function CardsWork() {
             name="FinSource Accounting"
             text="Laoreet amet nec et varius leo, sollicitudin aliquet suspendisse tristique. Faucibus lobortis potenti et tortor sed in magnis velit ac."
             image="/images/FinSource.jpg"
+            link="/work/finsource"
           />
         </div>
         <div
@@ -198,6 +203,7 @@ function CardsWork() {
             name="Hecker Construction"
             text="CImperdiet sed volutpat nullam fermentum. Quam proin sagittis volutpat diam proin non dui velit. Eget sed sollicitudin ipsum sed tincidunt magna venenatis condimentum. Eu tincidunt donec montes, quis."
             image="/images/Hecker.jpg"
+            link="/work/hecker-construction"
           />
         </div>
         <div
@@ -209,6 +215,7 @@ function CardsWork() {
               name="QANYA"
               text="Laoreet amet nec et varius leo, sollicitudin aliquet suspendisse tristique. Faucibus lobortis potenti et tortor sed in magnis velit ac."
               image="/images/Qanya.jpg"
+              link="/work/qanya"
             />
           </div>
         </div>
@@ -223,7 +230,7 @@ function CardsWork() {
             already there, we use design to enhance the heck out of it.
           </h3>
           <Link href="/work">
-            <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition ease-out duration-300">
+            <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-[#0f0f0f] hover:text-white transition ease-out duration-300">
               Get Started
             </a>
           </Link>

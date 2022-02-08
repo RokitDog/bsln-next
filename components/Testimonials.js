@@ -24,7 +24,7 @@ function Testimonials({ text, image, name, org }) {
             <p className="text-[16px] text-[#7d7d7d] ">
               {name}
               <br />
-              <span className=" text-black">{org}</span>
+              <span className=" text-[#0f0f0f]">{org}</span>
             </p>
           </div>
         </div>

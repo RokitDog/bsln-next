@@ -13,7 +13,7 @@ function Brands({ testimonialRef }) {
         toggleActions: 'play none none reverse',
         start: 'bottom bottom',
       },
-      backgroundColor: `black`,
+      backgroundColor: `#0f0f0f`,
       duration: 0.5,
       ease: Power2.easeOut,
     });

@@ -50,7 +50,7 @@ function studio() {
         end: 'bottom center',
         // markers: true,
       },
-      backgroundColor: `black`,
+      backgroundColor: `#0f0f0f`,
       duration: 0.5,
       ease: Power2.easeOut,
     });
@@ -198,7 +198,7 @@ function studio() {
                   brand come to life.
                 </p>
                 <Link href="/work">
-                  <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-black hover:text-white transition ease-out duration-300">
+                  <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-[#0f0f0f] hover:text-white transition ease-out duration-300">
                     See our work
                   </a>
                 </Link>
@@ -214,10 +214,10 @@ function studio() {
             </h3>
           </section>
         </div>
-        <section className="bg-black rounded-t-[60px]">
+        <section className="bg-[#0f0f0f] rounded-t-[60px]">
           <Services />
         </section>
-        <section className="bg-black pt-[125px] md:pt-[200px] pb-[150px] md:pb-[200px]">
+        <section className="bg-[#0f0f0f] pt-[125px] md:pt-[200px] pb-[150px] md:pb-[200px]">
           <h2 className="text-white text-center max-w-[644px] text-[30px] md:text-[42px] leading-[1.13] tracking-[-1%] mx-auto pb-[150px] md:pb-[200px] px-[15px]">
             Let us brag a little about the brands we've worked for.
           </h2>
