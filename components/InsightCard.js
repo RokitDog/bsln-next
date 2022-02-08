@@ -4,7 +4,7 @@ import React from 'react';
 function InsightCard({ image, date, heading, content }) {
   return (
     <div
-      className="max-w-[100%] opacity-0 translate-y-[50px] insight-card hover-js transition-all duration-300 ease-out  justify-self-center"
+      className="max-w-[100%] opacity-0 translate-y-[50px] insight-card hover-js transition-all duration-300 ease-out  justify-self-center pb-[88px]"
       data-image-src="view"
       id="insight-card-id"
     >

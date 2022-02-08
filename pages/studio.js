@@ -149,6 +149,7 @@ function studio() {
                 src="/images/team.jpg"
                 width={1280}
                 height={640}
+                layout="responsive"
                 alt="team-picture"
                 className="rounded-[15px]"
               />

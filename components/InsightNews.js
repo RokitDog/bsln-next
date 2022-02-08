@@ -3,22 +3,24 @@ import InsightCard from './InsightCard';
 import { imagesJSON } from './blogArray';
 import { gsap } from 'gsap';
 import { Cursor } from './Cursor';
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 function InsightNews() {
   const [blogs, setBlogs] = useState(8);
-  const cardsRef = useRef();
   const tl = gsap.timeline();
   const [anim, setAnim] = useState();
 
   useEffect(() => {
-    tl.to('.insight-card', {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      stagger: {
-        amount: 0.5,
-      },
-    });
+    setTimeout(() => {
+      tl.to('.insight-card', {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: {
+          amount: 0.5,
+        },
+      });
+    }, 1);
     if (window.innerWidth > 1024) {
       Cursor();
     }
@@ -26,23 +28,28 @@ function InsightNews() {
 
   return (
     <div className=" max-w-[1600px] mx-auto px-[30px] md:px-[50px]  pb-[100px] md:pb-[150px] ">
-      <div
-        className="grid gap-x-[40px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-[80px] flex-wrap insight-container"
-        ref={cardsRef}
+      {/* <div
+      className="grid gap-x-[40px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-[80px] flex-wrap insight-container"
+      > */}
+      <ResponsiveMasonry
+        columnsCountBreakPoints={{ 350: 1, 750: 2, 1024: 3, 1280: 4 }}
       >
-        {imagesJSON.map(
-          (image, i) =>
-            i < blogs && (
-              <InsightCard
-                key={i}
-                image={image.image}
-                date={image.date}
-                heading={image.heading}
-                content={image.content}
-              />
-            )
-        )}
-      </div>
+        <Masonry gutter="40px">
+          {imagesJSON.map(
+            (image, i) =>
+              i < blogs && (
+                <InsightCard
+                  key={i}
+                  image={image.image}
+                  date={image.date}
+                  heading={image.heading}
+                  content={image.content}
+                />
+              )
+          )}
+        </Masonry>
+      </ResponsiveMasonry>
+      {/* </div> */}
       <div className="flex justify-center mt-[70px] md:mt-[100px] transition-all duration-500">
         {blogs < imagesJSON.length && (
           <button
