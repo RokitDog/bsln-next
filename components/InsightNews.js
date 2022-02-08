@@ -28,9 +28,6 @@ function InsightNews() {
 
   return (
     <div className=" max-w-[1600px] mx-auto px-[30px] md:px-[50px]  pb-[100px] md:pb-[150px] ">
-      {/* <div
-      className="grid gap-x-[40px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-[80px] flex-wrap insight-container"
-      > */}
       <ResponsiveMasonry
         columnsCountBreakPoints={{ 350: 1, 750: 2, 1024: 3, 1280: 4 }}
       >
@@ -49,7 +46,6 @@ function InsightNews() {
           )}
         </Masonry>
       </ResponsiveMasonry>
-      {/* </div> */}
       <div className="flex justify-center mt-[70px] md:mt-[100px] transition-all duration-500">
         {blogs < imagesJSON.length && (
           <button

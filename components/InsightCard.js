@@ -14,9 +14,6 @@ function InsightCard({ image, date, heading, content }) {
           alt="insightImage"
           className=" rounded-[10px]"
           layout="responsive"
-          width={290}
-          height={290}
-          objectFit="cover"
         />
       </div>
       <p className="text-[#7D7D7D] text-[10px] mb-[10px]">{date}</p>
