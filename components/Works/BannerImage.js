@@ -2,19 +2,27 @@ import Image from 'next/image';
 import React from 'react';
 import { gsap, Power4 } from 'gsap';
 import { useEffect } from 'react';
+import { useState } from 'react';
 
 function BannerImage({ imageSrc }) {
-  useEffect(() => {
-    const anim = gsap.from('.workBanner', {
-      scale: 1.2,
-      duration: 0.5,
-      ease: Power4.easeInOut,
-    });
+  const [isLoaded, setIsLoaded] = useState(false);
 
-    return () => {
-      anim.kill();
-    };
-  }, []);
+  const loaded = () => {
+    setIsLoaded(true);
+  };
+
+  useEffect(() => {
+    let anim;
+    if (isLoaded) {
+      anim = gsap.from('.workBanner', {
+        scale: 1.2,
+        duration: 0.5,
+        ease: Power4.easeInOut,
+      });
+    }
+
+    return () => {};
+  }, [isLoaded]);
   return (
     <div className="workBannerParrent rounded-[10px] overflow-hidden">
       <Image
@@ -25,6 +33,7 @@ function BannerImage({ imageSrc }) {
         alt="bannerImg"
         className="workBanner absolute rounded-[10px]"
         priority
+        onLoad={loaded}
       />
     </div>
   );

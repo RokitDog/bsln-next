@@ -175,7 +175,7 @@
   }
 
   .service-page-container:hover > * {
-    opacity: 0.6;
+    opacity: 0.3;
   }
   .service-page-container > *:hover {
     opacity: 1;
