@@ -170,7 +170,7 @@ function branding() {
                 text="Being the unique black sheep in a herd of white should be the biggest aspiration when it comes to forming an authentic brand that your customers will remember, and want to come back to."
               />
             </div>
-            <div className="relative flex lg:self-center lg:justify-self-center">
+            <div className="relative flex lg:self-center lg:justify-self-center md:pr-[30px]">
               <div className="mr-[-100px]" ref={image1}>
                 <Image
                   src="/images/Mihano Momosa.jpg"
