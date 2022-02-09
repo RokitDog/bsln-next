@@ -158,18 +158,7 @@
   .wrapper-process::before {
     content: 'Our Process' !important;
   }
-  .banner-video {
-    position: relative;
-  }
-  .banner-video::before {
-    content: '';
-    background: white;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    right: 0;
-    transform-origin: right;
-  }
+
   .workBannerParrent {
     position: relative;
   }

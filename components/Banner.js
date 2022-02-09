@@ -3,9 +3,7 @@ import React, { useEffect, useRef, useState, Component } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { SplitText } from 'gsap/dist/SplitText';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { CSSRulePlugin } from 'gsap/dist/CSSRulePlugin';
 gsap.registerPlugin(SplitText);
-gsap.registerPlugin(CSSRulePlugin);
 
 function Banner() {
   const splitText = useRef();
@@ -20,10 +18,9 @@ function Banner() {
       ease: Power2.easeOut,
     });
 
-    const video = CSSRulePlugin.getRule('.banner-video:before');
-
-    const slideInVideo = gsap.to(video, 3, {
-      width: '0%',
+    const slideInVideo = gsap.from('.banner-video', 1, {
+      opacity: 0,
+      translateY: 100,
       delay: 2,
       ease: Power4.easeOut,
     });
