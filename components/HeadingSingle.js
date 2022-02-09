@@ -73,7 +73,7 @@ function HeadingSingle({ title, sub, text }) {
   }, [isFontLoaded]);
 
   return (
-    <div className=" mb-[180px] md:mb-[150px]">
+    <div>
       {sub && (
         <p
           className="font-medium text-[10px] md:text-[14px] text-[#7D7D7D] mb-[36px] opacity-0 translate-y-10"

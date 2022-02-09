@@ -87,7 +87,7 @@ function services() {
     <div>
       <main>
         <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]  mb-[100px]">
-          <div className="mt-[100px] md:px-[50px] ">
+          <div className="mt-[100px] md:px-[50px] mb-[180px] md:mb-[150px]">
             <HeadingSingle
               title="Helping businesses grow and brands evolve since 2008"
               sub="Services"

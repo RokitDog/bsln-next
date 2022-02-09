@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap, Power2 } from 'gsap';
 import Sliders from './Sliders';
+import Image from 'next/image';
 
 function Brands({ testimonialRef }) {
   const brands = useRef(null);
@@ -68,6 +69,20 @@ function Brands({ testimonialRef }) {
                 duration: 1,
               });
             }
+            if (i === 0) {
+              gsap.to('.scroll-down', {
+                opacity: 1,
+                duration: 1,
+              });
+            }
+          },
+          onLeave: () => {
+            if (i === 2) {
+              gsap.to('.scroll-down', {
+                opacity: 0,
+                duration: 1,
+              });
+            }
           },
         },
       });
@@ -91,7 +106,10 @@ function Brands({ testimonialRef }) {
   }, []);
 
   return (
-    <section ref={brands} className="mb-[600px] md:mb-[900px]">
+    <section ref={brands} className="mb-[600px] md:mb-[900px] relative">
+      <div className="fixed bottom-[150px] left-[50%] scroll-down opacity-0">
+        <Image src="/images/Union.svg" width={13} height={15} alt="icon" />
+      </div>
       <div
         ref={testimonialTrigger}
         className=" text-[30px] tracking-[-1%] text-center text-white md:text-[42px]  flex justify-center items-center my-[200px] md:my-[300px] "

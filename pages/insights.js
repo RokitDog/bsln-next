@@ -28,7 +28,7 @@ function insights() {
     <div>
       <main>
         <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]   mb-[100px]">
-          <div className="mt-[100px] md:px-[50px]   max-w-[950px]">
+          <div className="mt-[100px] md:px-[50px] max-w-[950px] mb-[180px] md:mb-[150px]">
             <HeadingSingle
               title="All of our latest updates, faces and stories from across our network."
               sub="Insights"

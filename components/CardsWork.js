@@ -128,7 +128,7 @@ function CardsWork() {
   return (
     <section className="mb-[142px] md:mb-[250px]">
       <div ref={ref} className="opacity-0 translate-y-10 md:pl-[80px]">
-        <div className="max-w-[980px]">
+        <div className="max-w-[980px] mb-[180px] md:mb-[150px]">
           <HeadingSingle
             title="Because all brands are unique, our solutions tell a different story each time."
             sub="Work"
