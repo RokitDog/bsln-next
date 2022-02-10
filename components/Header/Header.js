@@ -45,7 +45,9 @@ function Header() {
       controlit.classList.toggle('openmenu');
       ref.current.classList.toggle('inverted');
       logoRef.current.classList.toggle('inverted');
-      overflowRef.current.classList.toggle('overflow');
+      if (window.innerWidth < 768) {
+        overflowRef.current.classList.toggle('overflow');
+      }
     });
   }, []);
 
@@ -72,7 +74,9 @@ function Header() {
         controlit.classList.remove('openmenu');
         ref.current.classList.remove('inverted');
         logoRef.current.classList.remove('inverted');
-        overflowRef.current.classList.toggle('overflow');
+        if (window.innerWidth < 768) {
+          overflowRef.current.classList.toggle('overflow');
+        }
 
         headerTLClose.play();
       });
@@ -82,7 +86,9 @@ function Header() {
       controlit.classList.remove('openmenu');
       ref.current.classList.remove('inverted');
       logoRef.current.classList.remove('inverted');
-      overflowRef.current.classList.toggle('overflow');
+      if (window.innerWidth < 768) {
+        overflowRef.current.classList.toggle('overflow');
+      }
 
       headerTLClose.play();
     });
@@ -140,9 +146,11 @@ function Header() {
     };
   }, []);
 
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <header
-      className="z-[500] top-0 fixed left-0 right-0  transition-all duration-300 ease-out overflow-hidden h-[100px] opacity-0"
+      className="z-[500] top-0 fixed left-0 right-0  transition-all duration-300 ease-out overflow-hidden md:overflow-visible h-[100px] lg:h-auto opacity-0"
       ref={headerRef}
     >
       <div
@@ -177,32 +185,104 @@ function Header() {
         </div>
         <nav>
           <ul className="md:flex md:space-x-[40px] text-[46px] md:text-[16px] text-white md:text-[#0f0f0f]">
-            <li>
+            <li className="md:py-[40px]">
               <Link href="/work">
                 <a className="header-links">Work</a>
               </Link>
             </li>
-            <li>
+            <li
+              className="relative md:py-[40px]"
+              onMouseEnter={() => {
+                setIsVisible(true);
+              }}
+              onMouseLeave={() => {
+                setIsVisible(false);
+              }}
+            >
               <Link href="/services">
-                <a className="header-links">Services</a>
+                <a className="header-links submenu-parent">Services</a>
               </Link>
+              {isVisible ? (
+                <ul className="absolute bg-[#0f0f0f] text-white text-[14px] leading-[1.19] space-y-[5px] left-[-15px] rounded-[10px] w-[150px] top-[80px] submenu p-[20px] hidden md:block">
+                  <li className="submenu-item">
+                    <Link href="/services/branding">
+                      <a
+                        onClick={() => {
+                          setIsVisible(false);
+                        }}
+                        className="hover:opacity-70 focus:opacity-70 submenu-item"
+                      >
+                        Branding
+                      </a>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link href="/services/print-design">
+                      <a
+                        onClick={() => {
+                          setIsVisible(false);
+                        }}
+                        className="hover:opacity-70 focus:opacity-70 submenu-item"
+                      >
+                        Print Design
+                      </a>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link href="/services/websites">
+                      <a
+                        onClick={() => {
+                          setIsVisible(false);
+                        }}
+                        className="hover:opacity-70 focus:opacity-70 submenu-item"
+                      >
+                        Websites
+                      </a>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link href="/services/digital-marketing">
+                      <a
+                        onClick={() => {
+                          setIsVisible(false);
+                        }}
+                        className="hover:opacity-70 focus:opacity-70 submenu-item"
+                      >
+                        Digital Marketing
+                      </a>
+                    </Link>
+                  </li>
+                  <li className="submenu-item">
+                    <Link href="/services/motion-graphics">
+                      <a
+                        onClick={() => {
+                          setIsVisible(false);
+                        }}
+                        className="hover:opacity-70 focus:opacity-70 submenu-item"
+                      >
+                        Motion Graphics
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+              ) : null}
             </li>
-            <li>
+            <li className="md:py-[40px]">
               <Link href="/studio">
                 <a className="header-links">Studio</a>
               </Link>
             </li>
-            <li>
+            <li className="md:py-[40px]">
               <Link href="/insights">
                 <a className="header-links">Insights</a>
               </Link>
             </li>
-            <li>
+            <li className="md:py-[40px]">
               <Link href="#footer">
                 <a className="header-links">Contact</a>
               </Link>
             </li>
-            <li className="hidden md:block">
+            <li className="hidden md:block md:py-[40px]">
               <Link href="/contact">
                 <a className="px-[15px] py-[10px] bg-[#0F0F0F] rounded-3xl text-white">
                   Start here

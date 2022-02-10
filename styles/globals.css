@@ -43,6 +43,7 @@
     background: #0f0f0f;
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+
   .header-links:hover::before {
     width: 100%;
   }
@@ -144,7 +145,6 @@
   .footer-link {
     font-size: 42px;
     letter-spacing: -0.01rem;
-    font-weight: 500;
     line-height: 1;
     transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -163,10 +163,10 @@
     position: relative;
   }
 
-  .service-page-container:hover > * {
+  .service-page-container:hover .sb-single {
     opacity: 0.3;
   }
-  .service-page-container > *:hover {
+  .service-page-container .sb-single:hover {
     opacity: 1;
   }
   ::-webkit-calendar-picker-indicator {
@@ -183,6 +183,6 @@
     }
   }
   .overflow {
-    overflow: auto;
+    overflow: hidden;
   }
 }

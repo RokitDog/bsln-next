@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { gsap, Power4, Power2 } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import CursorBody from '../../components/CursorBody';
 import HeadingSingle from '../../components/HeadingSingle';
 import { Cursor } from '../../components/Cursor';
@@ -10,9 +9,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import ServiceCard from '../../components/ServiceCard';
 
-gsap.registerPlugin(ScrollTrigger);
-
-function branding() {
+function websites() {
   const image1 = useRef();
   const image2 = useRef();
   const contentRef = useRef();
@@ -62,7 +59,6 @@ function branding() {
       document.body.style.background = 'white';
     };
   }, []);
-
   return (
     <div>
       <main>
@@ -70,9 +66,10 @@ function branding() {
           <section className="mb-[180px] md:mb-[150px] grid lg:grid-cols-2 2xl:gap-x-[231px]">
             <div className="mt-[100px] lg:px-[50px] mb-[60px] max-w-[580px]">
               <HeadingSingle
-                title="Branding"
+                title="Websites"
                 sub="Services"
-                text="Being the unique black sheep in a herd of white should be the biggest aspiration when it comes to forming an authentic brand that your customers will remember, and want to come back to."
+                text="Your website is your best outfit for a first date.
+                We can help you make an impression your visitors will remember, turning them into paying clients and customers, getting you a second date."
               />
             </div>
             <div className="relative flex lg:self-center lg:justify-self-center">
@@ -101,96 +98,92 @@ function branding() {
               <div className="xl:space-y-[70px]">
                 <div className="mb-[70px] xl:mb-0">
                   <ServiceCard
-                    title="Logo Design"
-                    content="Even if you have been living under a rock, chances are you’ve seen the Apple logo and remember it. Logos tend to stick around in people’s heads. They are a visual representation of your brands identity, that elevates your professional appearance and separates your business from the rest. Everyone needs one."
+                    title="UI/UX"
+                    content="Ever feel like you’re playing an escape game when you're trying to navigate a website or an app?
+
+                    Let’s put an end to user torture 
+                    with UI and UX design."
                   />
                 </div>
                 <div className="mb-[70px] xl:mb-0">
                   <ServiceCard
-                    title="Branding & Rebranding"
-                    content="Feeling unseen in a sea of similar businesses?
-          Branding is what will help you swim to the top
-          and stay afloat. 
-          
-          It’s your business's unique presence and personality.
-          The name, logo, colors, imagery, tone, 
-          even the values you promote.
-          
-          Start from scratch or refresh and restart 
-          the growth of your business today."
+                    title="Online Store"
+                    content="We all like to window shop without anyone staring over our shoulder. 
+                    Preferably, in our underwear. 
+                    
+                    Whatever you're selling, give your customers freedom to buy it whenever, 
+                    from wherever."
                   />
                 </div>
                 <div className="mb-[70px] xl:mb-0">
                   <ServiceCard
-                    title="Copywriting"
-                    content="What is the difference between a boring block of text 
-          you immediately want to click away from 
-          and a simple sentence that makes you want to
-          JOIN, BUY, CLICK, READ MORE?
-           
-          Good copy."
+                    title="Content Writing"
+                    content="Suddenly, you find yourself opening an article with a random title like: 
+                    What's the link between good branding 
+                    and your grandmother's soup bowl?
+                    
+                    And you can't stop reading.
+                    
+                    You didn't care about the topic, but you even learn a thing or two.
+                    
+                    And you’re left wondering:
+                    What is this wizardry?!
+                    
+                    It’s quality content writing.
+                    And a bit of witchcraft, yes."
                   />
                 </div>
               </div>
               <div className="xl:space-y-[70px] ">
                 <div className="mb-[70px] xl:mb-0">
                   <ServiceCard
-                    title="Corporate Identity"
-                    content="You are introduced to a potential client.
-          You tell them your name and website.
-          
-          They forget it the next day.
-          
-          What if you tried this:
-          Business card. Memorandum. Envelope. All on brand.
-          
-          Because writing it out on a napkin is so last century and amnesia is not an excuse."
+                    title="Web Design"
+                    content="Does a spider walk around begging flies to come?
+                    No. He invests his time into making the greatest web he can.
+                    Then all he has to do is wait.
+                    
+                    Let's build a web(site).
+                    And catch (sorry, convert!) those visitors.
+                    
+                    Jokes aside.
+                    With an impressive website, you will reach more customers, seem more professional, sell more products,
+                    and live happily ever after."
                   />
                 </div>
                 <div className="mb-[70px] xl:mb-0">
                   <ServiceCard
-                    title="Illustration"
-                    content="Adults are similar to children. 
-          Our attention span is limited. 
-          We like imagery more than words.
-          
-          Illustrations are engaging, clear, fun and self-explanatory.
-          In a fast-paced world, this makes all the difference 
-          in making your customers stick around."
+                    title="Front-end
+                    Development"
+                    content="Unplug from the Matrix for
+                    a second, Neo.
+                    
+                    Do you ever think about how the websites you visit, the images and colors and text you see and interact with - are actually just long lines of code?
+                    
+                    Thanks to front-end development,
+                    we see the beauty and the functionality,
+                    not the zeros and ones."
                   />
                 </div>
               </div>
-              <div className="xl:space-y-[70px] md:col-start-2 md:mt-[-400px] xl:mt-0 xl:col-start-auto">
+              <div className="xl:space-y-[70px] md:col-start-2 md:mt-[-130px] xl:mt-0 xl:col-start-auto">
                 <div className="mb-[70px] xl:mb-0">
                   <ServiceCard
-                    title="Brand Standards"
-                    content="Imagine you have a friend called Steve. You like Steve.
-          Steve is always on time, wears polo shirts 
-          and is very shy in public.
-          
-          Suddenly, Steve is an hour late, he’s wearing a leather jacket,
-          talking very loudly.
-          
-          How does this make you feel?
-          
-          Humans like consistency. It creates trust. 
-          Brand standards provide rules and guides 
-          for fonts, colors and imagery, so there are no surprises.
-          
-          You know you can always count on Steve to be Steve."
+                    title="Landing Pages"
+                    content="It’s all about first impressions. 
+
+                    When your landing page cuts to the chase providing value, precise information and clear calls to
+                    action - get ready to watch
+                    users instantly convert."
                   />
                 </div>
                 <div className="mb-[70px] xl:mb-0">
                   <ServiceCard
-                    title="Packaging Design"
-                    content="Yes, your product should be great. 
-          But if your packaging sucks, 
-          nobody will care enough to buy it 
-          and get the chance to experience the greatness 
-          that’s hiding on the inside. 
-          
-          There's too many good products out there. 
-          Let's make yours stand out in any package crowd."
+                    title="Back-end
+                    Development"
+                    content="If your website is a performance in the theatre, back-end developers are the puppet masters that do the work behind the scenes. 
+
+                    If a show goes smoothly, 
+                    It's because the puppeteers have done their magic right."
                   />
                 </div>
               </div>
@@ -204,4 +197,4 @@ function branding() {
   );
 }
 
-export default branding;
+export default websites;

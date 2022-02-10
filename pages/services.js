@@ -7,6 +7,7 @@ import { gsap, Power2 } from 'gsap';
 import HeadingSingle from '../components/HeadingSingle';
 import ServiceBox from '../components/ServiceBox';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,41 +98,61 @@ function services() {
             ref={ref}
             className="opacity-0 translate-y-[100px] service-page-container transition-all duration-300 ease-out"
           >
-            <ServiceBox
-              title="Branding"
-              content="Being the unique black sheep in a herd of white should be the biggest aspiration when it comes to forming an authentic brand that your customers will remember, and want to come back to."
-              list={items1}
-              numberOfItems={4}
-              link="/"
-            />
-            <ServiceBox
-              title="Print Design"
-              content="Offline marketing isn't dead. Unlike in the case of digital advertising, printed ads can be converted into paper planes after they’ve completed their mission!"
-              list={items2}
-              numberOfItems={4}
-              link="/"
-            />
-            <ServiceBox
-              title="Websites"
-              content="Your website is your best outfit for a first date. We can help you make an impression your visitors will remember, turning them into paying clients and customers, getting you a second date."
-              list={items3}
-              numberOfItems={4}
-              link="/"
-            />
-            <ServiceBox
-              title="Digital Marketing"
-              content="Everyone’s online. If your not using the opportunity to reach millions of potential clients in the era of unlimited connection, let's get you on that train ASAP. It's a heck of a ride!"
-              list={items4}
-              numberOfItems={3}
-              link="/"
-            />
-            <ServiceBox
-              title="Motion Graphics"
-              content="We dare you not to look at a moving object. Impossible? Motion is mesmerizing. If you are trying to capture instant attention, animation is the way to go. Let’s move it!"
-              list={items5}
-              numberOfItems={3}
-              link="/"
-            />
+            <Link href="/services/branding">
+              <a>
+                <ServiceBox
+                  title="Branding"
+                  content="Being the unique black sheep in a herd of white should be the biggest aspiration when it comes to forming an authentic brand that your customers will remember, and want to come back to."
+                  list={items1}
+                  numberOfItems={4}
+                  link="/services/branding"
+                />
+              </a>
+            </Link>
+            <Link href="/services/print-design">
+              <a>
+                <ServiceBox
+                  title="Print Design"
+                  content="Offline marketing isn't dead. Unlike in the case of digital advertising, printed ads can be converted into paper planes after they’ve completed their mission!"
+                  list={items2}
+                  numberOfItems={4}
+                  link="/services/print-design"
+                />
+              </a>
+            </Link>
+            <Link href="/services/websites">
+              <a>
+                <ServiceBox
+                  title="Websites"
+                  content="Your website is your best outfit for a first date. We can help you make an impression your visitors will remember, turning them into paying clients and customers, getting you a second date."
+                  list={items3}
+                  numberOfItems={4}
+                  link="/services/websites"
+                />
+              </a>
+            </Link>
+            <Link href="/services/digital-marketing">
+              <a>
+                <ServiceBox
+                  title="Digital Marketing"
+                  content="Everyone’s online. If your not using the opportunity to reach millions of potential clients in the era of unlimited connection, let's get you on that train ASAP. It's a heck of a ride!"
+                  list={items4}
+                  numberOfItems={3}
+                  link="/services/digital-marketing"
+                />
+              </a>
+            </Link>
+            <Link href="/services/motion-graphics">
+              <a>
+                <ServiceBox
+                  title="Motion Graphics"
+                  content="We dare you not to look at a moving object. Impossible? Motion is mesmerizing. If you are trying to capture instant attention, animation is the way to go. Let’s move it!"
+                  list={items5}
+                  numberOfItems={3}
+                  link="/services/motion-graphics"
+                />
+              </a>
+            </Link>
           </section>
         </div>
         <Cta />

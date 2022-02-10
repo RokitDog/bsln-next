@@ -1,9 +1,10 @@
-import Link from 'next/link';
 import React from 'react';
+import { useRouter } from 'next/router';
 
 function ServiceBox({ title, content, list, numberOfItems, link }) {
+  const router = useRouter();
   return (
-    <div className="border-t border-[#7D7D7D] pl-[0] md:pl-[50px] lg:pl-[80px] pt-[60px] pb-[100px] transition-all duration-300">
+    <div className="sb-single border-t border-[#7D7D7D] pl-[0] md:pl-[50px] lg:pl-[80px] pt-[60px] pb-[100px] transition-all duration-300">
       <div
         className="hover-js flex xl:space-x-[220px] flex-col xl:flex-row xl:items-center  transition duration-300 space-y-[20px] xl:space-y-[0px]"
         data-image-src="view"
@@ -31,9 +32,14 @@ function ServiceBox({ title, content, list, numberOfItems, link }) {
           </div>
         </div>
         <div className="underline text-[14px] md:text-[16px] lg:hidden mt-[30px]">
-          <Link href={link}>
-            <a>Learn More</a>
-          </Link>
+          <p
+            onClick={() => {
+              router.push(link);
+            }}
+            className="cursor-pointer"
+          >
+            Learn More
+          </p>
         </div>
       </div>
     </div>
