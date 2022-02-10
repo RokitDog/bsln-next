@@ -185,13 +185,13 @@ function Header() {
         </div>
         <nav>
           <ul className="md:flex md:space-x-[40px] text-[46px] md:text-[16px] text-white md:text-[#0f0f0f]">
-            <li className="md:py-[40px]">
+            <li className="md:pb-[40px] md:mt-[40px]">
               <Link href="/work">
                 <a className="header-links">Work</a>
               </Link>
             </li>
             <li
-              className="relative md:py-[40px]"
+              className="relative md:pb-[40px] md:mt-[40px]"
               onMouseEnter={() => {
                 setIsVisible(true);
               }}
@@ -203,7 +203,7 @@ function Header() {
                 <a className="header-links submenu-parent">Services</a>
               </Link>
               {isVisible ? (
-                <ul className="absolute bg-[#0f0f0f] text-white text-[14px] leading-[1.19] space-y-[5px] left-[-15px] rounded-[10px] w-[150px] top-[80px] submenu p-[20px] hidden md:block">
+                <ul className="absolute bg-[#0f0f0f] text-white text-[14px] leading-[1.19] space-y-[5px] left-[-15px] rounded-[10px] w-[150px] top-[40px] submenu p-[20px] hidden md:block">
                   <li className="submenu-item">
                     <Link href="/services/branding">
                       <a
@@ -267,22 +267,22 @@ function Header() {
                 </ul>
               ) : null}
             </li>
-            <li className="md:py-[40px]">
+            <li className="md:pb-[40px] md:mt-[40px]">
               <Link href="/studio">
                 <a className="header-links">Studio</a>
               </Link>
             </li>
-            <li className="md:py-[40px]">
+            <li className="md:pb-[40px] md:mt-[40px]">
               <Link href="/insights">
                 <a className="header-links">Insights</a>
               </Link>
             </li>
-            <li className="md:py-[40px]">
+            <li className="md:pb-[40px] md:mt-[40px]">
               <Link href="#footer">
                 <a className="header-links">Contact</a>
               </Link>
             </li>
-            <li className="hidden md:block md:py-[40px]">
+            <li className="hidden md:block md:pb-[40px] md:mt-[40px]">
               <Link href="/contact">
                 <a className="px-[15px] py-[10px] bg-[#0F0F0F] rounded-3xl text-white">
                   Start here
