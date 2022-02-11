@@ -3,7 +3,7 @@ import LinkedIn from '@material-ui/icons/LinkedIn';
 import Image from 'next/image';
 import React from 'react';
 
-function Person({ name, position, linkedIn, instagram, image }) {
+function Person({ name, position, image }) {
   return (
     <div className="max-w-[290px] team-cards opacity-0 translate-y-[50px]">
       {image ? (
@@ -25,10 +25,6 @@ function Person({ name, position, linkedIn, instagram, image }) {
           <p className="text-[#7d7d7d] text-[14px] md:text-[16px]">
             {position}
           </p>
-        </div>
-        <div className="text-white">
-          {linkedIn && <LinkedIn />}
-          {instagram && <Instagram />}
         </div>
       </div>
     </div>
