@@ -179,7 +179,6 @@
     .services-cards:hover div:nth-child(1) {
       opacity: 1;
       visibility: visible;
-      top: 0;
     }
   }
   .overflow {

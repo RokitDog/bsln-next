@@ -52,7 +52,7 @@ function finsource() {
       scrollTrigger: {
         trigger: '.third-section',
         start: 'top center',
-        end: 'bottom center',
+        end: '92% center',
         toggleActions: 'play reverse play reverse',
         onEnter: () => {
           gsap.to('.second-section', {
@@ -107,7 +107,7 @@ function finsource() {
             <Image src={fs1} alt="work" className="fadeIn-text" />
           </section>
           <section className="opacity-0 third-section flex flex-col ">
-            <div className="h-[100vh] flex items-center justify-center ">
+            <div className=" flex items-center justify-center pb-[50vh]">
               <Image src={fs2} alt="logo" />
             </div>
             <div className=" relative rounded-[10px]  mb-[40px]">

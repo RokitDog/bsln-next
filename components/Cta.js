@@ -26,7 +26,7 @@ function Cta() {
             </p>
 
             <Link href="/contact">
-              <a className="text-[14px] md:text-[16px] text-white bg-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-white hover:text-[#0f0f0f] transition ease-out duration-300">
+              <a className="text-[14px] md:text-[16px] text-white bg-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-white hover:text-[#0f0f0f] transition ease-out duration-300 border border-black">
                 Let's get to work
               </a>
             </Link>

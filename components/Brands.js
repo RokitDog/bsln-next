@@ -107,7 +107,7 @@ function Brands({ testimonialRef }) {
 
   return (
     <section ref={brands} className="mb-[600px] md:mb-[900px] relative">
-      <div className="fixed bottom-[150px] left-[50%] scroll-down opacity-0 animate-bounce">
+      <div className="fixed bottom-[50px] left-[50%] translate-x-[-50%] scroll-down opacity-0 animate-bounce">
         <Image src="/images/Union.svg" width={13} height={15} alt="icon" />
       </div>
       <div
@@ -134,7 +134,7 @@ function Brands({ testimonialRef }) {
               We've got you.
               <br />
             </h2>
-            <span className="text-[20px] text-[#7D7D7D] fade-in opacity-0 translate-y-10 leading-[1.13] max-w-[300px] md:max-w-full mx-auto text-center">
+            <span className="text-[20px] text-[#7D7D7D] fade-in opacity-0 leading-[1.13] max-w-[300px] md:max-w-full mx-auto text-center">
               Let’s shape that idea of yours into something grand.
             </span>
           </div>

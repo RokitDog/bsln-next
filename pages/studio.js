@@ -172,7 +172,7 @@ function studio() {
           </section>
           <section className="hidden md:block">
             <div
-              className="flex items-center space-x-[110px]"
+              className="flex items-center space-x-[110px] justify-center"
               ref={revealSection}
             >
               <div className="rounded-[10px] max-w-[440px]">

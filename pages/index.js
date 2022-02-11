@@ -86,7 +86,7 @@ export default function Home() {
         <Brands testimonialRef={testimonials} />
         <div className="bg-white rounded-t-[40px]">
           <Services />
-          <div className="flex justify-around py-[35px] flex-col lg:flex-row items-center gap-y-[35px] lg:gap-y-0">
+          <div className="flex justify-around py-[35px] flex-col lg:flex-row items-center gap-y-[35px] lg:gap-y-0 px-[30px]">
             <div className="flex items-center">
               <div className="pr-[15px] mr-[15px] border-r border-r-[#0f0f0f]">
                 <h4 className="font-medium text-[24px]">B2B</h4>

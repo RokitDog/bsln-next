@@ -307,7 +307,7 @@ function Header() {
             </li>
             <li className="hidden md:block md:pb-[40px] md:mt-[40px]">
               <Link href="/contact">
-                <a className="px-[15px] py-[10px] bg-[#0F0F0F] rounded-3xl text-white">
+                <a className="px-[15px] py-[10px] bg-[#0F0F0F] rounded-[25px] text-white relative border border-black hover:bg-[#fff] hover:text-black transition ease-out duration-300">
                   Start here
                 </a>
               </Link>

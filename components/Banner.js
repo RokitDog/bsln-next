@@ -1,5 +1,5 @@
 import { gsap, Power4, Power2 } from 'gsap';
-import React, { useEffect, useRef, useState, Component } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { SplitText } from 'gsap/dist/SplitText';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';

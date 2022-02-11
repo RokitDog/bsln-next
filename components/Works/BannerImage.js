@@ -15,8 +15,8 @@ function BannerImage({ imageSrc }) {
     let anim;
     if (isLoaded) {
       anim = gsap.from('.workBanner', {
-        scale: 1.2,
-        duration: 0.5,
+        scale: 1.1,
+        duration: 1.5,
         ease: Power4.easeInOut,
       });
     }
