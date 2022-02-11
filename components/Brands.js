@@ -107,7 +107,7 @@ function Brands({ testimonialRef }) {
 
   return (
     <section ref={brands} className="mb-[600px] md:mb-[900px] relative">
-      <div className="fixed bottom-[150px] left-[50%] scroll-down opacity-0">
+      <div className="fixed bottom-[150px] left-[50%] scroll-down opacity-0 animate-bounce">
         <Image src="/images/Union.svg" width={13} height={15} alt="icon" />
       </div>
       <div

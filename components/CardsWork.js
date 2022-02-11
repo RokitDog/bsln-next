@@ -196,7 +196,7 @@ function CardsWork() {
           />
         </div>
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[-100px]"
+          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[-225px]"
           ref={ref7}
         >
           <Card
@@ -229,7 +229,7 @@ function CardsWork() {
             Each brand has a story to tell. By finding the authenticity that's
             already there, we use design to enhance the heck out of it.
           </h3>
-          <Link href="/work">
+          <Link href="/contact">
             <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-[#0f0f0f] hover:text-white transition ease-out duration-300">
               Get Started
             </a>

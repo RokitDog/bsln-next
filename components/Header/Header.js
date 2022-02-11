@@ -7,6 +7,7 @@ import LinkedIn from '@material-ui/icons/LinkedIn';
 import LogoComponent from './LogoComponent';
 import { gsap, Expo } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function Header() {
   const ref = useRef();
@@ -202,70 +203,92 @@ function Header() {
               <Link href="/services">
                 <a className="header-links submenu-parent">Services</a>
               </Link>
-              {isVisible ? (
-                <ul className="absolute bg-[#0f0f0f] text-white text-[14px] leading-[1.19] space-y-[5px] left-[-15px] rounded-[10px] w-[150px] top-[40px] submenu p-[20px] hidden md:block">
-                  <li className="submenu-item">
-                    <Link href="/services/branding">
-                      <a
-                        onClick={() => {
-                          setIsVisible(false);
-                        }}
-                        className="hover:opacity-70 focus:opacity-70 submenu-item"
-                      >
-                        Branding
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="submenu-item">
-                    <Link href="/services/print-design">
-                      <a
-                        onClick={() => {
-                          setIsVisible(false);
-                        }}
-                        className="hover:opacity-70 focus:opacity-70 submenu-item"
-                      >
-                        Print Design
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="submenu-item">
-                    <Link href="/services/websites">
-                      <a
-                        onClick={() => {
-                          setIsVisible(false);
-                        }}
-                        className="hover:opacity-70 focus:opacity-70 submenu-item"
-                      >
-                        Websites
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="submenu-item">
-                    <Link href="/services/digital-marketing">
-                      <a
-                        onClick={() => {
-                          setIsVisible(false);
-                        }}
-                        className="hover:opacity-70 focus:opacity-70 submenu-item"
-                      >
-                        Digital Marketing
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="submenu-item">
-                    <Link href="/services/motion-graphics">
-                      <a
-                        onClick={() => {
-                          setIsVisible(false);
-                        }}
-                        className="hover:opacity-70 focus:opacity-70 submenu-item"
-                      >
-                        Motion Graphics
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
-              ) : null}
+              <AnimatePresence>
+                {isVisible ? (
+                  <motion.ul
+                    className="absolute bg-[#0f0f0f] text-white text-[14px] leading-[1.19] space-y-[5px] left-[-15px] rounded-[10px] w-[150px] top-[40px] submenu px-[20px] hidden md:block origin-top"
+                    initial={{
+                      height: 0,
+                      paddingTop: 0,
+                      paddingBottom: 0,
+                      overflow: 'hidden',
+                    }}
+                    animate={{
+                      height: 145,
+                      paddingTop: 20,
+                      paddingBottom: 20,
+                      overflow: 'visible',
+                    }}
+                    exit={{
+                      height: 0,
+                      paddingTop: 0,
+                      paddingBottom: 0,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <li className="submenu-item">
+                      <Link href="/services/branding">
+                        <a
+                          // onClick={() => {
+                          //   setIsVisible(false);
+                          // }}
+                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                        >
+                          Branding
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="submenu-item">
+                      <Link href="/services/print-design">
+                        <a
+                          // onClick={() => {
+                          //   setIsVisible(false);
+                          // }}
+                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                        >
+                          Print Design
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="submenu-item">
+                      <Link href="/services/websites">
+                        <a
+                          // onClick={() => {
+                          //   setIsVisible(false);
+                          // }}
+                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                        >
+                          Websites
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="submenu-item">
+                      <Link href="/services/digital-marketing">
+                        <a
+                          // onClick={() => {
+                          //   setIsVisible(false);
+                          // }}
+                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                        >
+                          Digital Marketing
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="submenu-item">
+                      <Link href="/services/motion-graphics">
+                        <a
+                          // onClick={() => {
+                          //   setIsVisible(false);
+                          // }}
+                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                        >
+                          Motion Graphics
+                        </a>
+                      </Link>
+                    </li>
+                  </motion.ul>
+                ) : null}
+              </AnimatePresence>
             </li>
             <li className="md:pb-[40px] md:mt-[40px]">
               <Link href="/studio">
