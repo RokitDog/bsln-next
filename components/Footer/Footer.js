@@ -59,17 +59,10 @@ function Footer() {
               </a>
             </Link>
           </div>
-          <div className="flex space-y-[10px] md:space-y-0 md:space-x-[50px] mt-[50px] flex-col md:flex-row">
+          <div className="mt-[50px]">
             <div>
-              <p className="text-[#7D7D7D] font-medium">United States</p>
               <a className="text-[#7D7D7D] header-links cursor-pointer">
-                us@wearebaseline.com
-              </a>
-            </div>
-            <div>
-              <p className="text-[#7D7D7D] font-medium">Europe</p>
-              <a className="text-[#7D7D7D] header-links cursor-pointer">
-                europe@wearebaseline.com
+                contact@wearebaseline.com
               </a>
             </div>
           </div>

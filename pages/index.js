@@ -20,7 +20,7 @@ import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  let settings = {
+  const settings = {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

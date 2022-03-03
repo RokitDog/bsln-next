@@ -1,5 +1,3 @@
-import Instagram from '@material-ui/icons/Instagram';
-import LinkedIn from '@material-ui/icons/LinkedIn';
 import Image from 'next/image';
 import React from 'react';
 

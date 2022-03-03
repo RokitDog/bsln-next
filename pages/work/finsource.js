@@ -146,6 +146,7 @@ function finsource() {
               paragraph="In this case, we began by assembling the colour pallet, choosing and combining the right typography, and putting in many hours of work into developing the best yet most simple logo design, specially tailored for the client. Great quality content made the whole process of designing the website from start to finish much smoother. The site was live in less than a month, optimised to the extent that its score is 99/100 for the desktop version and 85/100 for mobile phones, making it fully responsive."
               imageSrc={fs6}
               bigImageSrc={fs7}
+              row={true}
             />
           </section>
           <div className="flex justify-between items-center px-[70px] mb-[160px]">

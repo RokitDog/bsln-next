@@ -20,7 +20,7 @@ function Card({ name, text, image, link }) {
             />
           </div>
           <div className="mt-[40px] flex items-start space-x-[30px]">
-            <h5 className="font-medium text-[17px] md:text-[20px] leading-[1.22] ">
+            <h5 className="font-medium text-[17px] md:text-[20px] leading-[1.22] shrink-[0.7]">
               {name}
             </h5>
             <p className=" text-[14px] md:text-[16px] text-[#7D7D7D] leading-[1.375]">

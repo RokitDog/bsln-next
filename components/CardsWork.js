@@ -27,14 +27,11 @@ function CardsWork() {
   });
 
   if (inView2) {
-    let innerWindowWidthh = window.innerWidth;
-
     const fadeInAnimation = gsap.to(entry2.target, {
       y: 0,
       duration: 1,
       opacity: 1,
       ease: Power2.easeOut,
-      delay: innerWindowWidthh > 1535 ? 1.3 : 0,
     });
   }
 
@@ -55,13 +52,11 @@ function CardsWork() {
   });
 
   if (inView4) {
-    let innerWindowWidthh = window.innerWidth;
     const fadeInAnimation = gsap.to(entry4.target, {
       y: 0,
       duration: 1,
       opacity: 1,
       ease: Power2.easeOut,
-      delay: innerWindowWidthh > 1535 ? 1.3 : 0,
     });
   }
   const [ref5, inView5, entry5] = useInView({
@@ -141,10 +136,10 @@ function CardsWork() {
           ref={ref2}
         >
           <Card
-            name="FLOWER COUTURE"
+            name="Hecker Construction"
             text="Magna ultrices dictum odio morbi sagittis quis at orci."
-            image="/images/FlowerCouture.jpg"
-            link="/work/flower-couture"
+            image="/images/HeckerHome.jpg"
+            link="/work/hecker-construction"
           />
         </div>
         <div
@@ -175,9 +170,9 @@ function CardsWork() {
             ref={ref5}
           >
             <Card
-              name="luv Michael"
+              name="QANYA"
               text="Vitae, massa rhoncus ac velit in ac cras. Suspendisse facilisis eget arcu vestibulum lacus, faucibus."
-              image="/images/luv Michael.jpg"
+              image="/images/QanyaHome.jpg"
               link="/work/luv-michael"
             />
           </div>
@@ -200,10 +195,10 @@ function CardsWork() {
           ref={ref7}
         >
           <Card
-            name="Hecker Construction"
+            name="Immertec"
             text="CImperdiet sed volutpat nullam fermentum. Quam proin sagittis volutpat diam proin non dui velit. Eget sed sollicitudin ipsum sed tincidunt magna venenatis condimentum. Eu tincidunt donec montes, quis."
-            image="/images/Hecker.jpg"
-            link="/work/hecker-construction"
+            image="/images/immertec/ImmertecPhone.jpg"
+            link="/work/immertec"
           />
         </div>
         <div
@@ -212,10 +207,10 @@ function CardsWork() {
         >
           <div className="mb-[100px]">
             <Card
-              name="QANYA"
+              name="FC Jedinstvo Gospodjinci"
               text="Laoreet amet nec et varius leo, sollicitudin aliquet suspendisse tristique. Faucibus lobortis potenti et tortor sed in magnis velit ac."
-              image="/images/Qanya.jpg"
-              link="/work/qanya"
+              image="/images/fcjedinstvo/Mockup.jpg"
+              link="/work/fc-jedinstvo-gospodjinci"
             />
           </div>
         </div>

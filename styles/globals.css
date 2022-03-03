@@ -184,4 +184,31 @@
   .overflow {
     overflow: hidden;
   }
+  .work-slider .slick-slide {
+    margin: 0 40px;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .cWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

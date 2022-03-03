@@ -108,10 +108,10 @@ function CardsHome() {
           ref={ref2}
         >
           <Card
-            name="Flower Couture"
+            name="Hecker Construction"
             text="Magna ultrices dictum odio morbi sagittis quis at orci."
-            image="/images/FlowerCouture.jpg"
-            link="/work/flower-couture"
+            image="/images/HeckerHome.jpg"
+            link="/work/hecker-construction"
           />
         </div>
         <div
@@ -142,10 +142,10 @@ function CardsHome() {
             ref={ref5}
           >
             <Card
-              name="Luv Michael"
+              name="QANYA"
               text="Vitae, massa rhoncus ac velit in ac cras. Suspendisse facilisis eget arcu vestibulum lacus, faucibus."
-              image="/images/luv Michael.jpg"
-              link="/work/luv-michael"
+              image="/images/QanyaHome.jpg"
+              link="/work/qanya"
             />
           </div>
         </div>
