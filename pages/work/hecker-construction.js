@@ -192,7 +192,7 @@ function heckerconstruction() {
           <div className="flex space-x-[40px] mb-[120px]">
             <div className="flex-[25%]">
               <Image
-                src="/images/hecker/Illustration2.jpg"
+                src="/images/hecker/illustration1.jpg"
                 alt="illustration"
                 className="fadeIn-text"
                 width={290}
