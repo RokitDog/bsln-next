@@ -5,7 +5,7 @@ import { SplitText } from 'gsap/dist/SplitText';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(SplitText);
 
-function Banner() {
+function Banner({ bannerHeading, bannerSubHeading }) {
   const splitText = useRef();
   const fadeIn = useRef();
 
@@ -85,22 +85,21 @@ function Banner() {
   };
 
   return (
-    <section className="header-active-padding">
+    <section className='header-active-padding'>
       <h1
-        className=" text-[46px] tracking-[-0.01] md:text-[72px] leading-[1.08] md:pl-[70px] md:pt-[100px] pt-[50px] max-w-[900px]"
+        className=' text-[46px] tracking-[-0.01] md:text-[72px] leading-[1.08] md:pl-[70px] md:pt-[100px] pt-[50px] max-w-[900px]'
         ref={splitText}
       >
-        Where your brands voice becomes visual.
+        {bannerHeading}
       </h1>
-      <div className="md:pl-[70px] pt-[40px]" ref={fadeIn}>
-        <p className="text-[20px] md:text-[28px] max-w-[713px] min-h-[120px] md:min-h-[170px] resizing-text">
-          Powerful branding and unique SEO friendly websites that help your
-          businesses &nbsp;
+      <div className='md:pl-[70px] pt-[40px]' ref={fadeIn}>
+        <p className='text-[20px] md:text-[28px] max-w-[713px] min-h-[120px] md:min-h-[170px] resizing-text'>
+          {bannerSubHeading} &nbsp;
           <span ref={text}>
             <Typewriter
               loop
               cursor
-              cursorStyle="|"
+              cursorStyle='|'
               typeSpeed={70}
               deleteSpeed={50}
               delaySpeed={1000}
@@ -117,16 +116,16 @@ function Banner() {
           </span>
         </p>
       </div>
-      <div className="my-[100px] banner-video">
+      <div className='my-[100px] banner-video'>
         <video
-          data-image-src="view"
-          className="hover-js w-[100%] h-auto"
+          data-image-src='view'
+          className='hover-js w-[100%] h-auto'
           autoPlay
           muted
           loop
           onPlay={loaded}
         >
-          <source src="/video/Hecker.mp4" type="video/mp4" />
+          <source src='/video/Hecker.mp4' type='video/mp4' />
         </video>
       </div>
     </section>

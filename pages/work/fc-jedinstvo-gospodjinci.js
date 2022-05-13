@@ -12,7 +12,8 @@ import img2 from '../../public/images/fcjedinstvo/JedinstvoMockup2.jpg';
 import { Cursor } from '../../components/Cursor';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Carousel from '../../components/Carousel';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/splide.min.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -138,22 +139,30 @@ function fcjedinstvogospodjinci() {
           />
         </section>
         <section
-          className="work-slider h-[720px] w-[100%] hover-js"
+          className="work-slider w-[100%] hover-js"
           data-image-src="drag"
         >
-          <Carousel _data={items} {...setting}>
-            {items.map((i, _i) => (
-              <div key={_i} className="item" style={{ ...itemStyle }}>
+          <Splide
+            options={{
+              perPage: 4,
+              arrows: false,
+              pagination: false,
+              drag: 'free',
+              gap: '40px',
+            }}
+          >
+            {items.map((item) => (
+              <SplideSlide key={item}>
                 <Image
-                  src={i}
+                  src={item}
                   alt="images"
                   height={720}
                   width={540}
                   layout="responsive"
                 />
-              </div>
+              </SplideSlide>
             ))}
-          </Carousel>
+          </Splide>
         </section>
         <section className="pt-[120px] max-w-[1600px] mx-auto px-[30px] md:px-[50px] mb-[80px] third-section">
           <div className="relative flex justify-center mb-[120px]">

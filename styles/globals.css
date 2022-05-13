@@ -182,7 +182,7 @@
     }
   }
   .overflow {
-    overflow: hidden;
+    overflow: scroll;
   }
   .work-slider .slick-slide {
     margin: 0 40px;

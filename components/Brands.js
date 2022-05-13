@@ -3,7 +3,14 @@ import { gsap, Power2 } from 'gsap';
 import Sliders from './Sliders';
 import Image from 'next/image';
 
-function Brands({ testimonialRef }) {
+function Brands({
+  testimonialRef,
+  brandsHeading,
+  brandsScrollText1,
+  brandsScrollText2,
+  brandsScrollText3,
+  delayedText,
+}) {
   const brands = useRef(null);
   const testimonialTrigger = useRef(null);
 
@@ -106,36 +113,36 @@ function Brands({ testimonialRef }) {
   }, []);
 
   return (
-    <section ref={brands} className="mb-[600px] md:mb-[900px] relative">
-      <div className="fixed bottom-[50px] left-[50%] translate-x-[-50%] scroll-down opacity-0 animate-bounce">
-        <Image src="/images/Union.svg" width={13} height={15} alt="icon" />
+    <section ref={brands} className='mb-[600px] md:mb-[900px] relative'>
+      <div className='fixed bottom-[50px] left-[50%] translate-x-[-50%] scroll-down opacity-0 animate-bounce'>
+        <Image src='/images/Union.svg' width={13} height={15} alt='icon' />
       </div>
       <div
         ref={testimonialTrigger}
-        className=" text-[30px] tracking-[-1%] text-center text-white md:text-[42px]  flex justify-center items-center my-[200px] md:my-[300px] "
+        className=' text-[30px] tracking-[-1%] text-center text-white md:text-[42px]  flex justify-center items-center my-[200px] md:my-[300px] '
       >
-        <h2>Big names that trust us</h2>
+        <h2>{brandsHeading}</h2>
       </div>
-      <div className="mb-[400px] md:mb-[900px]">
+      <div className='mb-[400px] md:mb-[900px]'>
         <Sliders left={true} />
         <Sliders />
         <Sliders left2={true} />
       </div>
-      <div className="h-[100vh] flex justify-center items-center relative px-[30px] md:px-0">
+      <div className='h-[100vh] flex justify-center items-center relative px-[30px] md:px-0'>
         <div>
-          <h2 className="h-[300px] lg:h-[600px] max-w-[527px] opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
-            You have an idea but you're not sure about it?
+          <h2 className='h-[300px] lg:h-[600px] max-w-[527px] opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]'>
+            {brandsScrollText1}
           </h2>
-          <h2 className="h-[300px] lg:h-[600px] max-w-[448px] mx-auto opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
-            It's too big, too small too crazy, too boring, or just too average?
+          <h2 className='h-[300px] lg:h-[600px] max-w-[448px] mx-auto opacity-0 scrolling-text   text-[30px] md:text-[42px] text-white text-center leading-[1.13]'>
+            {brandsScrollText2}
           </h2>
-          <div className="h-[300px] lg:h-[600px]  max-w-[527px]  opacity-0 scrolling-text  flex flex-col space-y-[20px] mx-auto">
-            <h2 className=" text-[30px] md:text-[42px] text-white text-center leading-[1.13]">
-              We've got you.
+          <div className='h-[300px] lg:h-[600px]  max-w-[527px]  opacity-0 scrolling-text  flex flex-col space-y-[20px] mx-auto'>
+            <h2 className=' text-[30px] md:text-[42px] text-white text-center leading-[1.13]'>
+              {brandsScrollText3}
               <br />
             </h2>
-            <span className="text-[20px] text-[#7D7D7D] fade-in opacity-0 leading-[1.13] max-w-[300px] md:max-w-full mx-auto text-center">
-              Let’s shape that idea of yours into something grand.
+            <span className='text-[20px] text-[#7D7D7D] fade-in opacity-0 leading-[1.13] max-w-[300px] md:max-w-full mx-auto text-center'>
+              {delayedText}
             </span>
           </div>
         </div>

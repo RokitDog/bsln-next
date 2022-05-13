@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import ProcessSection from './ProcessSection';
 
-function Process() {
+function Process({ processText1, processText2, processText3, processText4 }) {
   useEffect(() => {
     let points = gsap.utils.toArray('.point');
 
@@ -53,35 +53,12 @@ function Process() {
   }, []);
   return (
     <div>
-      <section className="relative philosophie max-w-[1600px] mx-auto">
-        <div className="h-[100vh] w-[100%] wrapper wrapper-process relative  before:absolute before:bottom-[90vh] before:text-[#7D7D7D] before:left-[30px] before:max-w-[54px] before:font-medium lg:before:bottom-[25vh] before:text-[12px]">
-          <ProcessSection
-            imageSrc="/images/0.svg"
-            content="Before we do - we get inspired
-            imagine, doodle, brainstorm
-            agree and disagree."
-          />
-          <ProcessSection
-            imageSrc="/images/2.svg"
-            content="We research and dwell, find
-            various solutions and pick
-            the best one with your help."
-          />
-          <ProcessSection
-            imageSrc="/images/3.svg"
-            content="
-              We divide tasks: design,
-              illustrate, write, code, and
-              then - magic happens."
-          />
-          <ProcessSection
-            imageSrc="/images/4.svg"
-            content="
-            You get the final product that
-            helps your company succeed,
-            while we get the satisfaction
-            from working on it."
-          />
+      <section className='relative philosophie max-w-[1600px] mx-auto'>
+        <div className='h-[100vh] w-[100%] wrapper wrapper-process relative  before:absolute before:bottom-[90vh] before:text-[#7D7D7D] before:left-[30px] before:max-w-[54px] before:font-medium lg:before:bottom-[25vh] before:text-[12px]'>
+          <ProcessSection imageSrc='/images/0.svg' content={processText1} />
+          <ProcessSection imageSrc='/images/2.svg' content={processText2} />
+          <ProcessSection imageSrc='/images/3.svg' content={processText3} />
+          <ProcessSection imageSrc='/images/4.svg' content={processText4} />
         </div>
       </section>
     </div>

@@ -5,9 +5,11 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
 import Cta from '../components/Cta';
 import CardsWork from '../components/CardsWork';
+import { sanityClient } from '../sanity';
 gsap.registerPlugin(ScrollTrigger);
 
-function work() {
+function work({ content }) {
+  const data = content[0];
   useEffect(() => {
     if (window.innerWidth > 1024) {
       Cursor();
@@ -28,12 +30,16 @@ function work() {
   return (
     <div>
       <main>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] ">
-          <div className="mt-[100px]">
+        <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px] '>
+          <div className='mt-[100px]'>
             <CardsWork />
           </div>
         </div>
-        <Cta />
+        <Cta
+          footerHeading={data.footerHeading}
+          footerSubHeading={data.footerSubHeading}
+          footerButton={data.footerButton}
+        />
       </main>
       <CursorBody />
     </div>
@@ -41,3 +47,22 @@ function work() {
 }
 
 export default work;
+
+export const getServerSideProps = async () => {
+  const query = `
+  *[_type == "HomePage"]{
+    footerHeading,
+    footerSubHeading,
+    footerButton
+  }
+  
+  `;
+
+  const content = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      content,
+    },
+  };
+};

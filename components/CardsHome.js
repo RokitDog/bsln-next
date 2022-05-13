@@ -3,12 +3,20 @@ import { useInView } from 'react-intersection-observer';
 import { gsap, Power2 } from 'gsap';
 import Card from './Card';
 import Link from 'next/link';
+import { urlFor } from '../sanity';
 
-function CardsHome() {
+function CardsHome({
+  slug,
+  heading,
+  subHeading,
+  cardsUnderlinedWord,
+  cards,
+  cardsCtaContent,
+  cardsCtaButton,
+}) {
   const [ref, inView, entry] = useInView({
     threshold: 0.75,
   });
-
   if (inView) {
     const fadeInAnimation = gsap.to(entry.target, {
       y: 0,
@@ -81,88 +89,86 @@ function CardsHome() {
     });
   }
   return (
-    <section className="mb-[142px] md:mb-[250px] cards-home">
-      <div ref={ref} className="opacity-0 translate-y-10">
-        <p className="font-medium text-[10px] md:text-[14px] text-[#7D7D7D]">
-          Work
+    <section className='mb-[142px] md:mb-[250px] cards-home'>
+      <div ref={ref} className='opacity-0 translate-y-10'>
+        <p className='font-medium text-[10px] md:text-[14px] text-[#7D7D7D]'>
+          {slug}
         </p>
         <div>
-          <h2 className="text-[30px] leading-[1.13] tracking-[-0.01rem] mt-[20px] md:mt-[40px] md:text-[42px] mb-[30px] max-w-[596px]">
-            Your project can be the next big thing we are proud to show off.
+          <h2 className='text-[30px] leading-[1.13] tracking-[-0.01rem] mt-[20px] md:mt-[40px] md:text-[42px] mb-[30px] max-w-[596px]'>
+            {heading}
           </h2>
-          <p className="text-[17px] md:text-[20px]">
-            It takes one email to{' '}
-            <span className="underline text-[#367F61]">
+          <p className='text-[17px] md:text-[20px]'>
+            {subHeading}{' '}
+            <span className='underline text-[#367F61]'>
               {' '}
-              <Link href="/contact">
-                <a>start</a>
+              <Link href='/contact'>
+                <a>{cardsUnderlinedWord}</a>
               </Link>
             </span>
             .
           </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 gap-x-[40px] lg:grid-cols-3">
+      <div className='grid md:grid-cols-2 gap-x-[40px] lg:grid-cols-3'>
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[200px]"
+          className='mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[200px]'
           ref={ref2}
         >
           <Card
-            name="Hecker Construction"
-            text="Magna ultrices dictum odio morbi sagittis quis at orci."
-            image="/images/HeckerHome.jpg"
-            link="/work/hecker-construction"
+            name={cards.cardTitle1}
+            text={cards.cardDescription1}
+            image={urlFor(cards.cardImage1).url()}
+            link='/work/hecker-construction'
           />
         </div>
         <div
-          className="mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[300px]"
+          className='mt-[80px] opacity-0  translate-y-[100px] justify-self-center  lg:mt-[300px]'
           ref={ref3}
         >
           <Card
-            name="Nestlé"
-            text="Cursus id volutpat eleifend id quis in natoque velit. Integer risus adipiscing sed platea quis platea a purus consectetur."
-            image="/images/Nestle.jpg"
-            link="/work/nestle"
+            name={cards.cardTitle2}
+            text={cards.cardDescription2}
+            image={urlFor(cards.cardImage2).url()}
+            link='/work/nestle'
           />
         </div>
-        <div className="md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto lg:col-span-1 lg:flex-col lg:mt-[-100px]">
+        <div className='md:flex md:justify-around md:col-span-2 md:gap-x-[40px] justify-self-center md:justify-self-auto lg:col-span-1 lg:flex-col lg:mt-[-100px]'>
           <div
-            className="mt-[80px] opacity-0  translate-y-[100px] md:flex-[50%] "
+            className='mt-[80px] opacity-0  translate-y-[100px] md:flex-[50%] '
             ref={ref4}
           >
             <Card
-              name="Mihano Momosa"
-              text="Nisl diam sed porttitor amet ullamcorper velit enim, faucibus sed."
-              image="/images/Mihano Momosa-alt.jpg"
-              link="/work/mihano-momosa"
+              name={cards.cardTitle3}
+              text={cards.cardDescription3}
+              image={urlFor(cards.cardImage3).url()}
+              link='/work/mihano-momosa'
             />
           </div>
           <div
-            className="mt-[80px] mb-[100px] opacity-0 translate-y-[100px]  justify-self-center    lg:mt-[160px] md:flex-[50%]"
+            className='mt-[80px] mb-[100px] opacity-0 translate-y-[100px]  justify-self-center    lg:mt-[160px] md:flex-[50%]'
             ref={ref5}
           >
             <Card
-              name="QANYA"
-              text="Vitae, massa rhoncus ac velit in ac cras. Suspendisse facilisis eget arcu vestibulum lacus, faucibus."
-              image="/images/QanyaHome.jpg"
-              link="/work/qanya"
+              name={cards.cardTitle4}
+              text={cards.cardDescription4}
+              image={urlFor(cards.cardImage4).url()}
+              link='/work/qanya'
             />
           </div>
         </div>
       </div>
       <div
-        className="max-w-full lg:max-w-[666px] xl:max-w-[880px] flex justify-center opacity-0 translate-y-10 lg:mt-[-200px]"
+        className='max-w-full lg:max-w-[666px] xl:max-w-[880px] flex justify-center opacity-0 translate-y-10 lg:mt-[-200px]'
         ref={ref6}
       >
         <div>
-          <h3 className="text-[26px] tracking-[-1%] leading-[1.15] md:text-[32px] mb-[35px] md:mb-[45px] ">
-            Because all brands are <br />
-            unique, our solutions tell a <br />
-            different story each time.
+          <h3 className='text-[26px] tracking-[-1%] leading-[1.15] md:text-[32px] mb-[35px] md:mb-[45px] max-w-[411px]'>
+            {cardsCtaContent}
           </h3>
-          <Link href="/work">
-            <a className="text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-[#0f0f0f] hover:text-white transition ease-out duration-300">
-              Check out our favourite projects
+          <Link href='/work'>
+            <a className='text-[14px] md:text-[16px] border-[0.5px] border-[#0f0f0f] rounded-full px-[15px] py-[10px] hover:bg-[#0f0f0f] hover:text-white transition ease-out duration-300'>
+              {cardsCtaButton}
             </a>
           </Link>
         </div>

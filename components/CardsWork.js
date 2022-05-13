@@ -173,7 +173,7 @@ function CardsWork() {
               name="QANYA"
               text="Vitae, massa rhoncus ac velit in ac cras. Suspendisse facilisis eget arcu vestibulum lacus, faucibus."
               image="/images/QanyaHome.jpg"
-              link="/work/luv-michael"
+              link="/work/qanya"
             />
           </div>
         </div>

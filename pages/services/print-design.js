@@ -8,8 +8,10 @@ import Cta from '../../components/Cta';
 import Image from 'next/image';
 import { useRef } from 'react';
 import ServiceCard from '../../components/ServiceCard';
+import { sanityClient } from '../../sanity';
 
-function printdesign() {
+function printdesign({ content }) {
+  const data = content[0];
   const image1 = useRef();
   const image2 = useRef();
   const contentRef = useRef();
@@ -63,43 +65,43 @@ function printdesign() {
   return (
     <div>
       <main>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]">
-          <section className="mb-[180px] md:mb-[150px] grid lg:grid-cols-2 2xl:gap-x-[231px]">
-            <div className="mt-[100px] lg:px-[50px] mb-[60px] max-w-[580px]">
+        <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px]'>
+          <section className='mb-[180px] md:mb-[150px] grid lg:grid-cols-2 2xl:gap-x-[231px]'>
+            <div className='mt-[100px] lg:px-[50px] mb-[60px] max-w-[580px]'>
               <HeadingSingle
-                title="Print Design"
-                sub="Services"
+                title='Print Design'
+                sub='Services'
                 text="Offline marketing isn't dead. Unlike in the case of digital advertising, printed ads can be converted into paper planes after they’ve completed their mission!"
               />
             </div>
-            <div className="relative flex lg:self-center lg:justify-self-center">
-              <div className="mr-[-100px]" ref={image1}>
+            <div className='relative flex lg:self-center lg:justify-self-center'>
+              <div className='mr-[-100px]' ref={image1}>
                 <Image
-                  src="/images/Mihano Momosa.jpg"
+                  src='/images/Mihano Momosa.jpg'
                   width={240}
                   height={260}
-                  alt="image"
+                  alt='image'
                   priority
                 />
               </div>
-              <div className="mr-[30px] md:mr-0" ref={image2}>
+              <div className='mr-[30px] md:mr-0' ref={image2}>
                 <Image
-                  src="/images/Qanya.jpg"
+                  src='/images/Qanya.jpg'
                   width={240}
                   height={260}
-                  alt="image"
+                  alt='image'
                   priority
                 />
               </div>
             </div>
           </section>
           <div ref={contentRef}>
-            <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-[150px] md:mb-[200px] gap-x-[60px] 2xl:gap-x-[120px] md:px-[50px]">
-              <div className="xl:space-y-[70px] ">
-                <div className="mb-[70px] xl:mb-0">
+            <section className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-[150px] md:mb-[200px] gap-x-[60px] 2xl:gap-x-[120px] md:px-[50px]'>
+              <div className='xl:space-y-[70px] '>
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Brochures"
-                    content="Do you need a cost effective way to advertise your business?
+                    title='Brochures'
+                    content='Do you need a cost effective way to advertise your business?
 
                     Branded and personalized,
                     with information about your company,
@@ -108,12 +110,12 @@ function printdesign() {
                     Throw them in the air, spread them around or share them online.
                     
                     Potential customers are just a
-                    brochure away."
+                    brochure away.'
                   />
                 </div>
-                <div className="mb-[70px] xl:mb-0">
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Indoor & Outdoor Advertising"
+                    title='Indoor & Outdoor Advertising'
                     content="Should you advertise your company on a gigantic billboard
                     or put a sign up in a coffee shop?
                     
@@ -125,10 +127,10 @@ function printdesign() {
                   />
                 </div>
               </div>
-              <div className="xl:space-y-[70px] ">
-                <div className="mb-[70px] xl:mb-0">
+              <div className='xl:space-y-[70px] '>
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Sales Sheets"
+                    title='Sales Sheets'
                     content="A brochure doesn't quite cut it for you?
 
                     The product you’re selling is so extraordinary, you just need a bit more space to describe it.
@@ -137,9 +139,9 @@ function printdesign() {
                     on a single piece of paper."
                   />
                 </div>
-                <div className="mb-[70px] xl:mb-0">
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Posters"
+                    title='Posters'
                     content="Offline marketing isn't dead. It’s all around us.
 
                     A cleverly thought-out poster will catch anyone’s attention,
@@ -150,10 +152,10 @@ function printdesign() {
                   />
                 </div>
               </div>
-              <div className="xl:space-y-[70px]  md:col-start-2 xl:col-start-auto">
-                <div className="mb-[70px] xl:mb-0 md:mt-[-80px] xl:mt-0">
+              <div className='xl:space-y-[70px]  md:col-start-2 xl:col-start-auto'>
+                <div className='mb-[70px] xl:mb-0 md:mt-[-80px] xl:mt-0'>
                   <ServiceCard
-                    title="Print Ads"
+                    title='Print Ads'
                     content="Imagine your company sells designer chairs.
 
                     Jane buys an interior design magazine
@@ -171,7 +173,11 @@ function printdesign() {
             </section>
           </div>
         </div>
-        <Cta />
+        <Cta
+          footerHeading={data.footerHeading}
+          footerSubHeading={data.footerSubHeading}
+          footerButton={data.footerButton}
+        />
       </main>
       <CursorBody />
     </div>
@@ -179,3 +185,22 @@ function printdesign() {
 }
 
 export default printdesign;
+
+export const getServerSideProps = async () => {
+  const query = `
+  *[_type == "HomePage"]{
+    footerHeading,
+    footerSubHeading,
+    footerButton
+  }
+  
+  `;
+
+  const content = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      content,
+    },
+  };
+};

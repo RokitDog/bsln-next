@@ -3,16 +3,20 @@ import React, { useEffect } from 'react';
 import CursorBody from '../../components/CursorBody';
 import BannerImage from '../../components/Works/BannerImage';
 import Blogs from '../../components/Works/Blogs';
+import Content from '../../components/Works/Content';
 import Job from '../../components/Works/Job';
 import Problem from '../../components/Works/Problem';
 import WorksText from '../../components/Works/WorksText';
+import img1 from '../../public/images/fcjedinstvo/Mockup1.jpg';
+import img2 from '../../public/images/fcjedinstvo/JedinstvoMockup2.jpg';
 import { Cursor } from '../../components/Cursor';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Carousel from '../../components/Carousel';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function nestle() {
+function qanya() {
   const job = ['Illustrations and Graphic', 'Design for App Promotion'];
 
   useEffect(() => {
@@ -328,4 +332,4 @@ function nestle() {
   );
 }
 
-export default nestle;
+export default qanya;

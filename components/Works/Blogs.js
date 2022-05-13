@@ -51,6 +51,14 @@ function Blogs() {
       link: '/work/hecker-construction',
       href: 'hecker-construction',
     },
+    {
+      render: false,
+      name: 'QANYA',
+      text: 'Nisl diam sed porttitor amet ullamcorper velit enim, faucibus sed.',
+      image: '/images/QanyaHome.jpg',
+      link: '/work/qanya',
+      href: 'qanya',
+    },
   ];
   const [blogCards, setBlogCards] = useState();
 
@@ -61,7 +69,7 @@ function Blogs() {
 
     const randomNumbers = [];
     while (randomNumbers.length < 3) {
-      let random = Math.floor(Math.random() * 5);
+      let random = Math.floor(Math.random() * 6);
       if (randomNumbers.indexOf(random) === -1) {
         randomNumbers.push(random);
       }

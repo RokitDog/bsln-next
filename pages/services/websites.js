@@ -8,8 +8,10 @@ import Cta from '../../components/Cta';
 import Image from 'next/image';
 import { useRef } from 'react';
 import ServiceCard from '../../components/ServiceCard';
+import { sanityClient } from '../../sanity';
 
-function websites() {
+function websites({ content }) {
+  const data = content[0];
   const image1 = useRef();
   const image2 = useRef();
   const contentRef = useRef();
@@ -62,52 +64,52 @@ function websites() {
   return (
     <div>
       <main>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]">
-          <section className="mb-[180px] md:mb-[150px] grid lg:grid-cols-2 2xl:gap-x-[231px]">
-            <div className="mt-[100px] lg:px-[50px] mb-[60px] max-w-[580px]">
+        <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px]'>
+          <section className='mb-[180px] md:mb-[150px] grid lg:grid-cols-2 2xl:gap-x-[231px]'>
+            <div className='mt-[100px] lg:px-[50px] mb-[60px] max-w-[580px]'>
               <HeadingSingle
-                title="Websites"
-                sub="Services"
-                text="Your website is your best outfit for a first date.
-                We can help you make an impression your visitors will remember, turning them into paying clients and customers, getting you a second date."
+                title='Websites'
+                sub='Services'
+                text='Your website is your best outfit for a first date.
+                We can help you make an impression your visitors will remember, turning them into paying clients and customers, getting you a second date.'
               />
             </div>
-            <div className="relative flex lg:self-center lg:justify-self-center">
-              <div className="mr-[-100px]" ref={image1}>
+            <div className='relative flex lg:self-center lg:justify-self-center'>
+              <div className='mr-[-100px]' ref={image1}>
                 <Image
-                  src="/images/Mihano Momosa.jpg"
+                  src='/images/Mihano Momosa.jpg'
                   width={240}
                   height={260}
-                  alt="image"
+                  alt='image'
                   priority
                 />
               </div>
-              <div className="mr-[30px] md:mr-0" ref={image2}>
+              <div className='mr-[30px] md:mr-0' ref={image2}>
                 <Image
-                  src="/images/Qanya.jpg"
+                  src='/images/Qanya.jpg'
                   width={240}
                   height={260}
-                  alt="image"
+                  alt='image'
                   priority
                 />
               </div>
             </div>
           </section>
           <div ref={contentRef}>
-            <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-[150px] md:mb-[200px] gap-x-[60px] 2xl:gap-x-[120px] md:px-[50px]">
-              <div className="xl:space-y-[70px]">
-                <div className="mb-[70px] xl:mb-0">
+            <section className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-[150px] md:mb-[200px] gap-x-[60px] 2xl:gap-x-[120px] md:px-[50px]'>
+              <div className='xl:space-y-[70px]'>
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="UI/UX"
+                    title='UI/UX'
                     content="Ever feel like you’re playing an escape game when you're trying to navigate a website or an app?
 
                     Let’s put an end to user torture 
                     with UI and UX design."
                   />
                 </div>
-                <div className="mb-[70px] xl:mb-0">
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Online Store"
+                    title='Online Store'
                     content="We all like to window shop without anyone staring over our shoulder. 
                     Preferably, in our underwear. 
                     
@@ -115,9 +117,9 @@ function websites() {
                     from wherever."
                   />
                 </div>
-                <div className="mb-[70px] xl:mb-0">
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Content Writing"
+                    title='Content Writing'
                     content="Suddenly, you find yourself opening an article with a random title like: 
                     What's the link between good branding 
                     and your grandmother's soup bowl?
@@ -134,10 +136,10 @@ function websites() {
                   />
                 </div>
               </div>
-              <div className="xl:space-y-[70px] ">
-                <div className="mb-[70px] xl:mb-0">
+              <div className='xl:space-y-[70px] '>
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Web Design"
+                    title='Web Design'
                     content="Does a spider walk around begging flies to come?
                     No. He invests his time into making the greatest web he can.
                     Then all he has to do is wait.
@@ -150,36 +152,36 @@ function websites() {
                     and live happily ever after."
                   />
                 </div>
-                <div className="mb-[70px] xl:mb-0">
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Front-end
-                    Development"
-                    content="Unplug from the Matrix for
+                    title='Front-end
+                    Development'
+                    content='Unplug from the Matrix for
                     a second, Neo.
                     
                     Do you ever think about how the websites you visit, the images and colors and text you see and interact with - are actually just long lines of code?
                     
                     Thanks to front-end development,
                     we see the beauty and the functionality,
-                    not the zeros and ones."
+                    not the zeros and ones.'
                   />
                 </div>
               </div>
-              <div className="xl:space-y-[70px] md:col-start-2 md:mt-[-130px] xl:mt-0 xl:col-start-auto">
-                <div className="mb-[70px] xl:mb-0">
+              <div className='xl:space-y-[70px] md:col-start-2 md:mt-[-130px] xl:mt-0 xl:col-start-auto'>
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Landing Pages"
-                    content="It’s all about first impressions. 
+                    title='Landing Pages'
+                    content='It’s all about first impressions. 
 
                     When your landing page cuts to the chase providing value, precise information and clear calls to
                     action - get ready to watch
-                    users instantly convert."
+                    users instantly convert.'
                   />
                 </div>
-                <div className="mb-[70px] xl:mb-0">
+                <div className='mb-[70px] xl:mb-0'>
                   <ServiceCard
-                    title="Back-end
-                    Development"
+                    title='Back-end
+                    Development'
                     content="If your website is a performance in the theatre, back-end developers are the puppet masters that do the work behind the scenes. 
 
                     If a show goes smoothly, 
@@ -190,7 +192,11 @@ function websites() {
             </section>
           </div>
         </div>
-        <Cta />
+        <Cta
+          footerHeading={data.footerHeading}
+          footerSubHeading={data.footerSubHeading}
+          footerButton={data.footerButton}
+        />
       </main>
       <CursorBody />
     </div>
@@ -198,3 +204,22 @@ function websites() {
 }
 
 export default websites;
+
+export const getServerSideProps = async () => {
+  const query = `
+  *[_type == "HomePage"]{
+    footerHeading,
+    footerSubHeading,
+    footerButton
+  }
+  
+  `;
+
+  const content = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      content,
+    },
+  };
+};

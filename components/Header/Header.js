@@ -151,32 +151,32 @@ function Header() {
 
   return (
     <header
-      className="z-[500] top-0 fixed left-0 right-0  transition-all duration-300 ease-out overflow-hidden md:overflow-visible h-[100px] lg:h-auto opacity-0"
+      className='z-[500] top-0 fixed left-0 right-0  transition-all duration-300 ease-out overflow-hidden md:overflow-visible h-[100px] lg:h-auto opacity-0'
       ref={headerRef}
     >
       <div
-        className="md:max-w-[1600px] mx-auto w-full flex md:flex-row flex-col justify-between md:items-center h-[100%] md:px-[50px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0"
+        className='md:max-w-[1600px] mx-auto w-full flex md:flex-row flex-col justify-between md:items-center h-[100%] md:px-[50px] px-[30px] pt-[40px] pb-[40px] md:pt-0 md:pb-0'
         ref={overflowRef}
       >
         <svg
           ref={ref}
-          id="burger"
-          width="30"
-          className=" md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white transition-all duration-1000"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 30 30"
+          id='burger'
+          width='30'
+          className=' md:hidden absolute right-[30px] top-[35px] cursor-pointer text-white transition-all duration-1000'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 30 30'
           onClick={() => {
             setClicked(!clicked);
           }}
         >
-          <path className="top " d="M0 9h30v2H0z" />
-          <path className="bot " d="M0 19h30v2H0z" />
+          <path className='top ' d='M0 9h30v2H0z' />
+          <path className='bot ' d='M0 19h30v2H0z' />
         </svg>
-        <div className="w-[93px]">
-          <Link href="/">
+        <div className='w-[93px]'>
+          <Link href='/'>
             <a>
               <LogoComponent
-                className="mb-[50px] md:mb-0 transition-all duration-1000"
+                className='mb-[50px] md:mb-0 transition-all duration-1000'
                 reference={logoRef}
                 width={137}
                 height={33}
@@ -185,14 +185,14 @@ function Header() {
           </Link>
         </div>
         <nav>
-          <ul className="md:flex md:space-x-[40px] text-[46px] md:text-[16px] text-white md:text-[#0f0f0f]">
-            <li className="md:pb-[40px] md:mt-[40px]">
-              <Link href="/work">
-                <a className="header-links">Work</a>
+          <ul className='md:flex md:space-x-[40px] text-[46px] md:text-[16px] text-white md:text-[#0f0f0f]'>
+            <li className='md:pb-[40px] md:mt-[40px]'>
+              <Link href='/work'>
+                <a className='header-links'>Work</a>
               </Link>
             </li>
             <li
-              className="relative md:pb-[40px] md:mt-[40px]"
+              className='relative md:pb-[40px] md:mt-[40px]'
               onMouseEnter={() => {
                 setIsVisible(true);
               }}
@@ -200,13 +200,13 @@ function Header() {
                 setIsVisible(false);
               }}
             >
-              <Link href="/services">
-                <a className="header-links submenu-parent">Services</a>
+              <Link href='/services'>
+                <a className='header-links submenu-parent'>Services</a>
               </Link>
               <AnimatePresence>
                 {isVisible ? (
                   <motion.ul
-                    className="absolute bg-[#0f0f0f] text-white text-[14px] leading-[1.19] space-y-[5px] left-[-15px] rounded-[10px] w-[150px] top-[40px] submenu px-[20px] hidden md:block origin-top"
+                    className='absolute bg-[#0f0f0f] text-white text-[14px] leading-[1.19] space-y-[5px] left-[-15px] rounded-[10px] w-[150px] top-[40px] submenu px-[20px] hidden md:block origin-top'
                     initial={{
                       height: 0,
                       paddingTop: 0,
@@ -226,61 +226,61 @@ function Header() {
                       overflow: 'hidden',
                     }}
                   >
-                    <li className="submenu-item">
-                      <Link href="/services/branding">
+                    <li className='submenu-item'>
+                      <Link href='/services/branding'>
                         <a
                           // onClick={() => {
                           //   setIsVisible(false);
                           // }}
-                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                          className='hover:opacity-70 focus:opacity-70 submenu-item'
                         >
                           Branding
                         </a>
                       </Link>
                     </li>
-                    <li className="submenu-item">
-                      <Link href="/services/print-design">
+                    <li className='submenu-item'>
+                      <Link href='/services/print-design'>
                         <a
                           // onClick={() => {
                           //   setIsVisible(false);
                           // }}
-                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                          className='hover:opacity-70 focus:opacity-70 submenu-item'
                         >
                           Print Design
                         </a>
                       </Link>
                     </li>
-                    <li className="submenu-item">
-                      <Link href="/services/websites">
+                    <li className='submenu-item'>
+                      <Link href='/services/websites'>
                         <a
                           // onClick={() => {
                           //   setIsVisible(false);
                           // }}
-                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                          className='hover:opacity-70 focus:opacity-70 submenu-item'
                         >
                           Websites
                         </a>
                       </Link>
                     </li>
-                    <li className="submenu-item">
-                      <Link href="/services/digital-marketing">
+                    <li className='submenu-item'>
+                      <Link href='/services/digital-marketing'>
                         <a
                           // onClick={() => {
                           //   setIsVisible(false);
                           // }}
-                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                          className='hover:opacity-70 focus:opacity-70 submenu-item'
                         >
                           Digital Marketing
                         </a>
                       </Link>
                     </li>
-                    <li className="submenu-item">
-                      <Link href="/services/motion-graphics">
+                    <li className='submenu-item'>
+                      <Link href='/services/motion-graphics'>
                         <a
                           // onClick={() => {
                           //   setIsVisible(false);
                           // }}
-                          className="hover:opacity-70 focus:opacity-70 submenu-item"
+                          className='hover:opacity-70 focus:opacity-70 submenu-item'
                         >
                           Motion Graphics
                         </a>
@@ -290,61 +290,61 @@ function Header() {
                 ) : null}
               </AnimatePresence>
             </li>
-            <li className="md:pb-[40px] md:mt-[40px]">
-              <Link href="/studio">
-                <a className="header-links">Studio</a>
+            <li className='md:pb-[40px] md:mt-[40px]'>
+              <Link href='/studio'>
+                <a className='header-links'>Studio</a>
               </Link>
             </li>
-            <li className="md:pb-[40px] md:mt-[40px]">
-              <Link href="/insights">
-                <a className="header-links">Insights</a>
+            <li className='md:pb-[40px] md:mt-[40px]'>
+              <Link href='/insights'>
+                <a className='header-links'>Insights</a>
               </Link>
             </li>
-            <li className="md:pb-[40px] md:mt-[40px]">
-              <Link href="#footer">
-                <a className="header-links">Contact</a>
+            <li className='md:pb-[40px] md:mt-[40px]'>
+              <Link href='/contact'>
+                <a className='header-links'>Contact</a>
               </Link>
             </li>
-            <li className="hidden md:block md:pb-[40px] md:mt-[40px]">
-              <Link href="/contact">
-                <a className="px-[15px] py-[10px] bg-[#0F0F0F] rounded-[25px] text-white relative border border-black hover:bg-[#fff] hover:text-black transition ease-out duration-300">
+            <li className='hidden md:block md:pb-[40px] md:mt-[40px]'>
+              <Link href='/contact'>
+                <a className='px-[15px] py-[10px] bg-[#0F0F0F] rounded-[25px] text-white relative border border-black hover:bg-[#fff] hover:text-black transition ease-out duration-300'>
                   Start here
                 </a>
               </Link>
             </li>
           </ul>
         </nav>
-        <div className="md:hidden">
-          <div className="space-x-[30px] text-white">
-            <Link href="#">
+        <div className='md:hidden'>
+          <div className='space-x-[30px] text-white'>
+            <Link href='#'>
               <a>
                 <FacebookIcon />
               </a>
             </Link>
-            <Link href="#">
+            <Link href='#'>
               <a>
                 <Twitter />
               </a>
             </Link>
-            <Link href="#">
+            <Link href='#'>
               <a>
                 <Instagram />
               </a>
             </Link>
-            <Link href="#">
+            <Link href='#'>
               <a>
                 <LinkedIn />
               </a>
             </Link>
           </div>
-          <div className="flex flex-col space-y-[10px] mt-[50px]">
+          <div className='flex flex-col space-y-[10px] mt-[50px]'>
             <div>
-              <p className="text-[#7D7D7D] font-medium">United States</p>
-              <a className="text-[#7D7D7D]">us@wearebaseline.com</a>
+              <p className='text-[#7D7D7D] font-medium'>United States</p>
+              <a className='text-[#7D7D7D]'>us@wearebaseline.com</a>
             </div>
             <div>
-              <p className="text-[#7D7D7D] font-medium">Europe</p>
-              <a className="text-[#7D7D7D]">europe@wearebaseline.com</a>
+              <p className='text-[#7D7D7D] font-medium'>Europe</p>
+              <a className='text-[#7D7D7D]'>europe@wearebaseline.com</a>
             </div>
           </div>
         </div>
