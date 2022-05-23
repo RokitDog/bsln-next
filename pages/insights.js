@@ -7,7 +7,7 @@ import CursorBody from '../components/CursorBody';
 import InsightNews from '../components/InsightNews';
 gsap.registerPlugin(ScrollTrigger);
 
-function insights() {
+function Insights() {
   useEffect(() => {
     if (window.innerWidth > 1024) {
       Cursor();
@@ -27,15 +27,15 @@ function insights() {
   return (
     <div>
       <main>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]  mb-[100px]">
-          <div className="mt-[100px] md:px-[50px] max-w-[950px] mb-[180px] md:mb-[150px]">
+        <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px]  mb-[100px]'>
+          <div className='mt-[100px] md:px-[50px] max-w-[950px] mb-[180px] md:mb-[150px]'>
             <HeadingSingle
-              title="All of our latest updates, faces and stories from across our network."
-              sub="Insights"
+              title='All of our latest updates, faces and stories from across our network.'
+              sub='Insights'
             />
           </div>
         </div>
-        <section className="bg-[#f3f3f3] rounded-[40px] pt-[70px] md:pt-[100px]">
+        <section className='bg-[#f3f3f3] rounded-[40px] pt-[70px] md:pt-[100px]'>
           <InsightNews />
         </section>
       </main>
@@ -44,4 +44,4 @@ function insights() {
   );
 }
 
-export default insights;
+export default Insights;

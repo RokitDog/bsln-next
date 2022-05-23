@@ -7,7 +7,7 @@ import ContactSlider from '../components/ContactSlider';
 import ContactForm from '../components/ContactForm';
 gsap.registerPlugin(ScrollTrigger);
 
-function contact() {
+function Contact() {
   useEffect(() => {
     if (window.innerWidth > 1024) {
       Cursor();
@@ -96,42 +96,42 @@ function contact() {
   return (
     <div>
       <main>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]  ">
+        <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px]  '>
           <div>
-            <section className="relative philosophie pb-[100px] md:pb-[150px] ">
+            <section className='relative philosophie pb-[100px] md:pb-[150px] '>
               <div
-                className="h-[893px] md:h-[100vh] w-[100%] wrapper relative"
+                className='h-[893px] md:h-[100vh] w-[100%] wrapper relative'
                 ref={sliderRef}
               >
                 <ContactSlider
-                  imageSrc="/images/Contact0.svg"
-                  content="If your website is in desperate need of a polish."
+                  imageSrc='/images/Contact0.svg'
+                  content='If your website is in desperate need of a polish.'
                 />
                 <ContactSlider
-                  imageSrc="/images/Contact0.svg"
-                  content="If your branding is anything but consistent and -on brand-"
+                  imageSrc='/images/Contact0.svg'
+                  content='If your branding is anything but consistent and -on brand-'
                 />
                 <ContactSlider
-                  imageSrc="/images/Contact0.svg"
-                  content="
-                  If your logo is outdated, non-existent or you are often asked the question “What is this supposed to be?”"
+                  imageSrc='/images/Contact0.svg'
+                  content='
+                  If your logo is outdated, non-existent or you are often asked the question “What is this supposed to be?”'
                 />
                 <ContactSlider
-                  imageSrc="/images/Contact0.svg"
-                  content="
+                  imageSrc='/images/Contact0.svg'
+                  content='
             You get the final product that
             helps your company succeed,
             while we get the satisfaction
-            from working on it."
+            from working on it.'
                 />
               </div>
-              <div className="mb-[40px] md:mb-[60px]">
-                <h2 className="text-center text-[30px] leading-[1.13] tracking-[-0.1%] md:text-[48px]">
+              <div className='mb-[40px] md:mb-[60px]'>
+                <h2 className='text-center text-[30px] leading-[1.13] tracking-[-0.1%] md:text-[48px]'>
                   Whatever the reason, we’re here to help.
                 </h2>
               </div>
               <div>
-                <p className="text-center text-[16px] md:text-[20px]">
+                <p className='text-center text-[16px] md:text-[20px]'>
                   So let's get started!
                 </p>
               </div>
@@ -139,26 +139,26 @@ function contact() {
           </div>
         </div>
         <section
-          className="pt-[100px] md:pt-[160px] md:pb-[150px]  bg-[#0f0f0f] origin-bottom"
+          className='pt-[100px] md:pt-[160px] md:pb-[150px]  bg-[#0f0f0f] origin-bottom'
           ref={formRef}
         >
-          <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] ">
+          <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px] '>
             <ContactForm ref1={formRef} ref2={thankYouRef} />
           </div>
         </section>
         <section
-          className="h-0 text-center overflow-hidden px-[30px]"
+          className='h-0 text-center overflow-hidden px-[30px]'
           ref={thankYouRef}
-          id="thankyou"
+          id='thankyou'
         >
-          <div className="space-y-[40px] md:space-y-[60px]">
-            <h2 className="text-[30px] md:text-[48px] tracking-[-1%] leading-[1.13] max-w-[850px] mx-auto">
+          <div className='space-y-[40px] md:space-y-[60px]'>
+            <h2 className='text-[30px] md:text-[48px] tracking-[-1%] leading-[1.13] max-w-[850px] mx-auto'>
               Thanks for trusting us with your project! We’ll get back to you
               ASAP.
             </h2>
             <p>
               Or you can email us directly at{' '}
-              <span className="text-[#367F61] underline font-medium">
+              <span className='text-[#367F61] underline font-medium'>
                 contact@wearebaseline.com
               </span>
             </p>
@@ -170,4 +170,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;

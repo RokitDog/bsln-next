@@ -12,7 +12,7 @@ import { sanityClient } from '../sanity';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function services({ content }) {
+function Services({ content }) {
   const data = content[0];
   const [ref, inView, entry] = useInView();
 
@@ -168,7 +168,7 @@ function services({ content }) {
   );
 }
 
-export default services;
+export default Services;
 
 export const getServerSideProps = async () => {
   const query = `

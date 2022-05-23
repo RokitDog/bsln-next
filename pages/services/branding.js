@@ -13,7 +13,7 @@ import { sanityClient } from '../../sanity';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function branding({ content }) {
+function Branding({ content }) {
   const data = content[0];
   const image1 = useRef();
   const image2 = useRef();
@@ -210,7 +210,7 @@ function branding({ content }) {
   );
 }
 
-export default branding;
+export default Branding;
 
 export const getServerSideProps = async () => {
   const query = `

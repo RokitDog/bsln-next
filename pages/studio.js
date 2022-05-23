@@ -13,7 +13,7 @@ import StudioBrands from '../components/StudioBrands';
 import { sanityClient } from '../sanity';
 gsap.registerPlugin(ScrollTrigger);
 
-function studio({ content }) {
+function Studio({ content }) {
   const data = content[0];
   const imageRef = useRef();
   const bgTrigger = useRef();
@@ -242,7 +242,7 @@ function studio({ content }) {
   );
 }
 
-export default studio;
+export default Studio;
 
 export const getServerSideProps = async () => {
   const query = `

@@ -10,7 +10,7 @@ import { useRef } from 'react';
 import ServiceCard from '../../components/ServiceCard';
 import { sanityClient } from '../../sanity';
 
-function websites({ content }) {
+function Websites({ content }) {
   const data = content[0];
   const image1 = useRef();
   const image2 = useRef();
@@ -203,7 +203,7 @@ function websites({ content }) {
   );
 }
 
-export default websites;
+export default Websites;
 
 export const getServerSideProps = async () => {
   const query = `

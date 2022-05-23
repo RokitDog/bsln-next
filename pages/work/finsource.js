@@ -21,7 +21,7 @@ import Blogs from '../../components/Works/Blogs';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function finsource() {
+function Finsource() {
   useEffect(() => {
     if (window.innerWidth > 1024) {
       Cursor();
@@ -89,73 +89,73 @@ function finsource() {
   return (
     <div>
       <main>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]">
-          <BannerImage imageSrc="/images/finsource/finsource-banner.jpg" />
+        <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px]'>
+          <BannerImage imageSrc='/images/finsource/finsource-banner.jpg' />
         </div>
-        <section className="bg-[#0b2f28] pt-[290px] pb-[250px] mt-[-220px]">
-          <div className="max-w-[1600px] mx-auto">
-            <WorksText text="FinSource Accounting is a tailored accounting and bookkeeping family-owned and operated firm which understands the unique challenges of running a business and a family. Founded by a corporate alumna of Deloitte and BNP Paribas, with over 15 years of experience in the financial industry." />
-            <div className="flex items-center justify-between px-[120px]">
+        <section className='bg-[#0b2f28] pt-[290px] pb-[250px] mt-[-220px]'>
+          <div className='max-w-[1600px] mx-auto'>
+            <WorksText text='FinSource Accounting is a tailored accounting and bookkeeping family-owned and operated firm which understands the unique challenges of running a business and a family. Founded by a corporate alumna of Deloitte and BNP Paribas, with over 15 years of experience in the financial industry.' />
+            <div className='flex items-center justify-between px-[120px]'>
               <Job jobs={job} />
-              <Problem text="Since the company was at its early stages, the client asked us to design a logo and a temporary one-page website that would expand and develop over time, as the business grew. Because FinSource Accounting makes “complex financials simple”, our task was to create their visual identity accordingly." />
+              <Problem text='Since the company was at its early stages, the client asked us to design a logo and a temporary one-page website that would expand and develop over time, as the business grew. Because FinSource Accounting makes “complex financials simple”, our task was to create their visual identity accordingly.' />
             </div>
           </div>
         </section>
-        <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px] mb-[100px]">
-          <section className="flex items-center justify-between second-section py-[250px] px-[70px]">
-            <Explanation text="We were asked to design a simple but memorable logo that will differentiate them from competitors and a user-friendly website that their future customers can easily navigate." />
-            <Image src={fs1} alt="work" className="fadeIn-text" />
+        <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px] mb-[100px]'>
+          <section className='flex items-center justify-between second-section py-[250px] px-[70px]'>
+            <Explanation text='We were asked to design a simple but memorable logo that will differentiate them from competitors and a user-friendly website that their future customers can easily navigate.' />
+            <Image src={fs1} alt='work' className='fadeIn-text' />
           </section>
-          <section className="opacity-0 third-section flex flex-col ">
-            <div className=" flex items-center justify-center pb-[50vh]">
-              <Image src={fs2} alt="logo" />
+          <section className='opacity-0 third-section flex flex-col '>
+            <div className=' flex items-center justify-center pb-[50vh]'>
+              <Image src={fs2} alt='logo' />
             </div>
-            <div className=" relative rounded-[10px]  mb-[40px]">
+            <div className=' relative rounded-[10px]  mb-[40px]'>
               <Image
                 src={fs3}
-                alt="typography"
-                className="rounded-[10px] fadeIn-text"
+                alt='typography'
+                className='rounded-[10px] fadeIn-text'
                 width={1280}
                 height={624}
-                layout="responsive"
+                layout='responsive'
               />
             </div>
-            <div className=" relative rounded-[10px] ">
+            <div className=' relative rounded-[10px] '>
               <Image
                 src={fs4}
-                alt="mockup"
-                className="rounded-[10px] fadeIn-text"
+                alt='mockup'
+                className='rounded-[10px] fadeIn-text'
                 width={1280}
                 height={624}
-                layout="responsive"
+                layout='responsive'
               />
             </div>
-            <div className=" relative rounded-[10px] text-center mt-[300px]">
+            <div className=' relative rounded-[10px] text-center mt-[300px]'>
               <Image
                 src={fs5}
-                alt="mockup"
-                className="fadeIn-text"
+                alt='mockup'
+                className='fadeIn-text'
                 width={943}
                 height={425}
               />
             </div>
           </section>
-          <section className="pt-[40vh] mb-[80px]">
+          <section className='pt-[40vh] mb-[80px]'>
             <Content
-              content="It makes no difference to us whether the client we’re working with is big or small, just starting out or already successful in their business ventures. We treat every project with undivided attention and care, giving all of our clients an equal chance at a fresh start."
-              paragraph="In this case, we began by assembling the colour pallet, choosing and combining the right typography, and putting in many hours of work into developing the best yet most simple logo design, specially tailored for the client. Great quality content made the whole process of designing the website from start to finish much smoother. The site was live in less than a month, optimised to the extent that its score is 99/100 for the desktop version and 85/100 for mobile phones, making it fully responsive."
+              content='It makes no difference to us whether the client we’re working with is big or small, just starting out or already successful in their business ventures. We treat every project with undivided attention and care, giving all of our clients an equal chance at a fresh start.'
+              paragraph='In this case, we began by assembling the colour pallet, choosing and combining the right typography, and putting in many hours of work into developing the best yet most simple logo design, specially tailored for the client. Great quality content made the whole process of designing the website from start to finish much smoother. The site was live in less than a month, optimised to the extent that its score is 99/100 for the desktop version and 85/100 for mobile phones, making it fully responsive.'
               imageSrc={fs6}
               bigImageSrc={fs7}
               row={true}
             />
           </section>
-          <div className="flex justify-between items-center px-[70px] mb-[160px]">
-            <h5 className="text-[20px]">FinSource Accounting</h5>
-            <p className="text-[20px] text-[#7d7d7d]">2021</p>
+          <div className='flex justify-between items-center px-[70px] mb-[160px]'>
+            <h5 className='text-[20px]'>FinSource Accounting</h5>
+            <p className='text-[20px] text-[#7d7d7d]'>2021</p>
           </div>
         </div>
-        <div className="bg-[#f3f3f3] rounded-[40px]">
-          <div className="max-w-[1600px] mx-auto px-[30px] md:px-[50px]">
+        <div className='bg-[#f3f3f3] rounded-[40px]'>
+          <div className='max-w-[1600px] mx-auto px-[30px] md:px-[50px]'>
             <Blogs />
           </div>
         </div>
@@ -165,4 +165,4 @@ function finsource() {
   );
 }
 
-export default finsource;
+export default Finsource;

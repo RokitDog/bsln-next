@@ -8,7 +8,7 @@ import CardsWork from '../components/CardsWork';
 import { sanityClient } from '../sanity';
 gsap.registerPlugin(ScrollTrigger);
 
-function work({ content }) {
+function Work({ content }) {
   const data = content[0];
   useEffect(() => {
     if (window.innerWidth > 1024) {
@@ -46,7 +46,7 @@ function work({ content }) {
   );
 }
 
-export default work;
+export default Work;
 
 export const getServerSideProps = async () => {
   const query = `
